@@ -3959,7 +3959,7 @@ ul.alpha, ol.alpha {
     list-style: upper-alpha;
 }
 blockquote {
-    background-color: rgba(249, 249, 249, 1);
+    background-color: rgba(131, 190, 157, 1);
     border-left: 5px solid rgba(233, 233, 233, 1);
     color: rgba(0, 0, 0, 1);
     * margin: 30px auto 35px;
@@ -4147,9 +4147,9 @@ div.footer-copyright {
 .inner {
     margin-top: 10px;
 }
-aside ul.nav-list>li>a:hover {
-    background-color: #d6d6d6;
+aside ul.nav-list>li>a:hover {    
     color:#000;
+
 }
 ul.nav-list.primary>li a {
     background: url(/images/list-icon.png) no-repeat 0 9px;
@@ -4308,10 +4308,11 @@ table.src th {
     padding-left: 0;
     padding-bottom: 10px;
     display: block;
+    color: #316947;
 }
 .pre-btn a:link, .pre-btn a:visited {
     text-decoration: none;
-    color: #000;
+    color: #316947;
     background-color: transparent;
     font-size: 105%;
     padding: 5px;
@@ -4359,10 +4360,11 @@ table.src th {
     padding-left: 0;
     padding-bottom: 10px;
     display: block;
+    color: #316947;
 }
 .nxt-btn a:link, .nxt-btn a:visited {
     text-decoration: none;
-    color: #000;
+    color: #316947;
     background-color: transparent;
     font-size: 105%;
     padding: 3px 20px 6px 20px;
@@ -4440,6 +4442,7 @@ table.src th {
     padding-left: 70px;
     left: -5px;
     top: 0;
+    color: #316947;
 }
 .middle-btn a:link, .middle-btn a:visited {
     text-decoration: none;
