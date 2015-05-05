@@ -941,7 +941,7 @@
     font-size: 100%}
 .absolutecls {
     height: 270px;
-    background: #06351c url(/images/pattern.png);
+    background: #06351c url(../../images/pattern.png);
     width: 100%;
     margin: 6px 0 4px 0;
     padding: 0;
@@ -1043,7 +1043,7 @@
     width: 600px!important;
 }
 td a, p a {
-    background: url(/images/link-icon.png) no-repeat;
+    background: url(../../images/link-icon.png) no-repeat;
     background-position: right;
     padding-right: 22px;
     padding-bottom: 2px;
@@ -1066,7 +1066,7 @@ div#loading {
     width: 150px;
     height: 150px;
     z-index: 900;
-    background: url(/images/loading.gif) no-repeat;
+    background: url(../../images/loading.gif) no-repeat;
     background-color: transparent;
     visibility: hidden;
 }
@@ -1089,22 +1089,22 @@ div#loading {
     font-weight: 500;
 }
 .tut-plus {
-    background: url(/images/absolute-classes.png) no-repeat 3% 46%;
+    background: url(../../images/absolute-classes.png) no-repeat 3% 46%;
     width: 158px;
     padding: 7px 0 7px 28px!important;
 }
 .tut-plus:hover {
-    background: url(/images/absolute-classes-h.png) no-repeat 3% 46%;
+    background: url(../../images/absolute-classes-h.png) no-repeat 3% 46%;
     width: 158px;
     padding: 7px 0 7px 28px!important;
 }
 .tut-pluss {
-    background: url(/images/absolute-classes.png) no-repeat 2% 42%;
+    background: url(../../images/absolute-classes.png) no-repeat 2% 42%;
     width: 156px;
     padding: 7px 0 7px 28px!important;
 }
 .tut-pluss:hover {
-    background: url(/images/absolute-classes-h.png) no-repeat 2% 42%;
+    background: url(../../images/absolute-classes-h.png) no-repeat 2% 42%;
     width: 156px;
     padding: 7px 0 7px 28px!important;
 }
@@ -1127,23 +1127,23 @@ div#loading {
     border: 1px solid #fff!important;
 }
 #teachonline {
-    background: url(/images/absolute-classes.png) no-repeat 3% 47%!important;
+    background: url(../../images/absolute-classes.png) no-repeat 3% 47%!important;
     padding: 8px 10px 8px 27px!important;
     font-weight: bold;
 }
 #teachonline:hover {
-    background: #316441 url(/images/absolute-classes-h.png) no-repeat 3% 47%!important;
+    background: #316441 url(../../images/absolute-classes-h.png) no-repeat 3% 47%!important;
     padding: 8px 10px 8px 27px!important;
     color: #fff!important;
     font-weight: bold;
 }
 .tut-lib {
-    background: url(/images/tutor.png) no-repeat 2% 37%;
+    background: url(../../images/tutor.png) no-repeat 2% 37%;
     width: 160px;
     padding: 7px 0 7px 28px!important;
 }
 .tut-lib:hover {
-    background: url(/images/tutor-h.png) no-repeat 2% 37%;
+    background: url(../../images/tutor-h.png) no-repeat 2% 37%;
     width: 160px;
     padding: 7px 0 7px 28px!important;
 }
@@ -1166,7 +1166,7 @@ div#loading {
     color: #8a8a8a;
 }
 .hook {
-    background-image: url("/images/hook.png");
+    background-image: url("../../images/hook.png");
     background-repeat: no-repeat;
     padding-bottom: 5%;
     padding-left: 4%;
@@ -1202,7 +1202,7 @@ ul.sprite li .greyout {
     opacity: 1;
 }
 ul.sprite li .gnat {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: 11px -10px;
     width: 145px;
@@ -1210,7 +1210,7 @@ ul.sprite li .gnat {
     cursor: pointer;
 }
 ul.sprite li .algol {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -147px -10px;
     width: 145px;
@@ -1218,7 +1218,7 @@ ul.sprite li .algol {
     cursor: pointer;
 }
 ul.sprite li .angular {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -287px -10px;
     width: 145px;
@@ -1226,7 +1226,7 @@ ul.sprite li .angular {
     cursor: pointer;
 }
 ul.sprite li .assembly {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: nno-repeat;
     background-position: -430px -10px;
     width: 145px;
@@ -1234,7 +1234,7 @@ ul.sprite li .assembly {
     cursor: pointer;
 }
 ul.sprite li .ascii {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -720px -10px;
     width: 145px;
@@ -1242,7 +1242,7 @@ ul.sprite li .ascii {
     cursor: pointer;
 }
 ul.sprite li .awk {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -855px -10px;
     width: 145px;
@@ -1250,7 +1250,7 @@ ul.sprite li .awk {
     cursor: pointer;
 }
 ul.sprite li .bash {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -584px -10px;
     width: 145px;
@@ -1258,7 +1258,7 @@ ul.sprite li .bash {
     cursor: pointer;
 }
 ul.sprite li .basic {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -990px -10px;
     width: 145px;
@@ -1266,7 +1266,7 @@ ul.sprite li .basic {
     cursor: pointer;
 }
 ul.sprite li .befunge {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1290px -10px;
     width: 145px;
@@ -1274,7 +1274,7 @@ ul.sprite li .befunge {
     cursor: pointer;
 }
 ul.sprite li .bootstrap {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1442px -10px;
     width: 145px;
@@ -1282,7 +1282,7 @@ ul.sprite li .bootstrap {
     cursor: pointer;
 }
 ul.sprite li .brain {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: 4px -108px;
     width: 145px;
@@ -1290,7 +1290,7 @@ ul.sprite li .brain {
     cursor: pointer;
 }
 ul.sprite li .clang {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -138px -106px;
     width: 145px;
@@ -1298,7 +1298,7 @@ ul.sprite li .clang {
     cursor: pointer;
 }
 ul.sprite li .css {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -273px -106px;
     width: 145px;
@@ -1306,7 +1306,7 @@ ul.sprite li .css {
     cursor: pointer;
 }
 ul.sprite li .clojure {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -425px -106px;
     width: 145px;
@@ -1314,7 +1314,7 @@ ul.sprite li .clojure {
     cursor: pointer;
 }
 ul.sprite li .cobol {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -590px -98px;
     width: 145px;
@@ -1322,7 +1322,7 @@ ul.sprite li .cobol {
     cursor: pointer;
 }
 ul.sprite li .coffscript {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -718px -115px;
     width: 145px;
@@ -1330,7 +1330,7 @@ ul.sprite li .coffscript {
     cursor: pointer;
 }
 ul.sprite li .c99strict {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -859px -109px;
     width: 145px;
@@ -1338,7 +1338,7 @@ ul.sprite li .c99strict {
     cursor: pointer;
 }
 ul.sprite li .cplus {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1002px -104px;
     width: 145px;
@@ -1346,7 +1346,7 @@ ul.sprite li .cplus {
     cursor: pointer;
 }
 ul.sprite li .cplusox {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1146px -109px;
     width: 145px;
@@ -1354,7 +1354,7 @@ ul.sprite li .cplusox {
     cursor: pointer;
 }
 ul.sprite li .cplus11 {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1295px -109px;
     width: 145px;
@@ -1362,7 +1362,7 @@ ul.sprite li .cplus11 {
     cursor: pointer;
 }
 ul.sprite li .chash {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1440px -109px;
     width: 145px;
@@ -1370,7 +1370,7 @@ ul.sprite li .chash {
     cursor: pointer;
 }
 ul.sprite li .dart {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -136px -203px;
     width: 145px;
@@ -1378,7 +1378,7 @@ ul.sprite li .dart {
     cursor: pointer;
 }
 ul.sprite li .dlang {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -273px -203px;
     width: 145px;
@@ -1386,7 +1386,7 @@ ul.sprite li .dlang {
     cursor: pointer;
 }
 ul.sprite li .embedc {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -716px -203px;
     width: 145px;
@@ -1394,7 +1394,7 @@ ul.sprite li .embedc {
     cursor: pointer;
 }
 ul.sprite li .erlang {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -859px -203px;
     width: 145px;
@@ -1402,7 +1402,7 @@ ul.sprite li .erlang {
     cursor: pointer;
 }
 ul.sprite li .factor {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1152px -206px;
     width: 145px;
@@ -1410,7 +1410,7 @@ ul.sprite li .factor {
     cursor: pointer;
 }
 ul.sprite li .fantom {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1300px -203px;
     width: 145px;
@@ -1418,7 +1418,7 @@ ul.sprite li .fantom {
     cursor: pointer;
 }
 ul.sprite li .falcon {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1454px -203px;
     width: 145px;
@@ -1426,7 +1426,7 @@ ul.sprite li .falcon {
     cursor: pointer;
 }
 ul.sprite li .fortran95 {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: 20px -303px;
     width: 145px;
@@ -1434,7 +1434,7 @@ ul.sprite li .fortran95 {
     cursor: pointer;
 }
 ul.sprite li .forth {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -133px -303px;
     width: 145px;
@@ -1442,7 +1442,7 @@ ul.sprite li .forth {
     cursor: pointer;
 }
 ul.sprite li .fhash {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -264px -297px;
     width: 145px;
@@ -1450,7 +1450,7 @@ ul.sprite li .fhash {
     cursor: pointer;
 }
 ul.sprite li .freebasic {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -420px -298px;
     width: 145px;
@@ -1458,7 +1458,7 @@ ul.sprite li .freebasic {
     cursor: pointer;
 }
 ul.sprite li .groovy {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -568px -303px;
     width: 145px;
@@ -1466,7 +1466,7 @@ ul.sprite li .groovy {
     cursor: pointer;
 }
 ul.sprite li .go {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -715px -299px;
     width: 145px;
@@ -1474,7 +1474,7 @@ ul.sprite li .go {
     cursor: pointer;
 }
 ul.sprite li .haxe {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -860px -303px;
     width: 145px;
@@ -1482,7 +1482,7 @@ ul.sprite li .haxe {
     cursor: pointer;
 }
 ul.sprite li .haskell {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1017px -303px;
     width: 145px;
@@ -1490,7 +1490,7 @@ ul.sprite li .haskell {
     cursor: pointer;
 }
 ul.sprite li .html {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1158px -303px;
     width: 145px;
@@ -1498,7 +1498,7 @@ ul.sprite li .html {
     cursor: pointer;
 }
 ul.sprite li .ilasm {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1307px -303px;
     width: 145px;
@@ -1506,7 +1506,7 @@ ul.sprite li .ilasm {
     cursor: pointer;
 }
 ul.sprite li .intercal {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1450px -303px;
     width: 145px;
@@ -1514,7 +1514,7 @@ ul.sprite li .intercal {
     cursor: pointer;
 }
 ul.sprite li .icon {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: 18px -403px;
     width: 145px;
@@ -1522,7 +1522,7 @@ ul.sprite li .icon {
     cursor: pointer;
 }
 ul.sprite li .java {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -125px -403px;
     width: 145px;
@@ -1530,7 +1530,7 @@ ul.sprite li .java {
     cursor: pointer;
 }
 ul.sprite li .java8 {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1035px -886px;
     width: 145px;
@@ -1538,7 +1538,7 @@ ul.sprite li .java8 {
     cursor: pointer;
 }
 ul.sprite li .javascript {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -256px -399px;
     width: 145px;
@@ -1546,7 +1546,7 @@ ul.sprite li .javascript {
     cursor: pointer;
 }
 ul.sprite li .coldfusion {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -568px -1039px;
     width: 145px;
@@ -1554,7 +1554,7 @@ ul.sprite li .coldfusion {
     cursor: pointer;
 }
 ul.sprite li .jsp {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -730px -1039px;
     width: 145px;
@@ -1562,7 +1562,7 @@ ul.sprite li .jsp {
     cursor: pointer;
 }
 ul.sprite li .jquery {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -860px -403px;
     width: 145px;
@@ -1570,7 +1570,7 @@ ul.sprite li .jquery {
     cursor: pointer;
 }
 ul.sprite li .julia {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1014px -403px;
     width: 145px;
@@ -1578,7 +1578,7 @@ ul.sprite li .julia {
     cursor: pointer;
 }
 ul.sprite li .kshshell {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1160px -403px;
     width: 145px;
@@ -1586,7 +1586,7 @@ ul.sprite li .kshshell {
     cursor: pointer;
 }
 ul.sprite li .lisp {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -125px -493px;
     width: 145px;
@@ -1594,7 +1594,7 @@ ul.sprite li .lisp {
     cursor: pointer;
 }
 ul.sprite li .lolcode {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -258px -493px;
     width: 145px;
@@ -1602,7 +1602,7 @@ ul.sprite li .lolcode {
     cursor: pointer;
 }
 ul.sprite li .lua {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -398px -493px;
     width: 145px;
@@ -1610,7 +1610,7 @@ ul.sprite li .lua {
     cursor: pointer;
 }
 ul.sprite li .matlab-octave {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -575px -496px;
     width: 145px;
@@ -1618,7 +1618,7 @@ ul.sprite li .matlab-octave {
     cursor: pointer;
 }
 ul.sprite li .malgolbe {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -722px -500px;
     width: 145px;
@@ -1626,7 +1626,7 @@ ul.sprite li .malgolbe {
     cursor: pointer;
 }
 ul.sprite li .markdown {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -863px -502px;
     width: 145px;
@@ -1634,7 +1634,7 @@ ul.sprite li .markdown {
     cursor: pointer;
 }
 ul.sprite li .mathML {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1018px -502px;
     width: 145px;
@@ -1642,7 +1642,7 @@ ul.sprite li .mathML {
     cursor: pointer;
 }
 ul.sprite li .mozart-oz {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1168px -502px;
     width: 145px;
@@ -1650,7 +1650,7 @@ ul.sprite li .mozart-oz {
     cursor: pointer;
 }
 ul.sprite li .nimrod {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1464px -498px;
     width: 145px;
@@ -1658,7 +1658,7 @@ ul.sprite li .nimrod {
     cursor: pointer;
 }
 ul.sprite li .node {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: 19px -598px;
     width: 145px;
@@ -1666,7 +1666,7 @@ ul.sprite li .node {
     cursor: pointer;
 }
 ul.sprite li .objectivec {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -130px -598px;
     width: 145px;
@@ -1674,7 +1674,7 @@ ul.sprite li .objectivec {
     cursor: pointer;
 }
 ul.sprite li .ocaml {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -259px -593px;
     width: 145px;
@@ -1682,7 +1682,7 @@ ul.sprite li .ocaml {
     cursor: pointer;
 }
 ul.sprite li .pascal {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -405px -589px;
     width: 145px;
@@ -1690,7 +1690,7 @@ ul.sprite li .pascal {
     cursor: pointer;
 }
 ul.sprite li .pari-gp {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -574px -593px;
     width: 145px;
@@ -1698,7 +1698,7 @@ ul.sprite li .pari-gp {
     cursor: pointer;
 }
 ul.sprite li .pawn {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -721px -593px;
     width: 145px;
@@ -1706,7 +1706,7 @@ ul.sprite li .pawn {
     cursor: pointer;
 }
 ul.sprite li .perl {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -870px -593px;
     width: 145px;
@@ -1714,7 +1714,7 @@ ul.sprite li .perl {
     cursor: pointer;
 }
 ul.sprite li .php {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1021px -593px;
     width: 145px;
@@ -1722,7 +1722,7 @@ ul.sprite li .php {
     cursor: pointer;
 }
 ul.sprite li .phpweb {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1167px -887px;
     width: 145px;
@@ -1730,7 +1730,7 @@ ul.sprite li .phpweb {
     cursor: pointer;
 }
 ul.sprite li .prolog {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1327px -593px;
     width: 145px;
@@ -1738,7 +1738,7 @@ ul.sprite li .prolog {
     cursor: pointer;
 }
 ul.sprite li .processing {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: 13px -693px;
     width: 145px;
@@ -1746,7 +1746,7 @@ ul.sprite li .processing {
     cursor: pointer;
 }
 ul.sprite li .python {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -133px -688px;
     width: 145px;
@@ -1754,7 +1754,7 @@ ul.sprite li .python {
     cursor: pointer;
 }
 ul.sprite li .python-3 {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -263px -688px;
     width: 145px;
@@ -1762,7 +1762,7 @@ ul.sprite li .python-3 {
     cursor: pointer;
 }
 ul.sprite li .rexx {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -864px -688px;
     width: 145px;
@@ -1770,7 +1770,7 @@ ul.sprite li .rexx {
     cursor: pointer;
 }
 ul.sprite li .restruc {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1030px -695px;
     width: 145px;
@@ -1778,7 +1778,7 @@ ul.sprite li .restruc {
     cursor: pointer;
 }
 ul.sprite li .ruby {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1176px -693px;
     width: 145px;
@@ -1786,7 +1786,7 @@ ul.sprite li .ruby {
     cursor: pointer;
 }
 ul.sprite li .rust {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1325px -688px;
     width: 145px;
@@ -1794,7 +1794,7 @@ ul.sprite li .rust {
     cursor: pointer;
 }
 ul.sprite li .r-programming {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1452px -699px;
     width: 145px;
@@ -1802,7 +1802,7 @@ ul.sprite li .r-programming {
     cursor: pointer;
 }
 ul.sprite li .scala {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: 18px -791px;
     width: 145px;
@@ -1810,7 +1810,7 @@ ul.sprite li .scala {
     cursor: pointer;
 }
 ul.sprite li .scheme {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -130px -788px;
     width: 145px;
@@ -1818,7 +1818,7 @@ ul.sprite li .scheme {
     cursor: pointer;
 }
 ul.sprite li .smalltalk {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -263px -791px;
     width: 145px;
@@ -1826,7 +1826,7 @@ ul.sprite li .smalltalk {
     cursor: pointer;
 }
 ul.sprite li .simula {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -395px -789px;
     width: 145px;
@@ -1834,7 +1834,7 @@ ul.sprite li .simula {
     cursor: pointer;
 }
 ul.sprite li .sml-nj {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -567px -786px;
     width: 145px;
@@ -1842,7 +1842,7 @@ ul.sprite li .sml-nj {
     cursor: pointer;
 }
 ul.sprite li .scriptbasic {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -721px -789px;
     width: 145px;
@@ -1850,7 +1850,7 @@ ul.sprite li .scriptbasic {
     cursor: pointer;
 }
 ul.sprite li .sqllite {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -873px -795px;
     width: 145px;
@@ -1858,7 +1858,7 @@ ul.sprite li .sqllite {
     cursor: pointer;
 }
 ul.sprite li .tcl {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1173px -789px;
     width: 145px;
@@ -1866,7 +1866,7 @@ ul.sprite li .tcl {
     cursor: pointer;
 }
 ul.sprite li .unlambda {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: 20px -891px;
     width: 145px;
@@ -1874,7 +1874,7 @@ ul.sprite li .unlambda {
     cursor: pointer;
 }
 ul.sprite li .vb-net {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -400px -891px;
     width: 145px;
@@ -1882,7 +1882,7 @@ ul.sprite li .vb-net {
     cursor: pointer;
 }
 ul.sprite li .verilog {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -570px -884px;
     width: 145px;
@@ -1890,7 +1890,7 @@ ul.sprite li .verilog {
     cursor: pointer;
 }
 ul.sprite li .whitespace {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -731px -882px;
     width: 145px;
@@ -1898,7 +1898,7 @@ ul.sprite li .whitespace {
     cursor: pointer;
 }
 ul.sprite li .ipython {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -570px -963px;
     width: 145px;
@@ -1906,7 +1906,7 @@ ul.sprite li .ipython {
     cursor: pointer;
 }
 ul.sprite li .sympy {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -724px -963px;
     width: 145px;
@@ -1914,7 +1914,7 @@ ul.sprite li .sympy {
     cursor: pointer;
 }
 ul.sprite li .numpy {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -871px -963px;
     width: 145px;
@@ -1922,7 +1922,7 @@ ul.sprite li .numpy {
     cursor: pointer;
 }
 ul.sprite li .scipy {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1027px -963px;
     width: 145px;
@@ -1930,7 +1930,7 @@ ul.sprite li .scipy {
     cursor: pointer;
 }
 ul.sprite li .octave {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1320px -963px;
     width: 145px;
@@ -1938,7 +1938,7 @@ ul.sprite li .octave {
     cursor: pointer;
 }
 ul.sprite li .centos {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1173px -963px;
     width: 145px;
@@ -1946,7 +1946,7 @@ ul.sprite li .centos {
     cursor: pointer;
 }
 ul.sprite li .redis {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1313px -886px;
     width: 145px;
@@ -1954,7 +1954,7 @@ ul.sprite li .redis {
     cursor: pointer;
 }
 ul.sprite li .mongodb {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1455px -886px;
     width: 145px;
@@ -1962,7 +1962,7 @@ ul.sprite li .mongodb {
     cursor: pointer;
 }
 ul.sprite li .mysql {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -872px -1032px;
     width: 145px;
@@ -1970,7 +1970,7 @@ ul.sprite li .mysql {
     cursor: pointer;
 }
 ul.sprite li .hadoop {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -125px -1033px;
     width: 145px;
@@ -1978,7 +1978,7 @@ ul.sprite li .hadoop {
     cursor: pointer;
 }
 ul.sprite li .oraclexe {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: 18px -1033px;
     width: 145px;
@@ -1986,7 +1986,7 @@ ul.sprite li .oraclexe {
     cursor: pointer;
 }
 ul.sprite li .memcached {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1031px -1032px;
     width: 145px;
@@ -1994,7 +1994,7 @@ ul.sprite li .memcached {
     cursor: pointer;
 }
 ul.sprite li .powershell {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -1173px -1040px;
     width: 145px;
@@ -2002,7 +2002,7 @@ ul.sprite li .powershell {
     cursor: pointer;
 }
 ul.sprite li .perl-mysql {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: 20px -964px;
     width: 145px;
@@ -2010,7 +2010,7 @@ ul.sprite li .perl-mysql {
     cursor: pointer;
 }
 ul.sprite li .python-mysql {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -131px -964px;
     width: 145px;
@@ -2018,7 +2018,7 @@ ul.sprite li .python-mysql {
     cursor: pointer;
 }
 ul.sprite li .php-mysql {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -261px -964px;
     width: 145px;
@@ -2026,7 +2026,7 @@ ul.sprite li .php-mysql {
     cursor: pointer;
 }
 ul.sprite li .java-mysql {
-    background-image: url(/images/cdgrnd-sprite.jpg);
+    background-image: url(../../images/cdgrnd-sprite.jpg);
     background-repeat: no-repeat;
     background-position: -400px -964px;
     width: 145px;
@@ -2034,7 +2034,7 @@ ul.sprite li .java-mysql {
     cursor: pointer;
 }
 ul.sprite li .processingjs {
-    background-image: url("/images/cdgrnd-sprite.jpg");
+    background-image: url("../../images/cdgrnd-sprite.jpg");
     background-position: -1458px -965px;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -2042,7 +2042,7 @@ ul.sprite li .processingjs {
     width: 145px;
 }
 ul.sprite li .p5js {
-    background-image: url("/images/cdgrnd-sprite.jpg");
+    background-image: url("../../images/cdgrnd-sprite.jpg");
     background-position: -1316px -1040px;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -2275,7 +2275,8 @@ header>div.container {
 .col-md-8 {
     width: 66.66666667%}
 .col-md-7 {
-    width: 66.33333333%}
+    width: 66.33333333%;
+    margin-left: 6%;}
 .col-md-6 {
     width: 50%}
 .col-md-5 {
@@ -2326,6 +2327,7 @@ th {
     width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
+    background: #D8D8D8;
 }
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     padding: 8px;
@@ -2334,7 +2336,7 @@ th {
     border-top: 1px solid #ddd;
 }
 .table-bordered {
-    border: 1px solid #ddd;
+    
 }
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
     border: 1px solid #ddd;
@@ -2627,10 +2629,10 @@ html {
     overflow-y: auto;
 }
 body {
-    background-color: #eee;
+    background-color: #55b070;
     color: #313131;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 22px;
     margin: 0;
 }
@@ -2833,7 +2835,7 @@ nav.mega-menu .nav.pull-right .dropdown-menu {
     top: 29px;
 }
 div.map-section {
-    background: transparent url(/images/map-top.jpg) center 0 no-repeat;
+    background: transparent url(../../images/map-top.jpg) center 0 no-repeat;
     padding-top: 220px;
     margin-top: 0;
 }
@@ -2847,7 +2849,7 @@ section.featured.footer {
     margin: 30px 0 -70px;
 }
 section.featured.map {
-    background-image: url(/images/map-bottom.jpg);
+    background-image: url(../../images/map-bottom.jpg);
     background-position: center 0;
     background-repeat: no-repeat;
     margin-top: 0;
@@ -2950,7 +2952,7 @@ div.home-intro p em {
     color: #2e9a3c;
 }
 div.home-intro {
-    background: #171717 url(/images/pattern.png) repeat center center;
+    background: #171717 url(../../images/pattern.png) repeat center center;
     margin-bottom: 5px;
     overflow: hidden;
     padding: 20px 0 10px 0;
@@ -3294,6 +3296,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     line-height: 30px;
     margin: 0 0 30px 0;
+    text-decoration: none !important;
+  margin-top: 5% !important;
 }
 h2 {
     font-size: 2.4em;
@@ -3878,7 +3882,7 @@ th {
     padding-bottom: 4px;
 }
 pre.prettyprint.tryit {
-    background: #eee url(/images/link.png) top right no-repeat!important;
+    background: #eee url(../../images/link.png) top right no-repeat!important;
 }
 iframe.result {
     width: 100%;
@@ -4046,7 +4050,7 @@ textarea.what {
     padding-left: 0;
 }
 .job-days, .job-source {
-    background: url(/images/hits.gif) no-repeat left;
+    background: url(../../images/hits.gif) no-repeat left;
     padding-left: 15px;
     border-right: 1px dotted #aaa;
     padding-right: 5px;
@@ -4059,7 +4063,6 @@ div.mini-logo img {
     width: 100%;
     max-width: 283px;
     margin-top: 1px;
-    border: 1px solid #d6d6d6;
     height: 194px;
 }
 div.cover img {
@@ -4131,8 +4134,7 @@ div.footer-copyright {
     border-top: 4px solid #aaa;
 }
 .middle-col {
-    border: 1px solid #d6d6d6;
-    background: #fff;
+
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -4147,14 +4149,15 @@ div.footer-copyright {
 }
 aside ul.nav-list>li>a:hover {
     background-color: #d6d6d6;
+    color:#000;
 }
 ul.nav-list.primary>li a {
     background: url(/images/list-icon.png) no-repeat 0 9px;
-    color: #000;
+    color: #ABDBBA;
     text-decoration: none;
 }
 ul.list li {
-    background: url(/images/icon-bullet.png) no-repeat 0 4px;
+    background: url(../../images/icon-bullet.png) no-repeat 0 4px;
     padding: 0 0 0 19px;
     list-style: none;
     margin-bottom: 5px;
@@ -4167,23 +4170,27 @@ ul.list li {
 }
 div.topgooglead {
     text-align: center;
+    display:none;
 }
 div.biggooglead {
     text-align: center;
+    display:none;
 }
 div.bottomgooglead {
     text-align: center;
     position: relative;
-    bottom: 8px;
+    display:none;
 }
 .rightgooglead {
     text-align: left;
     top: 50px;
+    display:none;
 }
 .rightgooglead {
     &.affix {
     position: fixed;
     top: 190px;
+        display:none;
 }
 &.affix-top {
     position: static;
@@ -4195,7 +4202,7 @@ div.bottomgooglead {
     line-height: 14px;
 }
 ul.list li {
-    color: #000;
+    color: #BDE7BF;
 }
 .col-md-2, .col-md-7, .col-md-3 {
     padding-left: 5px;
@@ -4206,7 +4213,6 @@ h1 {
     font-weight: normal;
     padding-bottom: .3em!important;
     margin-bottom: 1em;
-    text-shadow: 2px 2px 3px #ccc;
     text-align: center;
 }
 h2 {
@@ -4214,15 +4220,15 @@ h2 {
     margin-bottom: .5em!important;
     line-height: 1.5em;
     font-weight: normal;
-    padding: .5em 0 .1em;
-    text-shadow: 1px 1px 2px #ccc;
+    padding: 2em 0 1em !important;
+
 }
 h3 {
     font-size: 1.2em;
     line-height: 1.5em;
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 1px 1px 2px #ccc;
+
 }
 pre+h3 {
     padding-top: 10px!important;
@@ -4243,14 +4249,17 @@ h6 {
 h1, h2, h3 {
     margin: .2em .2em .2em 0;
     padding: 0;
-    font-weight: normal;
+    font-weight: bold;
+    text-decoration: underline;
+    color:#fff;
 }
 hr {
-    border-top: 1px solid #d6d6d6!important;
     height: 0;
     background-image: none;
     clear: both;
     margin: 7px 0 7px 0;
+    border: 1px solid #9ED2AD;
+    margin-top: 5%;
 }
 hr.tall {
     border: 0!important;
@@ -4265,7 +4274,7 @@ div.content p {
     margin: .0em .2em 1em .2em;
     padding: 0;
     text-align: justify;
-    color: #000;
+    color: #FFF;
 }
 table.src {
     border: 1px solid #d6d6d6;
@@ -4332,7 +4341,7 @@ table.src th {
     text-decoration: none;
     color: #000;
     background-color: transparent;
-    background: url(/images/sprite.png) no-repeat 0 -27px;
+    background: url(../../images/sprite.png) no-repeat 0 -27px;
     font-size: 115%;
     padding-left: 20px;
 }
@@ -4340,7 +4349,7 @@ table.src th {
     text-decoration: none;
     color: #000;
     background-color: transparent;
-    background: url(/images/sprite.png) no-repeat 0 0;
+    background: url(../../images/sprite.png) no-repeat 0 0;
     font-size: 115%;
     padding-left: 20px;
 }
@@ -4380,7 +4389,7 @@ table.src th {
     text-decoration: none;
     color: #000;
     background-color: transparent;
-    background: url(/images/sprite.png) no-repeat 112px -52px;
+    background: url(../../images/sprite.png) no-repeat 112px -52px;
     font-size: 115%;
     padding-left: 20px;
     padding-right: 20px;
@@ -4389,7 +4398,7 @@ table.src th {
     text-decoration: none;
     color: #000;
     background-color: transparent;
-    background: url(/images/sprite.png) no-repeat 112px -79px;
+    background: url(../../images/sprite.png) no-repeat 112px -79px;
     font-size: 115%;
     padding-left: 20px;
 }
@@ -4665,7 +4674,7 @@ button.btn-responsive-nav {
     display: none;
 }
 ul.nav-list.primary>li a {
-    background: url(/images/list-icon.png) no-repeat 0 14px;
+    background: url(../../images/list-icon.png) no-repeat 0 14px;
 }
 ul.nav-list.primary>li a {
     padding: 14px 17px;
@@ -4744,7 +4753,7 @@ button.btn-responsive-nav {
     display: block!important;
 }
 ul.nav-list.primary>li a {
-    background: url(/images/list-icon.png) no-repeat 0 14px;
+    background: url(../../images/list-icon.png) no-repeat 0 14px;
 }
 ul.nav-list.primary>li a {
     padding: 14px 17px;
@@ -4834,7 +4843,7 @@ div.featured-box {
     height: auto!important;
 }
 ul.nav-list.primary>li a {
-    background: url(/images/list-icon.png) no-repeat 0 14px;
+    background: url(../../images/list-icon.png) no-repeat 0 14px;
 }
 ul.nav-list.primary>li a {
     padding: 14px 17px;
@@ -4959,7 +4968,7 @@ button.btn-responsive-nav {
     display: block!important;
 }
 ul.nav-list.primary>li a {
-    background: url(/images/list-icon.png) no-repeat 0 14px;
+    background: url(../../images/list-icon.png) no-repeat 0 14px;
 }
 ul.nav-list.primary>li a {
     padding: 14px 17px;
@@ -5062,7 +5071,7 @@ div.featured-box {
     height: auto!important;
 }
 ul.nav-list.primary>li a {
-    background: url(/images/list-icon.png) no-repeat 0 14px;
+    background: url(../../images/list-icon.png) no-repeat 0 14px;
 }
 ul.nav-list.primary>li a {
     padding: 14px 17px;
@@ -5196,7 +5205,7 @@ div.featured-box {
     height: auto!important;
 }
 ul.nav-list.primary>li a {
-    background: url(/images/list-icon.png) no-repeat 0 14px;
+    background: url(../../images/list-icon.png) no-repeat 0 14px;
 }
 ul.nav-list.primary>li a {
     padding: 14px 17px;
@@ -5344,28 +5353,28 @@ div.lang {
     text-align: right;
 }
 div.green-bg {
-    background: #00420f url(/images/pattern.png) repeat center center;
+    background: #00420f url(../../images/pattern.png) repeat center center;
 }
 div.blue-bg {
-    background: #034676 url(/images/pattern.png) repeat center center;
+    background: #034676 url(../../images/pattern.png) repeat center center;
 }
 div.teal-bg {
-    background: #2d7572 url(/images/pattern.png) repeat center center;
+    background: #2d7572 url(../../images/pattern.png) repeat center center;
 }
 div.purple-bg {
-    background: #2a2a4d url(/images/pattern.png) repeat center center;
+    background: #2a2a4d url(../../images/pattern.png) repeat center center;
 }
 div.yellow-bg {
-    background: #8c7100 url(/images/pattern.png) repeat center center;
+    background: #8c7100 url(../../images/pattern.png) repeat center center;
 }
 div.black-bg {
-    background: #353535 url(/images/pattern.png) repeat center center;
+    background: #353535 url(../../images/pattern.png) repeat center center;
 }
 div.red-bg {
-    background: #642122 url(/images/pattern.png) repeat center center;
+    background: #642122 url(../../images/pattern.png) repeat center center;
 }
 footer div.footer-ribon, div.footer-copyright, header nav ul.nav-main li.dropdown-menu:hover a {
-    background: #00420f url(/images/pattern.png) repeat center center;
+    background: #00420f url(../../images/pattern.png) repeat center center;
 }
 div.background {
     width: 100%;
@@ -5991,7 +6000,7 @@ h1.mbv {
     outline: 0;
 }
 .st-banner {
-    background-image: url(/images/search-bg.jpg)!important;
+    background-image: url(../../images/search-bg.jpg)!important;
     background-position: top center!important;
     background-size: cover!important;
     color: #fff;
@@ -6584,7 +6593,7 @@ header nav ul.nav-top li.phone {
     color: #ccc;
 }
 #cboxLoadingGraphic {
-    background: url(/images/loading.gif) no-repeat center center;
+    background: url(../../images/loading.gif) no-repeat center center;
 }
 #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
     border: 0;
@@ -6608,7 +6617,7 @@ header nav ul.nav-top li.phone {
     top: 50%;
     left: 5px;
     margin-top: -32px;
-    background: url(/images/controls.png) no-repeat top left;
+    background: url(../../images/controls.png) no-repeat top left;
     width: 28px;
     height: 65px;
     text-indent: -9999px;
@@ -6621,7 +6630,7 @@ header nav ul.nav-top li.phone {
     top: 50%;
     right: 5px;
     margin-top: -32px;
-    background: url(/images/controls.png) no-repeat top right;
+    background: url(../../images/controls.png) no-repeat top right;
     width: 28px;
     height: 65px;
     text-indent: -9999px;
@@ -6634,7 +6643,7 @@ header nav ul.nav-top li.phone {
     top: 5px;
     right: 5px;
     display: block;
-    background: url(/images/controls.png) no-repeat top center;
+    background: url(../../images/controls.png) no-repeat top center;
     width: 38px;
     height: 19px;
     text-indent: -9999px;
@@ -6709,15 +6718,14 @@ header nav ul.nav-top li.phone {
     color: #060;
 }
 }pre.prettyprint {
-    border: 1px solid #d6d6d6;
-    background-color: #eee;
-    width: 98%;
-    border-radius: 0;
-    padding: 5px;
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: 12px;
-    overflow: auto;
+  background-color: #eee;
+  width: 98%;
+  border-radius: 3.5px;
+  padding: 15px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 12px;
+  overflow: auto;
 }
 tr td pre.prettyprint {
     white-space: pre-wrap;
