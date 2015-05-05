@@ -2327,7 +2327,7 @@ th {
     width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
-    background: #D8D8D8;
+    background: #BDBDBD;
 }
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     padding: 8px;
@@ -2339,7 +2339,7 @@ th {
     
 }
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-    border: 1px solid #ddd;
+ 
 }
 .table-bordered>thead>tr>th, .table-bordered>thead>tr>td {
     border-bottom-width: 2px;
@@ -3882,7 +3882,7 @@ th {
     padding-bottom: 4px;
 }
 pre.prettyprint.tryit {
-    background: #eee url(../../images/link.png) top right no-repeat!important;
+    background: #eee !important;
 }
 iframe.result {
     width: 100%;
@@ -6721,7 +6721,7 @@ header nav ul.nav-top li.phone {
     color: #060;
 }
 }pre.prettyprint {
-  background-color: #eee;
+  background-color: #2C2C2C;
   width: 98%;
   border-radius: 3.5px;
   padding: 15px;
