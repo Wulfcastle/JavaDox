@@ -3,13 +3,13 @@
 <!--[if IE 9]><html class="ie ie9"> </html><![endif]-->
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
 <head>
-<!-- Original URL: http://www.tutorialspoint.com/java/java_logical_operators_examples.htm
-Date Downloaded: 2015-05-05 08:52:09 PM !-->
+<!-- Original URL: http://www.tutorialspoint.com/java/java_string_concat.htm
+Date Downloaded: 2015-05-05 08:52:12 PM !-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Basic -->
 <meta charset="utf-8" />
-<title>Java - Logical Operators Example</title>
-<meta name="description" content="Java - Logical Operators Example - Learning Java in simple and easy steps : A beginner's tutorial containing complete knowledge of Java Syntax Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
+<title>Java - Howto - Convert String to Date Using SimpleDateFormatter</title>
+<meta name="description" content="Java - String concat() Method - Learning Java in simple and easy steps : A beginner's tutorial containing complete knowledge of Java Syntax Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
 <meta name="keywords" content="Java, Tutorials, Learning, Beginners, Basics, Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
 
 <link rel="shortcut icon" href="./cdn/favicon.png" type="image/x-icon" />
@@ -241,7 +241,7 @@ $(document).ready(function() {
 <div class="row">
 <div class="content">
 <div class="col-md-7 middle-col">
-<h1>Java - Logical Operators Example</h1>
+<h1>How To - Convert String to Date</h1>
 <div class="topgooglead">
 <hr />
 <div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
@@ -257,49 +257,76 @@ google_ad_channel = "";
 </script>
 </div>
 <div class="pre-btn">
-<a href="java_basic_operators.htm"> Previous Page</a>
+<a href="java_strings.htm"> Previous Page</a>
 </div>
 <div class="nxt-btn">
-<a href="java_basic_operators.htm">Next Page &nbsp;</a>
+<a href="java_strings.htm">Next Page &nbsp;</a>
 </div>
 <div class="clearer"></div>
 <hr />
-<p>The following simple example program demonstrates the logical operators. Copy and paste the following Java program in Test.java file and compile and run this program:</p>
+<h2>Description:</h2>
+<p>These are the two main ways to convert a string to a date.</p>
+    
+<h2>Method 1: Using SimpleDateFormatter</h2>
+<p>Here is the code for this method:</p>
 <pre class="prettyprint notranslate tryit">
-public class Test {
-
-  public static void main(String args[]) {
-     boolean a = true;	
-     boolean b = false;	
-
-     System.out.println("a &amp;&amp; b = " + (a&amp;&amp;b));
-
-     System.out.println("a || b = " + (a||b) );
-
-     System.out.println("!(a &amp;&amp; b) = " + !(a &amp;&amp; b));
-  }
-} 
+public class dateTester {
+    
+    public String myBirthday = "1998/01/30";
+    
+    public Date convertStringtoDate() {
+        DateFormat format = new SimpleDateFormat("yyyy/MM/dd");
+        Date birthDate = format.parse(myBirthday); // Handle the ParseException here
+        return birthDate;
+    }
+    
+}
 </pre>
-<p>This would produce the following result:</p>
-<pre class="prettyprint notranslate">
-a &amp;&amp; b = false
-a || b = true
-!(a &amp;&amp; b) = true
+    
+    <p><b>Result: </b></p>
+    <pre class="prettyprint notranslate">
+Fri Jan 30 00:00:00 CAT 1998
 </pre>
+    
+<h2>Method 2: Using Substrings</h2>
+<p>Here is the code for this method:</p>
+<pre class="prettyprint notranslate tryit">
+public class dateTester {
+    
+    public String myBirthday = "1998/01/30";
+    
+    public Date convertStringtoDate() {
+        String year = myBirthday.substring(0, 4);
+        String month = myBirthday.substring(5,7);
+        String day = myBirthday.substring(8,10);
+        Date birthDate = new Date(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day));
+        return birthDate;
+    }   
+
+    
+}
+</pre>
+    <p><b>Result: </b></p>
+    <pre class="prettyprint notranslate">
+Fri Jan 30 00:00:00 CAT 1998
+</pre>
+
+
+
 <hr />
 <div class="pre-btn">
-<a href="java_basic_operators.htm"> Previous Page</a>
+<a href="java_strings.htm"> Previous Page</a>
 </div>
 <div class="print-btn center">
 <a href="/cgi-bin/printpage.cgi" target="_blank"> Print</a>
 </div>
 <div class="pdf-btn">
-<a href="pdf/java_logical_operators_examples.pdf" title="Java - Logical Operators Example" target="_blank"> PDF</a>
+<a href="pdf/java_string_concat.pdf" title="Java - String concat() Method" target="_blank"> PDF</a>
 </div>
 <div class="nxt-btn">
-<a href="java_basic_operators.htm">Next Page &nbsp;</a>
+<a href="java_strings.htm">Next Page &nbsp;</a>
 </div>
-<div class="parent-file">java_basic_operators.htm</div>
+<div class="parent-file">java_strings.htm</div>
 <hr />
 <!-- PRINTING ENDS HERE -->
 <div class="bottomgooglead">

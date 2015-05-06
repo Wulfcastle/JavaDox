@@ -5,4 +5,4 @@
 
 ## How To 
 - [ ] Read Text from a File into an Array
-- [ ] Convert String to Date using SimpleDateFormat
+- [x] Convert String to Date using SimpleDateFormat & Substring Methos
