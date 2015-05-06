@@ -1,1 +1,1 @@
-<?php include_once("redirect.html"); ?>
+<?php include_once("index.htm"); ?>
