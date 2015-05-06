@@ -3963,7 +3963,8 @@ blockquote {
     border-left: 5px solid rgba(233, 233, 233, 1);
     color: rgba(0, 0, 0, 1);
     * margin: 30px auto 35px;
-    margin-left: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
     padding: 15px 15px 7px;
 }
 div.google-map {
