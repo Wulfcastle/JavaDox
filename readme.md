@@ -4,6 +4,7 @@
 - [x] Create How-To Section
 - [ ] Add Search Functionality
 - [ ] Refactor/Minimize Homepage Design
+- [ ] Add Database Notes/Pages/Tutorials
 
 ## How To 
 - [x] Read Text from a File into an Array
