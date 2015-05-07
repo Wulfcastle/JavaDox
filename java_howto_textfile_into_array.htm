@@ -192,7 +192,7 @@ $(document).ready(function() {
 <li><a target="_top" href="java_characters.htm">Java - Characters</a></li>
 <li><a target="_top" href="java_strings.htm">Java - Strings</a></li>
 <li><a target="_top" href="java_arrays.htm">Java - Arrays</a></li><li><a target="_top" href="java_two_dimensional_arrays.htm">Java - Two-Dimensional Arrays</a></li>
-<li><a target="_top" href="java_date_time.htm">Java - Date &amp; Time</a></li>
+<li><a target="_top" href="java_arraylist_class.htm">Java - ArrayLists</a></li><li><a target="_top" href="java_date_time.htm">Java - Date &amp; Time</a></li>
 <li><a target="_top" href="java_regular_expressions.htm">Java - Regular Expressions</a></li>
 <li><a target="_top" href="java_methods.htm">Java - Methods</a></li>
 <li><a target="_top" href="java_files_io.htm">Java - Files and I/O</a></li>
@@ -221,7 +221,8 @@ $(document).ready(function() {
 <li><a target="_top" href="java_documentation.htm">Java - Documentation</a></li>
 </ul>
 <ul class="nav nav-list primary left-menu">
-<li class="heading">How To</li><li><a target="_top" href="java_howto_string_to_date.htm">Convert String to Date</a></li><li><a target="_top" href="java_howto_string_to_date.htm">Read Textfile into Array</a></li>
+<li class="heading">How To</li><li><a target="_top" href="java_howto_string_to_date.htm">Convert String to Date</a></li><li><a target="_top" href="java_howto_textfile_into_array.htm">Read Textfile into Array</a></li>
+    
 
 
 
@@ -276,7 +277,7 @@ public class ReadTextFile {
         // create Scanner 
         Scanner myFile = new Scanner(new File("myTextFile.txt")).useDelimiter(",\\s*");
 
-        ArrayList<String> tempArray = new ArrayList<String>(); // Using ArrayList to temporary store values. 
+        ArrayList&#60;String&#62; tempArray = new ArrayList&#60;String&#62;(); // Using ArrayList to temporary store values. 
         //ArrayLists are better suited than Arrays for this as you don't have to declare memory space for them.
 
         // while loop

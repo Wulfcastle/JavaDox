@@ -192,7 +192,7 @@ $(document).ready(function() {
 <li><a target="_top" href="java_characters.htm">Java - Characters</a></li>
 <li><a target="_top" href="java_strings.htm">Java - Strings</a></li>
 <li><a target="_top" href="java_arrays.htm">Java - Arrays</a></li><li><a target="_top" href="java_two_dimensional_arrays.htm">Java - Two-Dimensional Arrays</a></li>
-<li><a target="_top" href="java_date_time.htm">Java - Date &amp; Time</a></li>
+<li><a target="_top" href="java_arraylist_class.htm">Java - ArrayLists</a></li><li><a target="_top" href="java_date_time.htm">Java - Date &amp; Time</a></li>
 <li><a target="_top" href="java_regular_expressions.htm">Java - Regular Expressions</a></li>
 <li><a target="_top" href="java_methods.htm">Java - Methods</a></li>
 <li><a target="_top" href="java_files_io.htm">Java - Files and I/O</a></li>
@@ -221,7 +221,7 @@ $(document).ready(function() {
 <li><a target="_top" href="java_documentation.htm">Java - Documentation</a></li>
 </ul>
 <ul class="nav nav-list primary left-menu">
-<li class="heading">How To</li><li><a target="_top" href="java_howto_string_to_date.htm">Convert String to Date</a></li><li><a target="_top" href="java_howto_string_to_date.htm">Read Textfile into Array</a></li>
+<li class="heading">How To</li><li><a target="_top" href="java_howto_string_to_date.htm">Convert String to Date</a></li><li><a target="_top" href="java_howto_textfile_into_array.htm">Read Textfile into Array</a></li>
 
 
 
@@ -265,20 +265,32 @@ google_ad_channel = "";
 <div class="clearer"></div>
 <hr />
 <p>The ArrayList class extends AbstractList and implements the List interface. ArrayList supports dynamic arrays that can grow as needed.</p>
+<blockquote>
 <p>Standard Java arrays are of a fixed length. After arrays are created, they cannot grow or shrink, which means that you must know in advance how many elements an array will hold.</p>
 <p>Array lists are created with an initial size. When this size is exceeded, the collection is automatically enlarged. When objects are removed, the array may be shrunk.</p>
-<p>The ArrayList class supports three constructors. The first constructor builds an empty array list.</p>
+</blockquote>
+<h2>Declaration:</h2>
+<p>The ArrayList class supports 4 constructors. The first constructor builds an empty array list.</p>
+<p><b style="text-decoration:underline;">Contructor 1: Empty ArrayList</b></p>
 <pre class="prettyprint notranslate">
-ArrayList( )
+ArrayList myFriends = new ArrayList();
 </pre>
+<p><b style="text-decoration:underline;">Constructor 2: Using Generics Feature to specify the type of elements contained in the ArrayList (Most Commonly Used)</b></p>
 <p>The following constructor builds an array list that is initialized with the elements of the collection c.</p>
 <pre class="prettyprint notranslate">
-ArrayList(Collection c)
+ArrayList&#60;String&#62; myFriendsNames = new ArrayList&#60;String&#62;();
 </pre>
+<p><b style="text-decoration:underline;">Constructor 3: ArrayList with Capacity</b></p>    
 <p>The following constructor builds  an array list that has the specified initial capacity. The capacity is the size of the underlying array that is used to store the elements.</p>
 <p>The capacity grows automatically as elements are added to an array list.</p>
 <pre class="prettyprint notranslate">
-ArrayList(int capacity)
+ArrayList friends = new ArrayList(100);
+</pre>
+<p><b style="text-decoration:underline;">Constructor 4: Initialization of ArrayList</b></p>
+<p>The following constructor builds an array list that is initialized with the elements of the collection c.</p>
+<pre class="prettyprint notranslate">
+// ArrayList(Collection c)
+ArrayList<String> places = new ArrayList<String>(Arrays.asList("Buenos Aires", "Córdoba", "La Plata"));
 </pre>
 <p>Apart from the methods inherited from its parent classes, ArrayList defines following methods:</p>
 <table class="table table-bordered">
@@ -486,42 +498,6 @@ google_ad_channel ="";
 <!--
 <div class="google-ad" style="position:relative; left:20px;">Advertisements</div>
 -->
-<div class="rightgooglead">
-<script type="text/javascript"><!--
-google_ad_client = "pub-7133395778201029";
-google_ad_width = 300;
-google_ad_height = 250;
-google_ad_format = "300x250_as";
-google_ad_type = "image";
-google_ad_channel ="";
-//--></script>
-<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
-</script>
-</div>
-<div class="rightgooglead">
-<script type="text/javascript"><!--
-google_ad_client = "pub-7133395778201029";
-google_ad_width = 300;
-google_ad_height = 600;
-google_ad_format = "300x600_as";
-google_ad_type = "image";
-google_ad_channel ="";
-//--></script>
-<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
-</script>
-</div>
-<div class="rightgooglead">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-2537027957187252";
-/* Right Side Ad */
-google_ad_slot = "right_side_ad";
-google_ad_width = 300;
-google_ad_height = 250;
-//-->
-</script>
-<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
-</script>
-</div>
 </div>
 </div>
 </div>
@@ -541,45 +517,9 @@ google_ad_height = 250;
 <li><a id="microsoft" href="http://www.windowsphone.com/s?appid=91249671-7184-4ad6-8a5f-d11847946b09" target="_blank" rel="nofollow"><img alt="tutorialspoint Windows app" src="./cdn/images/windows_store.jpg" class="mobile-apps" /></a></li>
 </ul>
 </div>
-<div class="col-md-2">
-<h4>About us</h4>
-<ul class="list icons list-unstyled">
-<li><i class="icon icon-caret-right"></i> <a href="/about/index.htm">Company</a></li>
-<li><i class="icon icon-caret-right"></i> <a href="/about/about_team.htm">Team</a></li>
-<li><i class="icon icon-caret-right"></i> <a href="/about/about_careers.htm">Careers</a></li>
-<li><i class="icon icon-caret-right"></i> <a href="/about/about_privacy.htm">Privacy Policy</a></li>
-<li><i class="icon icon-caret-right"></i> <a href="/about/about_terms_of_use.htm">Terms of use</a></li>
-</ul>
-</div>
-<div class="col-md-2">
-<h4>Extra Links</h4>
-<ul class="list icons list-unstyled">
-<li><i class="icon icon-caret-right"></i> <a href="forums/index.php">Forums</a></li>
-<li><i class="icon icon-caret-right"></i> <a href="shorttutorials/">Articles</a></li>
-<li><i class="icon icon-caret-right"></i> <a href="shared-tutorials.php">Shared</a></li>
-<li><i class="icon icon-caret-right"></i> <a href="seo_tools.htm">Seo Tools</a></li>
-<li><i class="icon icon-caret-right"></i> <a href="about/contact_us.htm">Contact</a></li>
-</ul>
-</div>
-<div class="col-md-3">
-<div class="contact-details">
-<h4>Contact Us</h4>
-<ul class="contact">
-<li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> 388-A , Road no 22, Jubilee Hills, Hyderabad Telangana, INDIA-500033</p></li>
-<li><p><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="about/contact_us.htm">Click Here</a></p></li>
-<li><p><i class="icon icon-dribbble"></i> <strong>Website:</strong> <a href="../index.html">www.tutorialspoint.com</a></p></li>
-</ul>
-</div>
-<div class="social-icons">
-<ul class="social-icons">
-<li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
-<li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
-<li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
-<li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
-<li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
-</ul>
-</div>
-</div>
+
+
+
 </div>
 </div>
 <div class="footer-copyright">
