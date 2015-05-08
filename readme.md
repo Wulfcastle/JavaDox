@@ -1,9 +1,10 @@
 #TODO
 
 - [x] Add Two-Dimensional Arrays
+- [x] Add ArrayLists
 - [x] Create How-To Section
 - [x] Add Swing Components
-- [ ] String Formatting !IMPORTANT
+- [x] String Formatting: EXTREMELY IMPORTANT!
 - [ ] Add Search Functionality
 - [ ] Refactor/Minimize Homepage Design
 - [ ] Add Database Notes/Pages/Tutorials
