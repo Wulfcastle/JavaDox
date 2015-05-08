@@ -280,21 +280,22 @@ String.format(Arguments, Objects)
 String.format("%[argument number] [flags] [width] [.precision] type", "Object 1", "Object 2", "Object etc.")
 </pre>
                            <ul class="list">
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%&nbsp;</b> - is a special character denoting that a formatting instruction follows.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;[argument index]&nbsp;</b> - explicitly denoted the index of the arguments to be formatted. If it not present, arguments will be formatted in the same order as they appear in the arguments list.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;[flag]&nbsp;</b> - i a special formatting instruction. For example, the + flag specifies that a numeric value should always be formatted with a sign, and the 0 flag specifies that 0 is the padding character. Other flags include – that is pad on the right , + pad on the left (if the formatted object is a string). Note that some flags cannot be combined with certain other flags or with certain formatted objects.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;[width]&nbsp;</b> - denotes the minimum number of output characters for that Object.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;[.precession]&nbsp;</b> - denotes the precision of floating point numbers in the output. That is basically the number of decimal digits you wish to print on the output. But it can be used for other types to truncate the output width</li>
-                              <li style="color:#fff;">
-                                 <b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;type&nbsp;</b> - along with <b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%&nbsp;</b>, are the only mandatory formatting arguments. type simply denotes the type of the object that will be formatted in the output. <br>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%&nbsp;</b> - is a special character denoting that a formatting instruction follows.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;[argument index]&nbsp;</b> - explicitly denoted the index of the arguments to be formatted. If it not present, arguments will be formatted in the same order as they appear in the arguments list.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;[flag]&nbsp;</b> - i a special formatting instruction. For example, the + flag specifies that a numeric value should always be formatted with a sign, and the 0 flag specifies that 0 is the padding character. Other flags include – that is pad on the right , + pad on the left (if the formatted object is a string). Note that some flags cannot be combined with certain other flags or with certain formatted objects.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;[width]&nbsp;</b> - denotes the minimum number of output characters for that Object.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;[.precession]&nbsp;</b> - denotes the precision of floating point numbers in the output. That is basically the number of decimal digits you wish to print on the output. But it can be used for other types to truncate the output width</li>
+                              <li style="color:#fff;background:none;">
+                                 <b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;type&nbsp;</b> - along with <b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%&nbsp;</b>, are the only mandatory formatting arguments. type simply denotes the type of the object that will be formatted in the output. <br>
                                  <br>
                                  <ul class="list">
-                                    <li style="color:#fff;"><b style="background-color:#646464;color:#fff;">&nbsp;d&nbsp;</b>  for <b><i>integers.</i></b></li>
-                                    <li style="color:#fff;"><b style="background-color:#646464;color:#fff;">&nbsp;s&nbsp;</b>  for <b><i>strings.</i></b></li>
-                                    <li style="color:#fff;"><b style="background-color:#646464;color:#fff;">&nbsp;f&nbsp;</b>  for <b><i>floating point numbers.</i></b></li>
-                                    <li style="color:#fff;"><b style="background-color:#646464;color:#fff;">&nbsp;x&nbsp;</b>  for <b><i>integers with Xex format</i></b></li>
+                                    <li style="color:#fff;background:none;"><b style="background-color:#646464;color:#fff;border-radius:2px;">&nbsp;d&nbsp;</b>  for <b><i>integers.</i></b></li>
+                                    <li style="color:#fff;background:none;"><b style="background-color:#646464;color:#fff;border-radius:2px;">&nbsp;s&nbsp;</b>  for <b><i>strings.</i></b></li>
+                                    <li style="color:#fff;background:none;"><b style="background-color:#646464;color:#fff;border-radius:2px;">&nbsp;f&nbsp;</b>  for <b><i>floating point numbers.</i></b></li>
+                                    <li style="color:#fff;background:none;"><b style="background-color:#646464;color:#fff;border-radius:2px;">&nbsp;x&nbsp;</b>  for <b><i>integers with Xex format</i></b></li>
                                  </ul>
                            </ul>
+                            <br>
                            <p><b style="text-decoration:underline;">Basic Example</b></p>
                            <p><b>StringFromatExample.java</b></p>
                            <pre class="prettyprint notranslate tryit">
@@ -328,11 +329,11 @@ String: Hello World, integer: 89, float: 9.231435
                             <br>
                            <h3 style="font-size:120%;color:#fff;font-weight:bold">Integer formatting</h3>
                            <ul class="list">
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%d&nbsp;</b> - will print the integer as it is.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%6d&nbsp;</b> - will print the integer as it is. If the number of digits is less than 6, the output will be padded on the left.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%-6d&nbsp;</b> - will print the integer as it is. If the number of digits is less than 6, the output will be padded on the right.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%06d&nbsp;</b> - will print the integer as it is. If the number of digits is less than 6, the output will be padded on the left with zeroes.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%.2d&nbsp;</b> - will print maximum 2 digits of the integer.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%d&nbsp;</b> - will print the integer as it is.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%6d&nbsp;</b> - will print the integer as it is. If the number of digits is less than 6, the output will be padded on the left.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%-6d&nbsp;</b> - will print the integer as it is. If the number of digits is less than 6, the output will be padded on the right.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%06d&nbsp;</b> - will print the integer as it is. If the number of digits is less than 6, the output will be padded on the left with zeroes.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%.2d&nbsp;</b> - will print maximum 2 digits of the integer.</li>
                            </ul>
                             <br>
                            <p><b>Example</b></p>
@@ -362,10 +363,10 @@ Column1     Column2     Column3
                             <!-- String Formatting -->
                            <h3 style="font-size:120%;color:#fff;font-weight:bold">String formatting</h3>
                            <ul class="list">
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%s&nbsp;</b> - will print the string as it is.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%15s&nbsp;</b> - will print the string as it is. If the string has less than 15 characters, the output will be padded on the left.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%-6s&nbsp;</b> - will print the string as it is. If the string has less than 6 characters, the output will be padded on the right</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%08s&nbsp;</b> - will print maximum 8 characters of the string.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%s&nbsp;</b> - will print the string as it is.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%15s&nbsp;</b> - will print the string as it is. If the string has less than 15 characters, the output will be padded on the left.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%-6s&nbsp;</b> - will print the string as it is. If the string has less than 6 characters, the output will be padded on the right</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%08s&nbsp;</b> - will print maximum 8 characters of the string.</li>
                            </ul>
                             <br>
                            <p><b>Example</b></p>
@@ -396,11 +397,11 @@ Hello       World
                             <!-- Floating Point Formatting -->
                            <h3 style="font-size:120%;color:#fff;font-weight:bold">Floating Point formatting</h3>
                            <ul class="list">
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%f&nbsp;</b> - will print the number as it is.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%15f&nbsp;</b> - will print the number as it is. If the number has less than 15 digits, the output will be padded on the left.</li>
-                               <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%-15f&nbsp;</b> - will print the number as it is. If the number has less than 15 digits, the output will be padded on the right.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%.8f&nbsp;</b> - will print maximum 8 decimal digits of the number.</li>
-                              <li style="color:#fff;"><b style="background-color:#2C2C2C;color:#BDE7BF;">&nbsp;%9.4f&nbsp;</b> - will print maximum 4 decimal digits of the number. The output will occupy 9 characters at least. If the number of digits is not enough, it will be padded</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%f&nbsp;</b> - will print the number as it is.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%15f&nbsp;</b> - will print the number as it is. If the number has less than 15 digits, the output will be padded on the left.</li>
+                               <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%-15f&nbsp;</b> - will print the number as it is. If the number has less than 15 digits, the output will be padded on the right.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%.8f&nbsp;</b> - will print maximum 8 decimal digits of the number.</li>
+                              <li style="color:#fff;background:none;"><b style="background-color:#2C2C2C;color:#BDE7BF;border-radius:2px;">&nbsp;%9.4f&nbsp;</b> - will print maximum 4 decimal digits of the number. The output will occupy 9 characters at least. If the number of digits is not enough, it will be padded</li>
                            </ul>
                             <br>
                            <p><b>Example</b></p>
