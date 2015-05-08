@@ -8,7 +8,7 @@ Date Downloaded: 2015-05-05 08:52:12 PM !-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Basic -->
 <meta charset="utf-8" />
-<title>Java - Howto - Convert String to Date Using SimpleDateFormatter</title>
+<title>Java - How-To - Convert Date to String</title>
 <meta name="description" content="Java - String concat() Method - Learning Java in simple and easy steps : A beginner's tutorial containing complete knowledge of Java Syntax Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
 <meta name="keywords" content="Java, Tutorials, Learning, Beginners, Basics, Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
 
@@ -244,6 +244,17 @@ $(document).ready(function() {
 <h1>How To - Convert String to Date</h1>
 <div class="topgooglead">
 <hr />
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js"> 
+</script>
 </div>
 <div class="pre-btn">
 <a href="java_strings.htm"> Previous Page</a>
@@ -253,45 +264,71 @@ $(document).ready(function() {
 </div>
 <div class="clearer"></div>
 <hr />
-<h2>Description:</h2>
-<p>These are the two main ways to convert a string to a date.</p>
+<blockquote><h2 style="padding-top:0% !important;">Steps to Convert Date to String in Java</h2>
+    <p>1. First step is to create a date format using SimpleDateFormat class
+<br>2..Call format() method of SimpleDateFormat by passing Date object this will return String representation of date into specified date format.</p>
+    </blockquote>
     
-<h2>Method 1: Using SimpleDateFormatter</h2>
-<p>Here is the code for this method:</p>
+<br><br>
 <pre class="prettyprint notranslate tryit">
-public class dateTester {
-    
-    public String myBirthday = "1998/01/30";
-    
-    public Date convertStringtoDate() {
-        DateFormat format = new SimpleDateFormat("yyyy/MM/dd");
-        Date birthDate = format.parse(myBirthday); // Handle the ParseException here
-        return birthDate;
-    }
-    
-}
-</pre>
-    
-    
-<h2>Method 2: Using Substrings</h2>
-<p>Here is the code for this method:</p>
-<pre class="prettyprint notranslate tryit">
-public class dateTester {
-    
-    public String myBirthday = "1998/01/30";
-    
-    public Date convertStringtoDate() {
-        String year = myBirthday.substring(0, 4);
-        String month = myBirthday.substring(5,7);
-        String day = myBirthday.substring(8,10);
-        Date birthDate = new Date(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day));
-        return birthDate;
-    }   
+// Creating Date in Java with today's date.
+Date dateNow = new Date();
 
-    
-}
-</pre>
 
+
+// change date into string yyyyMMdd format example "20110914"
+SimpleDateFormat dateformatyyyyMMdd = new SimpleDateFormat("yyyyMMdd");
+String date_to_string = dateformatyyyyMMdd.format(dateNow);
+System.out.println("date into yyyyMMdd format: " + date_to_string);
+
+
+
+// converting  date into ddMMyyyy format example "14092011"
+SimpleDateFormat dateformatddMMyyyy = new SimpleDateFormat("ddMMyyyy");
+date_to_string = dateformatddMMyyyy.format(dateNow);
+System.out.println("Today's date into ddMMyyyy format: " + date_to_string);
+
+
+
+// change date to string on dd-MM-yyyy format e.g. "14-09-2011"
+SimpleDateFormat dateformatJava = new SimpleDateFormat("dd-MM-yyyy");
+date_to_string = dateformatJava.format(dateNow);
+System.out.println("Today's date into dd-MM-yyyy format: " + date_to_string);
+
+
+
+// converting date to string dd/MM/yyyy format for example "14/09/2011"
+SimpleDateFormat formatDateJava = new SimpleDateFormat("dd/MM/yyyy");
+date_to_string = formatDateJava.format(dateNow);
+System.out.println("Today's date into dd/MM/yyyy format: " + date_to_string);
+
+
+
+// date to dd-MMM-yy format e.g. "14-Sep-11"
+SimpleDateFormat ddMMMyyFormat = new SimpleDateFormat("dd-MMM-yy");
+date_to_string = ddMMMyyFormat.format(dateNow);
+System.out.println("Today's date into dd-MMM-yy format: " + date_to_string);
+
+
+
+// convert date to dd-MMMM-yy format e.g. "14-September-11"
+SimpleDateFormat ddMMMMyyFormat = new SimpleDateFormat("dd-MMMM-yy");
+date_to_string = ddMMMMyyFormat.format(dateNow);
+System.out.println("date into dd-MMMM-yy format: " + date_to_string);
+
+
+</pre>
+    <br>
+<p>For complete details on available symbols for date conversion you can check java doc of DateFormat and SimpleDateFormat class.  Here are some important points about SimpleDateFormat which is worth remembering </p>
+<br><ul class="list">
+    <li>1. Common point of confusion between “m” and “M” , small case “m” represent minutes while “M” represent Month Also “d” represent date in month while “D” represent Day of week. This is most common cause of error while converting String to date and back date to string. In shot ddMMyy is not equal to DDmmyy.
+</li>
+    <li>2. It’s also worth noting that SimpleDateFormat  are not thread-safe. They are not synchronized so its better you create separate DateFormat for each thread to avoid any race condition while parsing date in Java.</li>
+
+</ul>
+    <br>
+<p>It’s very important for any java developer be it senior or junior to get familiarize himself with Date, Time and Calendar API. SimpleDateFormat is an excellent utility for converting String to Date and then Date to String but you just need to be little careful with format and thread-safety .
+</p>
 
 
 
