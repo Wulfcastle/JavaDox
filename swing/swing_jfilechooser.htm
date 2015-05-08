@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8"> </html><![endif]-->
+<!--[if IE 9]><html class="ie ie9"> </html><![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+<!-- Original URL: http://www.tutorialspoint.com./swing_jfilechooser.htm
+Date Downloaded: 2015-05-08 11:38:31 AM !-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Basic -->
+<meta charset="utf-8" />
+<title>SWING JFileChooser Class</title>
+<meta name="Description" content="Swing JFileChooser Class -  Learn Swing Framework in simple and easy steps using this beginner's tutorial containing basic to advanced knowledge starting from Environment Setup, Swing, Graphical User Interface, Swing Controls, Event Handling, Event Classes, Event listener interfaces, Layout Managers, Adapters, Layouts, Menus" />
+<meta name="Keywords" content="Swing, Graphical User Interface, Swing Controls, Event Handling, Event Classes, Event listener interfaces, Layout Managers, Adapters, Layouts, Menus " />
+
+<link rel="shortcut icon" href="../cdn/favicon.png" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+<meta name="author" content="tutorialspoint.com" />
+<meta property="fb:app_id" content="471319149685276" />
+<script type="text/javascript" src="../cdn/theme/js/script-min-v1.js"></script>
+<link rel="stylesheet" href="../cdn/theme/css/style-min-v1.css" />
+<link rel="stylesheet" href="../css/tomorrow-night.css" />
+<!--[if IE]>
+<link rel="stylesheet" href="../cdn/theme/css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<script src="../cdn/theme/vendor/respond.js"></script>
+<![endif]-->
+<!--[if IE]>
+<link rel="stylesheet" href="../cdn/theme/css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<script src="../cdn/theme/vendor/respond.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="../cdn/theme/css/ie8.css" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="../cdn/theme/css/ie9.css" />
+<![endif]-->
+<!-- Front Page related changes -->
+<style>
+
+
+
+
+img.mobile-apps { border: 1px solid #507a9b !important; }
+footer i.icon, footer ul.list.icons li i { color: #507a9b !important; }
+button.btn-responsive-nav, header div.search button.btn-default { background: #507a9b !important;}
+.social-icons-top { display:none; }
+</style>
+</head>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+<body onload="prettyPrint()">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="../cdn/images/loading-cg.gif" alt="" width="70" height="70" />
+   </div>
+</div>
+<div id="divGoogle"></div>
+<div class="body">
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="index.htm" title="tutorialspoint">
+      <img alt="JavaDox" src="../images/logo.png" />
+      </a>
+      </h1>			
+      <div class="search" id="searchBar">
+         <form method="get" id="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="www.tutorialspoint.com" />
+            <div class="input-group">
+               <input type="text" class="form-control search" name="q" id="q" autocomplete="off" placeholder="Search your tutorials..." onfocus="if (this.value == 'Search your tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your tutorials...';}" />
+               <input value="FORID:11" name="cof" type="hidden" />
+               <input type="hidden" name="ie" value="ISO-8859-1" />
+               <span class="input-group-btn"> <button class="btn btn-default" type="submit" onclick="javascript:void(0);"><i class="icon icon-search"></i></button> </span>
+            </div>
+         </form>
+      </div>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li><a id="free-training-icon" href="absoluteclasses.htm"><img src="../cdn/images/free-training.jpg" style="width:100px; position:absolute;left:-158px; top:-7px; z-index:99;" title="Free Online Training" /></a></li>
+            <li> <a href="shared-tutorials.php"><i class="icon icon-user"></i> &nbsp;Shared</a> </li>
+            <li> <a href="shorttutorials"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>
+            <li>
+            <div class="social-icons social-icons-top">
+               <ul class="social-icons">
+               <li class="facebook"><a href="http://www.facebook.com/tutorialspointindia" target="_blank" title="Facebook">Facebook</a></li>
+               <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" title="Twitter">Twitter</a></li>
+               <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+               <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+               </ul>
+            </div>
+            </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button>
+   </div>
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown"><a class="dropdown-toggle tut-lib" href="tutorialslibrary.htm"> Tutorials Library </a>
+      <ul class="dropdown-menu" id="submenu">
+         <li>
+            <div class="mega-menu-content">
+              <div class="row">
+                 <div class="col-md-6">
+                    <ul class="sub-menu">
+                     <li><a href="academic_tutorials.htm">Academic</a></li>
+                     <li><a href="big_data_tutorials.htm">Big Data</a></li>
+                     <li><a href="database_tutorials.htm">Databases</a></li>
+                     <li><a href="java_technology_tutorials.htm">Java Technologies</a></li>
+                     <li><a href="mainframe_tutorials.htm">Mainframe</a></li>
+                     <li><a href="management_tutorials.htm">Management</a></li>
+                     <li><a href="microsoft_technologies_tutorials.htm">Microsoft Technologies</a></li>
+                     <li><a href="misc_tutorials.htm">Miscellaneous</a></li>
+                   </ul>
+                 </div>
+                 <div class="col-md-6">
+                  <ul class="sub-menu">
+                     <li><a href="mobile_development_tutorials.htm">Mobile Development</a></li>
+                     <li><a href="computer_programming_tutorials.htm">Programming</a></li>
+                     <li><a href="scripting_lnaguage_tutorials.htm">Scripts</a></li>
+                     <li><a href="software_quality_tutorials.htm">Software Quality</a></li>
+                     <li><a href="telecom_tutorials.htm">Telecom</a></li>
+                     <li><a href="web_development_tutorials.htm">Web Development</a></li>
+                     <li><a href="xml_technologies_tutorials.htm">XML Technologies</a></li>
+                     <li><a href="multi_language_tutorials.htm">Multi Language Tutorials</a></li>
+                  </ul>
+                 </div>
+              </div>
+            </div>
+         </li>
+       </ul>
+               </li>
+               <li class="dropdown"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground</a> </li>
+                  <li class="dropdown"> 							
+                     <a class="dropdown-toggle tut-plus" href="absoluteclasses.htm">Absolute Classes</a>                     <ul class="dropdown-menu" id="submenu1">
+                                                <li class="current-menu-ancestor current-menu-parent active dropdown-submenu" style="border-bottom:none;">
+                        </li><li style="border-bottom:none;"><a href="absoluteclasses/userlogin.htm"><i class="fa-sign-in"></i>&nbsp;Login</a></li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px" class="stickyhide">&nbsp;</li>
+                        <li><a href="absoluteclasses/usersignup.htm"><i class="fa-pencil-square-o"></i>&nbsp;Sign Up&nbsp;</a></li>
+                        <li style="border-bottom:none;"><a href="absoluteclasses/upcomingclasses.htm" style="border-bottom:none;"><i class="fa-book book-head"></i> Upcoming Classes </a></li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px">&nbsp;</li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px">&nbsp;</li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/allcourses.htm" style="border-bottom:none;"><i class="fa-book book-head"></i> All Courses </a></li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/testimonials.htm" style="border-bottom:none;"><i class="fa-check check"></i> Testimonial</a></li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/help.htm" style="border-bottom:none;"><i class="fa-question book-head"></i> Help/FAQ</a></li>
+                        <li style="border-bottom:none;"><a href="absoluteclasses/contact_abc.htm" style="border-bottom:none;"><i class="fa fa-envelope-o"></i> Contact</a></li>
+                                             
+                     </ul>
+                  
+            </li></ul>
+         </nav>
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="../images/java-mini-logo.png" alt="Swing Tutorial" />
+</div>
+<ul class="nav nav-list primary left-menu"><li><a target="_top" href="../index.htm"><b>Back to Home</b></a></li></ul><ul class="nav nav-list primary left-menu">
+<li class="heading">SWING GUI Library</li>
+
+<li><a target="_top" href="swing_overview.htm">SWING - Overview</a></li>
+<li><a target="_top" href="swing_environment.htm">SWING - Environment</a></li>
+<li><a target="_top" href="swing_controls.htm">SWING - Controls</a></li>
+<li><a target="_top" href="swing_event_handling.htm">SWING - Event Handling</a></li>
+<li><a target="_top" href="swing_event_classes.htm">SWING - Event Classes</a></li>
+<li><a target="_top" href="swing_event_listeners.htm">SWING - Event Listeners</a></li>
+<li><a target="_top" href="swing_event_adapters.htm">SWING - Event Adapters</a></li>
+<li><a target="_top" href="swing_layouts.htm">SWING - Layouts</a></li>
+<li><a target="_top" href="swing_menu.htm">SWING - Menu</a></li>
+<li><a target="_top" href="swing_containers.htm">SWING - Containers</a></li>
+</ul>
+
+
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>SWING - JFileChooser Class</h1>
+<div class="topgooglead">
+<hr />
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js"></script></div> 
+<div class="pre-btn">
+<a href="swing_controls.htm"> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="swing_controls.htm">Next Page &nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr />
+<h2>Introduction</h2>
+<p>The class <b>JFileChooser</b> is a component which provides a simple mechanism for the user to choose a file. </p>
+<h2>Class declaration</h2>
+<p>Following is the declaration for <b>javax.swing.JFileChooser</b> class:</p>
+<pre class="prettyprint notranslate">
+public class JFileChooser
+   extends JComponent
+      implements Accessible
+</pre>
+<h2>Field</h2>
+<p>Following are the fields for <b>javax.swing.JFileChooser</b> class:</p>
+<ul class="list">
+<li><p><b>static String ACCEPT_ALL_FILE_FILTER_USED_CHANGED_PROPERTY </b> --Identifies whether a the AcceptAllFileFilter is used or not.</p></li>
+<li><p /><b>protected AccessibleContext accessibleContext </b></li>
+<li><p><b>static String ACCESSORY_CHANGED_PROPERTY </b> --Says that a different accessory component is in use (for example, to preview files).</p></li>
+<li><p><b>static String APPROVE_BUTTON_MNEMONIC_CHANGED_PROPERTY </b> --Identifies change in the mnemonic for the approve (yes, ok) button.</p></li>
+<li><p><b>static String APPROVE_BUTTON_TEXT_CHANGED_PROPERTY </b> --Identifies change in the text on the approve (yes, ok) button.</p></li>
+<li><p><b>static String APPROVE_BUTTON_TOOL_TIP_TEXT_CHANGED_PROPERTY </b> --Identifies change in the tooltip text for the approve (yes, ok) button.</p></li>
+<li><p><b>static int APPROVE_OPTION </b> --Return value if approve (yes, ok) is chosen.</p></li>
+<li><p><b>static String APPROVE_SELECTION </b> --Instruction to approve the current selection (same as pressing yes or ok).</p></li>
+<li><p><b>static int CANCEL_OPTION </b> --Return value if cancel is chosen.</p></li>
+<li><p><b>static String CANCEL_SELECTION </b> --Instruction to cancel the current selection.</p></li>
+<li><p><b>static String CHOOSABLE_FILE_FILTER_CHANGED_PROPERTY </b> --Identifies a change in the list of predefined file filters the user can choose from.</p></li>
+<li><p><b>static String CONTROL_BUTTONS_ARE_SHOWN_CHANGED_PROPERTY </b> --Instruction to display the control buttons.</p></li>
+<li><p><b>static int CUSTOM_DIALOG </b> --Type value indicating that the JFileChooser supports a developer-specified file operation.</p></li>
+<li><p><b>static String DIALOG_TITLE_CHANGED_PROPERTY </b> --Identifies a change in the dialog title.</p></li>
+<li><p><b>static String DIALOG_TYPE_CHANGED_PROPERTY </b> --Identifies a change in the type of files displayed (files only, directories only, or both files and directories).</p></li>
+<li><p><b>static int DIRECTORIES_ONLY </b> --Instruction to display only directories.</p></li>
+<li><p><b>static String DIRECTORY_CHANGED_PROPERTY </b> --Identifies user's directory change.</p></li>
+<li><p><b>static int ERROR_OPTION </b> --Return value if an error occured.</p></li>
+<li><p><b>static String FILE_FILTER_CHANGED_PROPERTY </b> --User changed the kind of files to display.</p></li>
+<li><p><b>static String FILE_HIDING_CHANGED_PROPERTY </b> --Identifies a change in the display-hidden-files property.</p></li>
+<li><p><b>static String FILE_SELECTION_MODE_CHANGED_PROPERTY </b> --Identifies a change in the kind of selection (single, multiple, etc.).</p></li>
+<li><p><b>static String FILE_SYSTEM_VIEW_CHANGED_PROPERTY </b> --Says that a different object is being used to find available drives on the system.</p></li>
+<li><p><b>static String FILE_VIEW_CHANGED_PROPERTY </b> --Says that a different object is being used to retrieve file information.</p></li>
+<li><p><b>static int FILES_AND_DIRECTORIES </b> --Instruction to display both files and directories.</p></li>
+<li><p><b>static int FILES_ONLY </b> --Instruction to display only files.</p></li>
+<li><p><b>static String MULTI_SELECTION_ENABLED_CHANGED_PROPERTY </b> --Enables multiple-file selections.</p></li>
+<li><p><b>static int OPEN_DIALOG </b> --Type value indicating that the JFileChooser supports an "Open" file operation.</p></li>
+<li><p><b>static int SAVE_DIALOG </b> --Type value indicating that the JFileChooser supports a "Save" file operation.</p></li>
+<li><p><b>static String SELECTED_FILE_CHANGED_PROPERTY </b> --Identifies change in user's single-file selection.</p></li>
+<li><p><b>static String SELECTED_FILES_CHANGED_PROPERTY </b> --Identifies change in user's multiple-file selection.</p></li>
+</ul>
+<h2>Class constructors</h2>
+<table class="table table-bordered">
+<tr>
+<th style="width:5%">S.N.</th>
+<th>Constructor &amp; Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td><b>JFileChooser() </b><p>Constructs a JFileChooser pointing to the user's default directory.</p></td>
+</tr>
+<tr>
+<td>2</td>
+<td><b>JFileChooser(File currentDirectory) </b><p>Constructs a JFileChooser using the given File as the path.</p></td>
+</tr>
+<tr>
+<td>3</td>
+<td><b>JFileChooser(File currentDirectory, FileSystemView fsv)</b><p> Constructs a JFileChooser using the given current directory and FileSystemView.</p></td>
+</tr>
+<tr>
+<td>4</td>
+<td><b>JFileChooser(FileSystemView fsv) </b><p>Constructs a JFileChooser using the given FileSystemView.</p></td>
+</tr>
+<tr>
+<td>5</td>
+<td><b>JFileChooser(String currentDirectoryPath) </b><p>Constructs a JFileChooser using the given path.</p></td>
+</tr>
+<tr>
+<td>6</td>
+<td><b>JFileChooser(String currentDirectoryPath, FileSystemView fsv) </b><p>Constructs a JFileChooser using the given current directory path and FileSystemView.</p></td>
+</tr>
+</table>
+<h2>Class methods</h2>
+<table class="table table-bordered">
+<tr>
+<th style="width:5%">S.N.</th>
+<th>Method &amp; Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td><b>boolean accept(File f) </b><p>Returns true if the file should be displayed.</p></td>
+</tr>
+<tr>
+<td>2</td>
+<td><b>void addActionListener(ActionListener l) </b><p>Adds an ActionListener to the file chooser.</p></td>
+</tr>
+<tr>
+<td>3</td>
+<td><b>void addChoosableFileFilter(FileFilter filter) </b><p>Adds a filter to the list of user choosable file filters.</p></td>
+</tr>
+<tr>
+<td>4</td>
+<td><b>void approveSelection() </b><p>Called by the UI when the user hits the Approve button (labeled "Open" or "Save", by default).</p></td>
+</tr>
+<tr>
+<td>5</td>
+<td><b>void cancelSelection() </b><p>Called by the UI when the user chooses the Cancel button.</p></td>
+</tr>
+<tr>
+<td>6</td>
+<td><b>void changeToParentDirectory() </b><p>Changes the directory to be set to the parent of the current directory.</p></td>
+</tr>
+<tr>
+<td>7</td>
+<td><b>protected  JDialog	createDialog(Component parent) </b><p>Creates and returns a new JDialog wrapping this centered on the parent in the parent's frame.</p></td>
+</tr>
+<tr>
+<td>8</td>
+<td><b>void ensureFileIsVisible(File f) </b><p>Makes sure that the specified file is viewable, and not hidden.</p></td>
+</tr>
+<tr>
+<td>9</td>
+<td><b>protected void fireActionPerformed(String command) </b><p>Notifies all listeners that have registered interest for notification on this event type.</p></td>
+</tr>
+<tr>
+<td>10</td>
+<td><b>FileFilter getAcceptAllFileFilter() </b><p>Returns the AcceptAll file filter.</p></td>
+</tr>
+<tr>
+<td>11</td>
+<td><b>AccessibleContext	getAccessibleContext() </b><p>Gets the AccessibleContext associated with this JFileChooser.</p></td>
+</tr>
+<tr>
+<td>12</td>
+<td><b>JComponent getAccessory() </b><p>Returns the accessory component.</p></td>
+</tr>
+<tr>
+<td>13</td>
+<td><b>ActionListener[]getActionListeners() </b><p>Returns an array of all the action listeners registered on this file chooser.</p></td>
+</tr>
+<tr>
+<td>14</td>
+<td><b>int getApproveButtonMnemonic() </b><p>Returns the approve button's mnemonic.</p></td>
+</tr>
+<tr>
+<td>15</td>
+<td><b>String getApproveButtonText() </b><p>Returns the text used in the ApproveButton in the FileChooserUI.</p></td>
+</tr>
+<tr>
+<td>16</td>
+<td><b>String getApproveButtonToolTipText() </b><p>Returns the tooltip text used in the ApproveButton.</p></td>
+</tr>
+<tr>
+<td>17</td>
+<td><b>FileFilter[] getChoosableFileFilters() </b><p>Gets the list of user choosable file filters.</p></td>
+</tr>
+<tr>
+<td>18</td>
+<td><b>boolean getControlButtonsAreShown() </b><p>Returns the value of the controlButtonsAreShown property.</p></td>
+</tr>
+<tr>
+<td>19</td>
+<td><b>File getCurrentDirectory() </b><p>Returns the current directory.</p></td>
+</tr>
+<tr>
+<td>20</td>
+<td><b>String getDescription(File f) </b><p>Returns the file description.</p></td>
+</tr>
+<tr>
+<td>21</td>
+<td><b>String getDialogTitle() </b><p>Gets the string that goes in the JFileChooser's titlebar.</p></td>
+</tr>
+<tr>
+<td>22</td>
+<td><b>int getDialogType() </b><p>Returns the type of this dialog.</p></td>
+</tr>
+<tr>
+<td>23</td>
+<td><b>boolean getDragEnabled() </b><p>Gets the value of the dragEnabled property.</p></td>
+</tr>
+<tr>
+<td>24</td>
+<td><b>FileFilter getFileFilter() </b><p>Returns the currently selected file filter.</p></td>
+</tr>
+<tr>
+<td>25</td>
+<td><b>int getFileSelectionMode() </b><p>Returns the current file-selection mode.</p></td>
+</tr>
+<tr>
+<td>26</td>
+<td><b>FileSystemView getFileSystemView() </b><p>Returns the file system view.</p></td>
+</tr>
+<tr>
+<td>27</td>
+<td><b>FileView getFileView() </b><p>Returns the current file view.</p></td>
+</tr>
+<tr>
+<td>28</td>
+<td><b>Icon getIcon(File f) </b><p>Returns the icon for this file or type of file, depending on the system.</p></td>
+</tr>
+<tr>
+<td>29</td>
+<td><b>String getName(File f) </b><p>Returns the filename.</p></td>
+</tr>
+<tr>
+<td>30</td>
+<td><b>File getSelectedFile() </b><p>Returns the selected file.</p></td>
+</tr>
+<tr>
+<td>31</td>
+<td><b>File[] getSelectedFiles() </b><p>Returns a list of selected files if the file chooser is set to allow multiple selection.</p></td>
+</tr>
+<tr>
+<td>32</td>
+<td><b>String getTypeDescription(File f) </b><p>Returns the file type.</p></td>
+</tr>
+<tr>
+<td>33</td>
+<td><b>FileChooserUI getUI() </b><p>Gets the UI object which implements the L&amp;F for this component.</p></td>
+</tr>
+<tr>
+<td>34</td>
+<td><b>String getUIClassID() </b><p>Returns a string that specifies the name of the L&F class that renders this component.</p></td>
+</tr>
+<tr>
+<td>35</td>
+<td><b>boolean isAcceptAllFileFilterUsed() </b><p>Returns whether the AcceptAll FileFilter is used.</p></td>
+</tr>
+<tr>
+<td>36</td>
+<td><b>boolean isDirectorySelectionEnabled() </b><p>Convenience call that determines if directories are selectable based on the current file selection mode.</p></td>
+</tr>
+<tr>
+<td>37</td>
+<td><b>boolean isFileHidingEnabled() </b><p>Returns true if hidden files are not shown in the file chooser; otherwise, returns false.</p></td>
+</tr>
+<tr>
+<td>38</td>
+<td><b>boolean isFileSelectionEnabled() </b><p>Convenience call that determines if files are selectable based on the current file selection mode.</p></td>
+</tr>
+<tr>
+<td>39</td>
+<td><b>boolean isMultiSelectionEnabled() </b><p>Returns true if multiple files can be selected.</p></td>
+</tr>
+<tr>
+<td>40</td>
+<td><b>boolean isTraversable(File f) </b><p>Returns true if the file (directory) can be visited.</p></td>
+</tr>
+<tr>
+<td>41</td>
+<td><b>protected String paramString() </b><p>Returns a string representation of this JFileChooser.</p></td>
+</tr>
+<tr>
+<td>42</td>
+<td><b>void removeActionListener(ActionListener l) </b><p>Removes an ActionListener from the file chooser.</p></td>
+</tr>
+<tr>
+<td>43</td>
+<td><b>boolean removeChoosableFileFilter(FileFilter f) </b><p>Removes a filter from the list of user choosable file filters.</p></td>
+</tr>
+<tr>
+<td>44</td>
+<td><b>void rescanCurrentDirectory() </b><p>Tells the UI to rescan its files list from the current directory.</p></td>
+</tr>
+<tr>
+<td>45</td>
+<td><b>void resetChoosableFileFilters() </b><p>Resets the choosable file filter list to its starting state.</p></td>
+</tr>
+<tr>
+<td>46</td>
+<td><b>void setAcceptAllFileFilterUsed(boolean b) </b><p>Determines whether the AcceptAll FileFilter is used as an available choice in the choosable filter list.</p></td>
+</tr>
+<tr>
+<td>47</td>
+<td><b>void setAccessory(JComponent newAccessory) </b><p>Sets the accessory component.</p></td>
+</tr>
+<tr>
+<td>48</td>
+<td><b>void setApproveButtonMnemonic(char mnemonic)</b><p> Sets the approve button's mnemonic using a character.</p></td>
+</tr>
+<tr>
+<td>49</td>
+<td><b>void setApproveButtonMnemonic(int mnemonic) </b><p>Sets the approve button's mnemonic using a numeric keycode.</p></td>
+</tr>
+<tr>
+<td>50</td>
+<td><b>void setApproveButtonText(String approveButtonText) </b><p>Sets the text used in the ApproveButton in the FileChooserUI.</p></td>
+</tr>
+<tr>
+<td>51</td>
+<td><b>void setApproveButtonToolTipText(String toolTipText)</b><p> Sets the tooltip text used in the ApproveButton.</p></td>
+</tr>
+<tr>
+<td>52</td>
+<td><b>void setControlButtonsAreShown(boolean b) </b><p>Sets the property that indicates whether the approve and cancel buttons are shown in the file chooser.</p></td>
+</tr>
+<tr>
+<td>53</td>
+<td><b>void setCurrentDirectory(File dir) </b><p>Sets the current directory.</p></td>
+</tr>
+<tr>
+<td>54</td>
+<td><b>void setDialogTitle(String dialogTitle) </b><p>Sets the string that goes in the JFileChooser window's title bar.</p></td>
+</tr>
+<tr>
+<td>55</td>
+<td><b>void setDialogType(int dialogType) </b><p>Sets the type of this dialog.</p></td>
+</tr>
+<tr>
+<td>56</td>
+<td><b>void setDragEnabled(boolean b) </b><p>Sets the dragEnabled property, which must be true to enable automatic drag handling (the first part of drag and drop) on this component.</p></td>
+</tr>
+<tr>
+<td>57</td>
+<td><b>void setFileFilter(FileFilter filter) </b><p>Sets the current file filter.</p></td>
+</tr>
+<tr>
+<td>58</td>
+<td><b>void setFileHidingEnabled(boolean b) </b><p>Sets file hiding on or off.</p></td>
+</tr>
+<tr>
+<td>59</td>
+<td><b>void setFileSelectionMode(int mode) </b><p>Sets the JFileChooser to allow the user to just select files, just select directories, or select both files and directories.</p></td>
+</tr>
+<tr>
+<td>60</td>
+<td><b>void setFileSystemView(FileSystemView fsv) </b><p>Sets the file system view that the JFileChooser uses for accessing and creating file system resources, such as finding the floppy drive and getting a list of root drives.</p></td>
+</tr>
+<tr>
+<td>61</td>
+<td><b>void setFileView(FileView fileView) </b><p>Sets the file view to used to retrieve UI information, such as the icon that represents a file or the type description of a file.</p></td>
+</tr>
+<tr>
+<td>62</td>
+<td><b>void setMultiSelectionEnabled(boolean b) </b><p>Sets the file chooser to allow multiple file selections.</p></td>
+</tr>
+<tr>
+<td>63</td>
+<td><b>void setSelectedFile(File file) </b><p>Sets the selected file.</p></td>
+</tr>
+<tr>
+<td>64</td>
+<td><b>void setSelectedFiles(File[] selectedFiles) </b><p>Sets the list of selected files if the file chooser is set to allow multiple selection.</p></td>
+</tr>
+<tr>
+<td>65</td>
+<td><b>protected void setup(FileSystemView view) </b><p>Performs common constructor initialization and setup.</p></td>
+</tr>
+<tr>
+<td>66</td>
+<td><b>int showDialog(Component parent, String approveButtonText) </b><p>Pops a custom file chooser dialog with a custom approve button.</p></td>
+</tr>
+<tr>
+<td>67</td>
+<td><b>int showOpenDialog(Component parent) </b><p>Pops up an "Open File" file chooser dialog.</p></td>
+</tr>
+<tr>
+<td>68</td>
+<td><b>int showSaveDialog(Component parent) </b><p>Pops up a "Save File" file chooser dialog.</p></td>
+</tr>
+<tr>
+<td>69</td>
+<td><b>void updateUI() </b><p>Resets the UI property to a value from the current look and feel.</p></td>
+</tr>
+</table>
+<h2>Methods inherited</h2>
+<p>This class inherits methods from the following classes:</p>
+<ul class="list">
+<li><p>javax.swing.JComponent</p></li>
+<li><p>java.awt.Container</p></li>
+<li><p>java.awt.Component</p></li>
+<li><p>java.lang.Object</p></li>
+</ul>
+<h2>JFileChooser Example</h2>
+<p>Create the following java program using any editor of your choice in say <b>D:/ &gt; SWING &gt; com &gt; tutorialspoint &gt; gui &gt;</b></p>
+<i>SwingControlDemo.java</i>
+<pre class="prettyprint notranslate">
+package com.tutorialspoint.gui;
+ 
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+ 
+public class SwingControlDemo {
+    
+   private JFrame mainFrame;
+   private JLabel headerLabel;
+   private JLabel statusLabel;
+   private JPanel controlPanel;
+
+   public SwingControlDemo(){
+      prepareGUI();
+   }
+
+   public static void main(String[] args){
+      SwingControlDemo  swingControlDemo = new SwingControlDemo();      
+      swingControlDemo.showFileChooserDemo();
+   }
+
+   private void prepareGUI(){
+      mainFrame = new JFrame("Java Swing Examples");
+      mainFrame.setSize(400,400);
+      mainFrame.setLayout(new GridLayout(3, 1));
+      mainFrame.addWindowListener(new WindowAdapter() {
+         public void windowClosing(WindowEvent windowEvent){
+            System.exit(0);
+         }        
+      });    
+      headerLabel = new JLabel("", JLabel.CENTER);        
+      statusLabel = new JLabel("",JLabel.CENTER);    
+
+      statusLabel.setSize(350,100);
+
+      controlPanel = new JPanel();
+      controlPanel.setLayout(new FlowLayout());
+
+      mainFrame.add(headerLabel);
+      mainFrame.add(controlPanel);
+      mainFrame.add(statusLabel);
+      mainFrame.setVisible(true);  
+   }
+
+   private void showFileChooserDemo(){
+      headerLabel.setText("Control in action: JFileChooser"); 
+
+      final JFileChooser  fileDialog = new JFileChooser();
+      JButton showFileDialogButton = new JButton("Open File");
+      showFileDialogButton.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            int returnVal = fileDialog.showOpenDialog(mainFrame);
+            if (returnVal == JFileChooser.APPROVE_OPTION) {
+               java.io.File file = fileDialog.getSelectedFile();
+               statusLabel.setText("File Selected :" 
+               + file.getName());
+            }
+            else{
+               statusLabel.setText("Open command cancelled by user." );           
+            }      
+         }
+      });
+      controlPanel.add(showFileDialogButton);
+      mainFrame.setVisible(true);  
+   }
+}
+</pre>
+<p>Compile the program using command prompt. Go to <b>D:/ &gt; SWING </b> and type the following command.</p>
+<pre class="prettyprint notranslate">
+D:\SWING>javac com\tutorialspoint\gui\SwingControlDemo.java
+</pre>
+<p>If no error comes that means compilation is successful. Run the program using following command.</p>
+<pre class="prettyprint notranslate">
+D:\SWING>java com.tutorialspoint.gui.SwingControlDemo
+</pre>
+<p>Verify the following output</p>
+<img src="/swing/images/swing_jfilechooser.jpg" alt="Swing JFileChooser" />
+<hr style="margin-bottom:1.25% !important;"><div class="pre-btn">
+<a href="swing_controls.htm"> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="/cgi-bin/printpage.cgi" target="_blank Print</a>
+</div>
+<div class="nxt-btn">
+<a href="swing_controls.htm">Next Page &nbsp;</a>
+</div>
+<div class="parent-file">swing_controls.htm</div>
+<hr />
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<!-- AddThis Button BEGIN -->
+<!--
+<div class="simple-ad">
+<div class="addthis_sharing_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f661ec623a400f0"></script>
+</div>
+-->
+<!-- AddThis Button END -->
+<!--
+<div class="google-ad" style="position:relative; left:20px;">Advertisements</div>
+-->
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="inner">
+<div class="container">
+<div class="row">
+<div class="footer-ribon">
+<span>Extras</span>
+</div>
+<div class="col-md-2">
+<h4>Mobile First</h4>
+<ul class="list icons list-unstyled">
+<li><a id="iphone" href="https://itunes.apple.com/om/app/tutorials-point/id914891263?mt=8" target="_blank" rel="nofollow"><img alt="tutorialspoint iPhone App" src="../cdn/images/apple_store.jpg" class="mobile-apps" /></a></li>
+<li><a id="android" href="https://play.google.com/store/apps/details?id=com.tutorialspoint.onlineviewer" target="_blank" rel="nofollow"><img alt="tutorialspoint Android app" src="../cdn/images/google_play.jpg" class="mobile-apps" /></a></li>
+<li><a id="microsoft" href="http://www.windowsphone.com/s?appid=91249671-7184-4ad6-8a5f-d11847946b09" target="_blank" rel="nofollow"><img alt="tutorialspoint Windows app" src="../cdn/images/windows_store.jpg" class="mobile-apps" /></a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<h4>About us</h4>
+<ul class="list icons list-unstyled">
+<li><i class="icon icon-caret-right"></i> <a href="/about/index.htm">Company</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_team.htm">Team</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_careers.htm">Careers</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_privacy.htm">Privacy Policy</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_terms_of_use.htm">Terms of use</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<h4>Extra Links</h4>
+<ul class="list icons list-unstyled">
+<li><i class="icon icon-caret-right"></i> <a href="forums/index.php">Forums</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="shorttutorials/">Articles</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="shared-tutorials.php">Shared</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="seo_tools.htm">Seo Tools</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="about/contact_us.htm">Contact</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<div class="contact-details">
+<h4>Contact Us</h4>
+<ul class="contact">
+<li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> 388-A , Road no 22, Jubilee Hills, Hyderabad Telangana, INDIA-500033</p></li>
+<li><p><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="about/contact_us.htm">Click Here</a></p></li>
+<li><p><i class="icon icon-dribbble"></i> <strong>Website:</strong> <a href="http://www.tutorialspoint.com">www.tutorialspoint.com</a></p></li>
+</ul>
+</div>
+<div class="social-icons">
+<ul class="social-icons">
+<li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+<li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+<li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+<li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+<li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="index.htm" class="logo">
+<img alt="Tutorials Point" class="img-responsive" src="../cdn/scripts/img/logo-footer.png" />
+</a>
+</div>
+<div class="col-md-6">
+<p>&copy; Copyright 2015. All Rights Reserved.</p>
+</div>
+<div class="col-md-4">
+<nav id="sub-menu">
+<ul>
+<li><a href="/about/tutorials_writing.htm">Write for us</a></li>
+<li><a href="/about/faq.htm">FAQ's</a></li>
+<li><a href="/about/about_helping.htm">Helping</a></li>
+<li><a href="/about/contact_us.htm">Contact</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="../cdn/theme/js/custom-min.js"></script>
+<script src="../../www.google-analytics.com/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+</div>
+</body>
+</html>

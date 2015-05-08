@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8"> </html><![endif]-->
+<!--[if IE 9]><html class="ie ie9"> </html><![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+<!-- Original URL: http://www.tutorialspoint.com./swing_joptionpane.htm
+Date Downloaded: 2015-05-08 11:38:31 AM !-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Basic -->
+<meta charset="utf-8" />
+<title>SWING JOptionPane Class</title>
+<meta name="Description" content="Swing JOptionPane Class -  Learn Swing Framework in simple and easy steps using this beginner's tutorial containing basic to advanced knowledge starting from Environment Setup, Swing, Graphical User Interface, Swing Controls, Event Handling, Event Classes, Event listener interfaces, Layout Managers, Adapters, Layouts, Menus" />
+<meta name="Keywords" content="Swing, Graphical User Interface, Swing Controls, Event Handling, Event Classes, Event listener interfaces, Layout Managers, Adapters, Layouts, Menus " />
+
+<link rel="shortcut icon" href="../cdn/favicon.png" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+<meta name="author" content="tutorialspoint.com" />
+<meta property="fb:app_id" content="471319149685276" />
+<script type="text/javascript" src="../cdn/theme/js/script-min-v1.js"></script>
+<link rel="stylesheet" href="../cdn/theme/css/style-min-v1.css" />
+<link rel="stylesheet" href="../css/tomorrow-night.css" />
+<!--[if IE]>
+<link rel="stylesheet" href="../cdn/theme/css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<script src="../cdn/theme/vendor/respond.js"></script>
+<![endif]-->
+<!--[if IE]>
+<link rel="stylesheet" href="../cdn/theme/css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<script src="../cdn/theme/vendor/respond.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="../cdn/theme/css/ie8.css" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="../cdn/theme/css/ie9.css" />
+<![endif]-->
+<!-- Front Page related changes -->
+<style>
+
+
+
+
+img.mobile-apps { border: 1px solid #507a9b !important; }
+footer i.icon, footer ul.list.icons li i { color: #507a9b !important; }
+button.btn-responsive-nav, header div.search button.btn-default { background: #507a9b !important;}
+.social-icons-top { display:none; }
+</style>
+</head>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+<body onload="prettyPrint()">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="../cdn/images/loading-cg.gif" alt="" width="70" height="70" />
+   </div>
+</div>
+<div id="divGoogle"></div>
+<div class="body">
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="index.htm" title="tutorialspoint">
+      <img alt="JavaDox" src="../images/logo.png" />
+      </a>
+      </h1>			
+      <div class="search" id="searchBar">
+         <form method="get" id="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="www.tutorialspoint.com" />
+            <div class="input-group">
+               <input type="text" class="form-control search" name="q" id="q" autocomplete="off" placeholder="Search your tutorials..." onfocus="if (this.value == 'Search your tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your tutorials...';}" />
+               <input value="FORID:11" name="cof" type="hidden" />
+               <input type="hidden" name="ie" value="ISO-8859-1" />
+               <span class="input-group-btn"> <button class="btn btn-default" type="submit" onclick="javascript:void(0);"><i class="icon icon-search"></i></button> </span>
+            </div>
+         </form>
+      </div>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li><a id="free-training-icon" href="absoluteclasses.htm"><img src="../cdn/images/free-training.jpg" style="width:100px; position:absolute;left:-158px; top:-7px; z-index:99;" title="Free Online Training" /></a></li>
+            <li> <a href="shared-tutorials.php"><i class="icon icon-user"></i> &nbsp;Shared</a> </li>
+            <li> <a href="shorttutorials"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>
+            <li>
+            <div class="social-icons social-icons-top">
+               <ul class="social-icons">
+               <li class="facebook"><a href="http://www.facebook.com/tutorialspointindia" target="_blank" title="Facebook">Facebook</a></li>
+               <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" title="Twitter">Twitter</a></li>
+               <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+               <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+               </ul>
+            </div>
+            </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button>
+   </div>
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown"><a class="dropdown-toggle tut-lib" href="tutorialslibrary.htm"> Tutorials Library </a>
+      <ul class="dropdown-menu" id="submenu">
+         <li>
+            <div class="mega-menu-content">
+              <div class="row">
+                 <div class="col-md-6">
+                    <ul class="sub-menu">
+                     <li><a href="academic_tutorials.htm">Academic</a></li>
+                     <li><a href="big_data_tutorials.htm">Big Data</a></li>
+                     <li><a href="database_tutorials.htm">Databases</a></li>
+                     <li><a href="java_technology_tutorials.htm">Java Technologies</a></li>
+                     <li><a href="mainframe_tutorials.htm">Mainframe</a></li>
+                     <li><a href="management_tutorials.htm">Management</a></li>
+                     <li><a href="microsoft_technologies_tutorials.htm">Microsoft Technologies</a></li>
+                     <li><a href="misc_tutorials.htm">Miscellaneous</a></li>
+                   </ul>
+                 </div>
+                 <div class="col-md-6">
+                  <ul class="sub-menu">
+                     <li><a href="mobile_development_tutorials.htm">Mobile Development</a></li>
+                     <li><a href="computer_programming_tutorials.htm">Programming</a></li>
+                     <li><a href="scripting_lnaguage_tutorials.htm">Scripts</a></li>
+                     <li><a href="software_quality_tutorials.htm">Software Quality</a></li>
+                     <li><a href="telecom_tutorials.htm">Telecom</a></li>
+                     <li><a href="web_development_tutorials.htm">Web Development</a></li>
+                     <li><a href="xml_technologies_tutorials.htm">XML Technologies</a></li>
+                     <li><a href="multi_language_tutorials.htm">Multi Language Tutorials</a></li>
+                  </ul>
+                 </div>
+              </div>
+            </div>
+         </li>
+       </ul>
+               </li>
+               <li class="dropdown"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground</a> </li>
+                  <li class="dropdown"> 							
+                     <a class="dropdown-toggle tut-plus" href="absoluteclasses.htm">Absolute Classes</a>                     <ul class="dropdown-menu" id="submenu1">
+                                                <li class="current-menu-ancestor current-menu-parent active dropdown-submenu" style="border-bottom:none;">
+                        </li><li style="border-bottom:none;"><a href="absoluteclasses/userlogin.htm"><i class="fa-sign-in"></i>&nbsp;Login</a></li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px" class="stickyhide">&nbsp;</li>
+                        <li><a href="absoluteclasses/usersignup.htm"><i class="fa-pencil-square-o"></i>&nbsp;Sign Up&nbsp;</a></li>
+                        <li style="border-bottom:none;"><a href="absoluteclasses/upcomingclasses.htm" style="border-bottom:none;"><i class="fa-book book-head"></i> Upcoming Classes </a></li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px">&nbsp;</li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px">&nbsp;</li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/allcourses.htm" style="border-bottom:none;"><i class="fa-book book-head"></i> All Courses </a></li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/testimonials.htm" style="border-bottom:none;"><i class="fa-check check"></i> Testimonial</a></li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/help.htm" style="border-bottom:none;"><i class="fa-question book-head"></i> Help/FAQ</a></li>
+                        <li style="border-bottom:none;"><a href="absoluteclasses/contact_abc.htm" style="border-bottom:none;"><i class="fa fa-envelope-o"></i> Contact</a></li>
+                                             
+                     </ul>
+                  
+            </li></ul>
+         </nav>
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="../images/java-mini-logo.png" alt="Swing Tutorial" />
+</div>
+<ul class="nav nav-list primary left-menu"><li><a target="_top" href="../index.htm"><b>Back to Home</b></a></li></ul><ul class="nav nav-list primary left-menu">
+<li class="heading">SWING GUI Library</li>
+
+<li><a target="_top" href="swing_overview.htm">SWING - Overview</a></li>
+<li><a target="_top" href="swing_environment.htm">SWING - Environment</a></li>
+<li><a target="_top" href="swing_controls.htm">SWING - Controls</a></li>
+<li><a target="_top" href="swing_event_handling.htm">SWING - Event Handling</a></li>
+<li><a target="_top" href="swing_event_classes.htm">SWING - Event Classes</a></li>
+<li><a target="_top" href="swing_event_listeners.htm">SWING - Event Listeners</a></li>
+<li><a target="_top" href="swing_event_adapters.htm">SWING - Event Adapters</a></li>
+<li><a target="_top" href="swing_layouts.htm">SWING - Layouts</a></li>
+<li><a target="_top" href="swing_menu.htm">SWING - Menu</a></li>
+<li><a target="_top" href="swing_containers.htm">SWING - Containers</a></li>
+</ul>
+
+
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>SWING - JOptionPane Class</h1>
+<div class="topgooglead">
+<hr />
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js"></script></div> 
+<div class="pre-btn">
+<a href="swing_controls.htm"> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="swing_controls.htm">Next Page &nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr />
+<h2>Introduction</h2>
+<p>The class <b>JOptionPane</b> is a component which provides standard methods to pop up a standard dialog box for a value or informs user of something. </p>
+<h2>Class declaration</h2>
+<p>Following is the declaration for <b>javax.swing.JOptionPane</b> class:</p>
+<pre class="prettyprint notranslate">
+public class JOptionPane
+   extends JComponent
+      implements Accessible
+</pre>
+<h2>Field</h2>
+<p>Following are the fields for <b>javax.swing.JOptionPane</b> class:</p>
+<ul class="list">
+<li><p><b>static int CANCEL_OPTION</b> -- Return value from class method if CANCEL is chosen.</p></li>
+<li><p><b>static int CLOSED_OPTION</b> -- Return value from class method if user closes window without selecting anything, more than likely this should be treated as either a CANCEL_OPTION or NO_OPTION.</p></li>
+<li><p><b>static int DEFAULT_OPTION</b> -- Type meaning Look and Feel should not supply any options -- only use the options from the JOptionPane.</p></li>
+<li><p><b>static int ERROR_MESSAGE</b> -- Used for error messages.</p></li>
+<li><p><b>protected Icon icon</b> -- Icon used in pane.</p></li>
+<li><p><b>static string ICON_PROPERTY</b> -- Bound property name for icon.</p></li>
+<li><p><b>static int INFORMATION_MESSAGE</b> -- Used for information messages.</p></li>
+<li><p><b>static string INITIAL_SELECTION_VALUE_PROPERTY</b> -- Bound property name for initialSelectionValue.</p></li>
+<li><p><b>static string INITIAL_VALUE_PROPERTY</b> -- Bound property name for initialValue.</p></li>
+<li><p><b>protected Object initialSelectionValue</b> -- Initial value to select in selectionValues.</p></li>
+<li><p><b>protected Object initialValue</b> -- Value that should be initially selected in options.</p></li>
+<li><p><b>static string INPUT_VALUE_PROPERTY</b> -- Bound property name for inputValue.</p></li>
+<li><p><b>protected Object inputValue</b> -- Value the user has input.</p></li>
+<li><p><b>protected Object message</b> -- Message to display.</p></li>
+<li><p><b>static string MESSAGE_PROPERTY</b> -- Bound property name for message.</p></li>
+<li><p><b>static string MESSAGE_TYPE_PROPERTY</b> -- Bound property name for type.</p></li>
+<li><p><b>static int OK_CANCEL_OPTION</b> -- Type used for showConfirmDialog.</p></li>
+<li><p><b>protected int	messageType</b> -- Message type.</p></li>
+<li><p><b>static int NO_OPTION</b> -- Return value from class method if NO is chosen.</p></li>
+<li><p><b>static int OK_OPTION</b> -- Return value form class method if OK is chosen.</p></li>
+<li><p><b>static string OPTION_TYPE_PROPERTY</b> -- Bound property name for optionType.</p></li>
+<li><p><b>protected Object[]	options</b> -- Options to display to the user.</p></li>
+<li><p><b>static string OPTIONS_PROPERTY</b> -- Bound property name for option.</p></li>
+<li><p><b>protected int	optionType</b> -- Option type, one of DEFAULT_OPTION, YES_NO_OPTION, YES_NO_CANCEL_OPTION or OK_CANCEL_OPTION.</p></li>
+<li><p><b>static int PLAIN_MESSAGE</b> -- No icon is used.</p></li>
+<li><p><b>static int QUESTION_MESSAGE</b> -- Used for questions.</p></li>
+<li><p><b>static string SELECTION_VALUES_PROPERTY</b> -- Bound property name for selectionValues.</p></li>
+<li><p><b>protected Object[] selectionValues</b> -- Array of values the user can choose from.</p></li>
+<li><p><b>static Object UNINITIALIZED_VALUE</b> -- Indicates that the user has not yet selected a value.</p></li>
+<li><p><b>protected Object value</b> -- Currently selected value, will be a valid option, or UNINITIALIZED_VALUE or null.</p></li>
+<li><p><b>static string VALUE_PROPERTY</b> -- Bound property name for value.</p></li>
+<li><p><b>static string WANTS_INPUT_PROPERTY</b> -- Bound property name for wantsInput.</p></li>
+<li><p><b>protected boolean wantsInput</b> -- If true, a UI widget will be provided to the user to get input.</p></li>
+<li><p><b>static int WARNING_MESSAGE</b> -- Used for warning messages.</p></li>
+<li><p><b>static int YES_NO_CANCEL_OPTION</b> -- Type used for showConfirmDialog.</p></li>
+<li><p><b>static int YES_NO_OPTION</b> -- Type used for showConfirmDialog.</p></li>
+<li><p><b>static int YES_OPTION</b> -- Return value from class method if YES is chosen.</p></li>
+</ul>
+<h2>Class constructors</h2>
+<table class="table table-bordered">
+<tr>
+<th style="width:5%">S.N.</th>
+<th>Constructor &amp; Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td><b>JOptionPane()</b><p>Creates a JOptionPane with a test message.</p></td>
+</tr>
+<tr>
+<td>2</td>
+<td><b>JOptionPane(Object message)</b><p>Creates a instance of JOptionPane to display a message using the plain-message message type and the default options delivered by the UI.</p></td>
+</tr>
+<tr>
+<td>3</td>
+<td><b>JOptionPane(Object message, int messageType)</b><p>Creates an instance of JOptionPane to display a message with the specified message type and the default options</p></td>
+</tr>
+<tr>
+<td>4</td>
+<td><b>JOptionPane(Object message, int messageType, int optionType)</b><p>Creates an instance of JOptionPane to display a message with the specified message type and options.</p></td>
+</tr>
+<tr>
+<td>5</td>
+<td><b>JOptionPane(Object message, int messageType, int optionType, Icon icon)</b><p>Creates an instance of JOptionPane to display a message with the specified message type, options, and icon.</p></td>
+</tr>
+<tr>
+<td>6</td>
+<td><b>JOptionPane(Object message, int messageType, int optionType, Icon icon, Object[] options)</b><p>Creates an instance of JOptionPane to display a message with the specified message type, icon, and options.</p></td>
+</tr>
+<tr>
+<td>7</td>
+<td><b>JOptionPane(Object message, int messageType, int optionType, Icon icon, Object[] options, Object initialValue)</b><p>Creates an instance of JOptionPane to display a message with the specified message type, icon, and options, with the initially-selected option specified.</p></td>
+</tr>
+</table>
+<h2>Class methods</h2>
+<table class="table table-bordered">
+<tr>
+<th style="width:5%">S.N.</th>
+<th>Method &amp; Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td><b>JDialog createDialog(Component parentComponent, String title)</b><p>Creates and returns a new JDialog wrapping this centered on the parentComponent in the parentComponent's frame.</p></td>
+</tr>
+<tr>
+<td>2</td>
+<td><b>JDialog createDialog(String title)</b><p>Creates and returns a new parentless JDialog with the specified title.</p></td>
+</tr>
+<tr>
+<td>3</td>
+<td><b>JInternalFrame	createInternalFrame(Component parentComponent, String title)</b><p>Creates and returns an instance of JInternalFrame.</p></td>
+</tr>
+<tr>
+<td>4</td>
+<td><b>AccessibleContext getAccessibleContext()</b><p>Returns the AccessibleContext associated with this JOptionPane.</p></td>
+</tr>
+<tr>
+<td>5</td>
+<td><b>static JDesktopPane getDesktopPaneForComponent(Component parentComponent)</b><p>Returns the specified component's desktop pane.</p></td>
+</tr>
+<tr>
+<td>6</td>
+<td><b>static Frame getFrameForComponent(Component parentComponent)</b><p>Returns the specified component's Frame.</p></td>
+</tr>
+<tr>
+<td>7</td>
+<td><b>Icon getIcon()</b><p>Returns the icon this pane displays.</p></td>
+</tr>
+<tr>
+<td>8</td>
+<td><b>Object getInitialSelectionValue()</b><p />Returns the input value that is displayed as initially selected to the user.
+</td></tr><tr>
+<td>9</td>
+<td><b>Object getInitialValue()</b><p>Returns the initial value.</p></td>
+</tr>
+<tr>
+<td>10</td>
+<td><b>Object getInputValue()</b><p>Returns the value the user has input, if wantsInput is true.</p></td>
+</tr>
+<tr>
+<td>11</td>
+<td><b>int getMaxCharactersPerLineCount()</b><p>Returns the maximum number of characters to place on a line in a message.</p></td>
+</tr>
+<tr>
+<td>12</td>
+<td><b>Object getMessage()</b><p>Returns the message-object this pane displays.</p></td>
+</tr>
+<tr>
+<td>13</td>
+<td><b>int getMessageType()</b><p>Returns the message type.</p></td>
+</tr>
+<tr>
+<td>14</td>
+<td><b>Object[] getOptions()</b><p>Returns the choices the user can make.</p></td>
+</tr>
+<tr>
+<td>15</td>
+<td><b>int getOptionType()</b><p>Returns the type of options that are displayed.</p></td>
+</tr>
+<tr>
+<td>16</td>
+<td><b>static Frame getRootFrame()</b><p>Returns the Frame to use for the class methods in which a frame is not provided.</p></td>
+</tr>
+<tr>
+<td>17</td>
+<td><b>Object[] getSelectionValues()</b><p>Returns the input selection values.</p></td>
+</tr>
+<tr>
+<td>18</td>
+<td><b>OptionPaneUI getUI()</b><p>Returns the UI object which implements the L&F for this component.</p></td>
+</tr>
+<tr>
+<td>19</td>
+<td><b>String getUIClassID()</b><p>Returns the name of the UI class that implements the L&F for this component.</p></td>
+</tr>
+<tr>
+<td>20</td>
+<td><b>Object getValue()</b><p>Returns the value the user has selected.</p></td>
+</tr>
+<tr>
+<td>21</td>
+<td><b>boolean getWantsInput()</b><p>Returns the value of the wantsInput property.</p></td>
+</tr>
+<tr><td>22</td>
+<td><b>protected String	paramString()</b><p>Returns a string representation of this JOptionPane.</p></td>
+</tr>
+<tr>
+<td>23</td>
+<td><b>void selectInitialValue()</b><p>Requests that the initial value be selected, which will set focus to the initial value.</p></td>
+</tr>
+<tr>
+<td>24</td>
+<td><b>void setIcon(Icon newIcon)</b><p>Sets the icon to display.</p></td>
+</tr>
+<tr>
+<td>25</td>
+<td><b>void setInitialSelectionValue(Object newValue)</b><p>Sets the input value that is initially displayed as selected to the user.</p></td>
+</tr>
+<tr>
+<td>26</td>
+<td><b>void setInitialValue(Object newInitialValue)</b><p>Sets the initial value that is to be enabled -- the Component that has the focus when the pane is initially displayed.</p></td>
+</tr>
+<tr>
+<td>27</td>
+<td><b>void setInputValue(Object newValue)</b><p>Sets the input value that was selected or input by the user.</p></td>
+</tr>
+<tr>
+<td>28</td>
+<td><b>void setMessage(Object newMessage)</b><p>Sets the option pane's message-object.</p></td>
+</tr>
+<tr>
+<td>29</td>
+<td><b>void setMessageType(int newType)</b><p>Sets the option pane's message type.</p></td>
+</tr>
+<tr>
+<td>30</td>
+<td><b>void setOptions(Object[] newOptions)</b><p>Sets the options this pane displays.</p></td>
+</tr>
+<tr>
+<td>31</td>
+<td><b>void setOptionType(int newType)</b><p> Sets the options to display.</p></td>
+</tr>
+<tr>
+<td>32</td>
+<td><b>static voidsetRootFrame(Frame newRootFrame)</b><p>Sets the frame to use for class methods in which a frame is not provided.</p></td>
+</tr>
+<tr>
+<td>33</td>
+<td><b>void setSelectionValues(Object[] newValues)</b><p>Sets the input selection values for a pane that provides the user with a list of items to choose from.</p></td>
+</tr>
+<tr>
+<td>34</td>
+<td><b>void setUI(OptionPaneUI ui)</b><p>Sets the UI object which implements the L&amp;F for this component.</p></td>
+</tr>
+<tr>
+<td>35</td>
+<td><b>void setValue(Object newValue)</b><p>Sets the value the user has chosen.</p></td>
+</tr>
+<tr>
+<td>36</td>
+<td><b>void setWantsInput(boolean newValue)</b><p>Sets the wantsInput property.</p></td>
+</tr>
+<tr>
+<td>37</td>
+<td><b>static int showConfirmDialog(Component parentComponent, Object message)</b><p>Brings up a dialog with the options Yes, No and Cancel; with the title, Select an Option.</p></td>
+</tr>
+<tr>
+<td>38</td>
+<td><b>static int showConfirmDialog(Component parentComponent, Object message, String title, int optionType)</b><p>Brings up a dialog where the number of choices is determined by the optionType parameter.</p></td>
+</tr>
+<tr>
+<td>39</td>
+<td><b>static int showConfirmDialog(Component parentComponent, Object message, String title, int optionType, int messageType)</b><p>Brings up a dialog where the number of choices is determined by the optionType parameter, where the messageType parameter determines the icon to display.</p></td>
+</tr>
+<tr>
+<td>40</td>
+<td><b>static int showConfirmDialog(Component parentComponent, Object message, String title, int optionType, int messageType, Icon icon)</b><p>Brings up a dialog with a specified icon, where the number of choices is determined by the optionType parameter.</p></td>
+</tr>
+<tr>
+<td>41</td>
+<td><b>static String showInputDialog(Component parentComponent, Object message)</b><p>Shows a question-message dialog requesting input from the user parented to parentComponent.</p></td>
+</tr>
+<tr>
+<td>42</td>
+<td><b>static String	showInputDialog(Component parentComponent, Object message, Object initialSelectionValue)</b><p>Shows a question-message dialog requesting input from the user and parented to parentComponent.</p></td>
+</tr>
+<tr>
+<td>43</td>
+<td><b>static String	showInputDialog(Component parentComponent, Object message, String title, int essageType)</b><p>Shows a dialog requesting input from the user parented to parentComponent with the dialog having the title title and message type messageType.</p></td>
+</tr>
+<tr>
+<td>44</td>
+<td><b>static Object showInputDialog(Component parentComponent, Object message, String title, int messageType, Icon icon, Object[] selectionValues, Object initialSelectionValue)</b><p>Prompts the user for input in a blocking dialog where the initial selection, possible selections, and all other options can be specified.</p></td>
+</tr>
+<tr>
+<td>45</td>
+<td><b>static String showInputDialog(Object message)</b><p>Shows a question-message dialog requesting input from the user.</p></td>
+</tr>
+<tr>
+<td>46</td>
+<td><b>static String showInputDialog(Object message, Object initialSelectionValue)</b><p>Shows a question-message dialog requesting input from the user, with the input value initialized to initialSelectionValue.</p></td>
+</tr>
+<tr>
+<td>47</td>
+<td><b>static int showInternalConfirmDialog(Component parentComponent, Object message)</b><p>Brings up an internal dialog panel with the options Yes, No and Cancel; with the title, Select an Option.</p></td>
+</tr>
+<tr>
+<td>48</td>
+<td><b>static int showInternalConfirmDialog(Component parentComponent, Object message, String title, int optionType)</b><p>Brings up a internal dialog panel where the number of choices is determined by the optionType parameter.</p></td>
+</tr>
+<tr>
+<td>49</td>
+<td><b>static int showInternalConfirmDialog(Component parentComponent, Object message, String title, int optionType, int messageType)</b><p>Brings up an internal dialog panel where the number of choices is determined by the optionType parameter, where the messageType parameter determines the icon to display.</p></td>
+</tr>
+<tr>
+<td>50</td>
+<td><b>static int showInternalConfirmDialog(Component parentComponent, Object message, String title, int optionType, int messageType, Icon icon)</b><p>Brings up an internal dialog panel with a specified icon, where the number of choices is determined by the optionType parameter.</p></td>
+</tr>
+<tr>
+<td>51</td>
+<td><b>static String	showInternalInputDialog(Component parentComponent, Object message)</b><p>Shows an internal question-message dialog requesting input from the user parented to parentComponent.</p></td>
+</tr>
+<tr>
+<td>52</td>
+<td><b>static String	showInternalInputDialog(Component parentComponent, Object message, String title, int messageType)</b><p>Shows an internal dialog requesting input from the user parented to parentComponent with the dialog having the title title and message type messageType.</p></td>
+</tr>
+<tr>
+<td>53</td>
+<td><b>static Object showInternalInputDialog(Component parentComponent, Object message, String title, int messageType, Icon icon, Object[] selectionValues, Object initialSelectionValue)</b><p>Prompts the user for input in a blocking internal dialog where the initial selection, possible selections, and all other options can be specified.</p></td>
+</tr>
+<tr>
+<td>54</td>
+<td><b>static voidshowInternalMessageDialog(Component parentComponent, Object message)</b><p>Brings up an internal confirmation dialog panel.</p></td>
+</tr>
+<tr>
+<td>55</td>
+<td><b>static voidshowInternalMessageDialog(Component parentComponent, Object message, String title, int messageType)</b><p>Brings up an internal dialog panel that displays a message using a default icon determined by the messageType parameter.</p></td>
+</tr>
+<tr>
+<td>56</td>
+<td><b>static voidshowInternalMessageDialog(Component parentComponent, Object message, String title, int messageType, Icon icon)</b><p>Brings up an internal dialog panel displaying a message, specifying all parameters.</p></td>
+</tr>
+<tr>
+<td>57</td>
+<td><b>static voidshowMessageDialog(Component parentComponent, Object message)</b><p>Brings up an information-message dialog titled "Message".</p></td>
+</tr>
+<tr>
+<td>58</td>
+<td><b>static voidshowMessageDialog(Component parentComponent, Object message, String title, int messageType)</b><p>Brings up a dialog that displays a message using a default icon determined by the messageType parameter.</p></td>
+</tr>
+<tr>
+<td>59</td>
+<td><b>static voidshowMessageDialog(Component parentComponent, Object message, String title, int messageType, Icon icon)</b><p>Brings up a dialog displaying a message, specifying all parameters.</p></td>
+</tr>
+<tr>
+<td>60</td>
+<td><b>static int	showOptionDialog(Component parentComponent, Object message, String title, int optionType, int messageType, Icon icon, Object[] options, Object initialValue)</b><p>Brings up a dialog with a specified icon, where the initial choice is determined by the initialValue parameter and the number of choices is determined by the optionType parameter.</p></td>
+</tr>
+<tr>
+<td>61</td>
+<td><b>void updateUI()</b><p>Notification from the UIManager that the L&amp;F has changed.</p></td>
+</tr>
+<tr>
+<td>62</td>
+<td><b>static int showInternalOptionDialog(Component parentComponent, Object message, String title, int optionType, int messageType, Icon icon, Object[] options, Object initialValue)</b><p>Brings up an internal dialog panel with a specified icon, where the initial choice is determined by the initialValue parameter and the number of choices is determined by the optionType parameter.</p></td>
+</tr>
+</table>
+<h2>Methods inherited</h2>
+<p>This class inherits methods from the following classes:</p>
+<ul class="list">
+<li><p>javax.swing.JComponent</p></li>
+<li><p>java.awt.Container</p></li>
+<li><p>java.awt.Component</p></li>
+<li><p>java.lang.Object</p></li>
+</ul>
+<h2>JOptionPane Example</h2>
+<p>Create the following java program using any editor of your choice in say <b>D:/ &gt; SWING &gt; com &gt; tutorialspoint &gt; gui &gt;</b></p>
+<i>SwingControlDemo.java</i>
+<pre class="prettyprint notranslate">
+package com.tutorialspoint.gui;
+ 
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+ 
+public class SwingControlDemo {
+    
+   private JFrame mainFrame;
+   private JLabel headerLabel;
+   private JLabel statusLabel;
+   private JPanel controlPanel;
+
+   public SwingControlDemo(){
+      prepareGUI();
+   }
+
+   public static void main(String[] args){
+      SwingControlDemo  swingControlDemo = new SwingControlDemo();      
+      swingControlDemo.showDialogDemo();
+   }
+
+   private void prepareGUI(){
+      mainFrame = new JFrame("Java Swing Examples");
+      mainFrame.setSize(400,400);
+      mainFrame.setLayout(new GridLayout(3, 1));
+      mainFrame.addWindowListener(new WindowAdapter() {
+         public void windowClosing(WindowEvent windowEvent){
+            System.exit(0);
+         }        
+      });    
+      headerLabel = new JLabel("", JLabel.CENTER);        
+      statusLabel = new JLabel("",JLabel.CENTER);    
+
+      statusLabel.setSize(350,100);
+
+      controlPanel = new JPanel();
+      controlPanel.setLayout(new FlowLayout());
+
+      mainFrame.add(headerLabel);
+      mainFrame.add(controlPanel);
+      mainFrame.add(statusLabel);
+      mainFrame.setVisible(true);  
+   }
+
+   private void showDialogDemo(){                                       
+      headerLabel.setText("Control in action: JOptionPane"); 
+
+      JButton okButton = new JButton("OK");        
+      JButton javaButton = new JButton("Yes/No");
+      JButton cancelButton = new JButton("Yes/No/Cancel");
+
+      okButton.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent e) {
+            JOptionPane.showMessageDialog(
+            mainFrame, "Welcome to TutorialsPoint.com");
+         }          
+      });
+
+      javaButton.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent e) {
+            int output = JOptionPane.showConfirmDialog(mainFrame
+               , "Click any button"
+               ,"TutorialsPoint.com"
+               ,JOptionPane.YES_NO_OPTION);
+
+            if(output == JOptionPane.YES_OPTION){
+               statusLabel.setText("Yes selected.");
+            }else if(output == JOptionPane.NO_OPTION){
+               statusLabel.setText("No selected.");
+            }
+         }
+      });
+
+      cancelButton.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent e) {                
+            int output = JOptionPane.showConfirmDialog(mainFrame
+               , "Click any button"
+               ,"TutorialsPoint.com"
+               ,JOptionPane.YES_NO_CANCEL_OPTION,
+               JOptionPane.INFORMATION_MESSAGE);
+
+            if(output == JOptionPane.YES_OPTION){
+               statusLabel.setText("Yes selected.");
+            }else if(output == JOptionPane.NO_OPTION){
+               statusLabel.setText("No selected.");
+            }else if(output == JOptionPane.CANCEL_OPTION){
+               statusLabel.setText("Cancel selected.");
+            }
+         }
+      });
+
+      controlPanel.add(okButton);
+      controlPanel.add(javaButton);
+      controlPanel.add(cancelButton);       
+      mainFrame.setVisible(true);  
+   }
+}
+</pre>
+<p>Compile the program using command prompt. Go to <b>D:/ &gt; SWING</b> and type the following command.</p>
+<pre class="prettyprint notranslate">
+D:\SWING>javac com\tutorialspoint\gui\SwingControlDemo.java
+</pre>
+<p>If no error comes that means compilation is successful. Run the program using following command.</p>
+<pre class="prettyprint notranslate">
+D:\SWING>java com.tutorialspoint.gui.SwingControlDemo
+</pre>
+<p>Verify the following output</p>
+<img src="/swing/images/swing_joptionpane.jpg" alt="Swing JOptionPane" />
+<hr style="margin-bottom:1.25% !important;"><div class="pre-btn">
+<a href="swing_controls.htm"> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="/cgi-bin/printpage.cgi" target="_blank Print</a>
+</div>
+<div class="nxt-btn">
+<a href="swing_controls.htm">Next Page &nbsp;</a>
+</div>
+<div class="parent-file">swing_controls.htm</div>
+<hr />
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<!-- AddThis Button BEGIN -->
+<!--
+<div class="simple-ad">
+<div class="addthis_sharing_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f661ec623a400f0"></script>
+</div>
+-->
+<!-- AddThis Button END -->
+<!--
+<div class="google-ad" style="position:relative; left:20px;">Advertisements</div>
+-->
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="inner">
+<div class="container">
+<div class="row">
+<div class="footer-ribon">
+<span>Extras</span>
+</div>
+<div class="col-md-2">
+<h4>Mobile First</h4>
+<ul class="list icons list-unstyled">
+<li><a id="iphone" href="https://itunes.apple.com/om/app/tutorials-point/id914891263?mt=8" target="_blank" rel="nofollow"><img alt="tutorialspoint iPhone App" src="../cdn/images/apple_store.jpg" class="mobile-apps" /></a></li>
+<li><a id="android" href="https://play.google.com/store/apps/details?id=com.tutorialspoint.onlineviewer" target="_blank" rel="nofollow"><img alt="tutorialspoint Android app" src="../cdn/images/google_play.jpg" class="mobile-apps" /></a></li>
+<li><a id="microsoft" href="http://www.windowsphone.com/s?appid=91249671-7184-4ad6-8a5f-d11847946b09" target="_blank" rel="nofollow"><img alt="tutorialspoint Windows app" src="../cdn/images/windows_store.jpg" class="mobile-apps" /></a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<h4>About us</h4>
+<ul class="list icons list-unstyled">
+<li><i class="icon icon-caret-right"></i> <a href="/about/index.htm">Company</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_team.htm">Team</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_careers.htm">Careers</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_privacy.htm">Privacy Policy</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_terms_of_use.htm">Terms of use</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<h4>Extra Links</h4>
+<ul class="list icons list-unstyled">
+<li><i class="icon icon-caret-right"></i> <a href="forums/index.php">Forums</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="shorttutorials/">Articles</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="shared-tutorials.php">Shared</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="seo_tools.htm">Seo Tools</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="about/contact_us.htm">Contact</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<div class="contact-details">
+<h4>Contact Us</h4>
+<ul class="contact">
+<li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> 388-A , Road no 22, Jubilee Hills, Hyderabad Telangana, INDIA-500033</p></li>
+<li><p><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="about/contact_us.htm">Click Here</a></p></li>
+<li><p><i class="icon icon-dribbble"></i> <strong>Website:</strong> <a href="http://www.tutorialspoint.com">www.tutorialspoint.com</a></p></li>
+</ul>
+</div>
+<div class="social-icons">
+<ul class="social-icons">
+<li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+<li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+<li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+<li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+<li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="index.htm" class="logo">
+<img alt="Tutorials Point" class="img-responsive" src="../cdn/scripts/img/logo-footer.png" />
+</a>
+</div>
+<div class="col-md-6">
+<p>&copy; Copyright 2015. All Rights Reserved.</p>
+</div>
+<div class="col-md-4">
+<nav id="sub-menu">
+<ul>
+<li><a href="/about/tutorials_writing.htm">Write for us</a></li>
+<li><a href="/about/faq.htm">FAQ's</a></li>
+<li><a href="/about/about_helping.htm">Helping</a></li>
+<li><a href="/about/contact_us.htm">Contact</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="../cdn/theme/js/custom-min.js"></script>
+<script src="../../www.google-analytics.com/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+</div>
+</body>
+</html>

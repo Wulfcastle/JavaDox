@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8"> </html><![endif]-->
+<!--[if IE 9]><html class="ie ie9"> </html><![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+<!-- Original URL: http://www.tutorialspoint.com./swing_jcomponent.htm
+Date Downloaded: 2015-05-08 11:38:29 AM !-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Basic -->
+<meta charset="utf-8" />
+<title>SWING JComponent Class</title>
+<meta name="Description" content="Swing JComponent Class -  Learn Swing Framework in simple and easy steps using this beginner's tutorial containing basic to advanced knowledge starting from Environment Setup, Swing, Graphical User Interface, Swing Controls, Event Handling, Event Classes, Event listener interfaces, Layout Managers, Adapters, Layouts, Menus" />
+<meta name="Keywords" content="Swing, Graphical User Interface, Swing Controls, Event Handling, Event Classes, Event listener interfaces, Layout Managers, Adapters, Layouts, Menus " />
+
+<link rel="shortcut icon" href="../cdn/favicon.png" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+<meta name="author" content="tutorialspoint.com" />
+<meta property="fb:app_id" content="471319149685276" />
+<script type="text/javascript" src="../cdn/theme/js/script-min-v1.js"></script>
+<link rel="stylesheet" href="../cdn/theme/css/style-min-v1.css" />
+<link rel="stylesheet" href="../css/tomorrow-night.css" />
+<!--[if IE]>
+<link rel="stylesheet" href="../cdn/theme/css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<script src="../cdn/theme/vendor/respond.js"></script>
+<![endif]-->
+<!--[if IE]>
+<link rel="stylesheet" href="../cdn/theme/css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<script src="../cdn/theme/vendor/respond.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="../cdn/theme/css/ie8.css" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="../cdn/theme/css/ie9.css" />
+<![endif]-->
+<!-- Front Page related changes -->
+<style>
+
+
+
+
+img.mobile-apps { border: 1px solid #507a9b !important; }
+footer i.icon, footer ul.list.icons li i { color: #507a9b !important; }
+button.btn-responsive-nav, header div.search button.btn-default { background: #507a9b !important;}
+.social-icons-top { display:none; }
+</style>
+</head>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+<body onload="prettyPrint()">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="../cdn/images/loading-cg.gif" alt="" width="70" height="70" />
+   </div>
+</div>
+<div id="divGoogle"></div>
+<div class="body">
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="index.htm" title="tutorialspoint">
+      <img alt="JavaDox" src="../images/logo.png" />
+      </a>
+      </h1>			
+      <div class="search" id="searchBar">
+         <form method="get" id="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="www.tutorialspoint.com" />
+            <div class="input-group">
+               <input type="text" class="form-control search" name="q" id="q" autocomplete="off" placeholder="Search your tutorials..." onfocus="if (this.value == 'Search your tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your tutorials...';}" />
+               <input value="FORID:11" name="cof" type="hidden" />
+               <input type="hidden" name="ie" value="ISO-8859-1" />
+               <span class="input-group-btn"> <button class="btn btn-default" type="submit" onclick="javascript:void(0);"><i class="icon icon-search"></i></button> </span>
+            </div>
+         </form>
+      </div>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li><a id="free-training-icon" href="absoluteclasses.htm"><img src="../cdn/images/free-training.jpg" style="width:100px; position:absolute;left:-158px; top:-7px; z-index:99;" title="Free Online Training" /></a></li>
+            <li> <a href="shared-tutorials.php"><i class="icon icon-user"></i> &nbsp;Shared</a> </li>
+            <li> <a href="shorttutorials"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>
+            <li>
+            <div class="social-icons social-icons-top">
+               <ul class="social-icons">
+               <li class="facebook"><a href="http://www.facebook.com/tutorialspointindia" target="_blank" title="Facebook">Facebook</a></li>
+               <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" title="Twitter">Twitter</a></li>
+               <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+               <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+               </ul>
+            </div>
+            </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button>
+   </div>
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown"><a class="dropdown-toggle tut-lib" href="tutorialslibrary.htm"> Tutorials Library </a>
+      <ul class="dropdown-menu" id="submenu">
+         <li>
+            <div class="mega-menu-content">
+              <div class="row">
+                 <div class="col-md-6">
+                    <ul class="sub-menu">
+                     <li><a href="academic_tutorials.htm">Academic</a></li>
+                     <li><a href="big_data_tutorials.htm">Big Data</a></li>
+                     <li><a href="database_tutorials.htm">Databases</a></li>
+                     <li><a href="java_technology_tutorials.htm">Java Technologies</a></li>
+                     <li><a href="mainframe_tutorials.htm">Mainframe</a></li>
+                     <li><a href="management_tutorials.htm">Management</a></li>
+                     <li><a href="microsoft_technologies_tutorials.htm">Microsoft Technologies</a></li>
+                     <li><a href="misc_tutorials.htm">Miscellaneous</a></li>
+                   </ul>
+                 </div>
+                 <div class="col-md-6">
+                  <ul class="sub-menu">
+                     <li><a href="mobile_development_tutorials.htm">Mobile Development</a></li>
+                     <li><a href="computer_programming_tutorials.htm">Programming</a></li>
+                     <li><a href="scripting_lnaguage_tutorials.htm">Scripts</a></li>
+                     <li><a href="software_quality_tutorials.htm">Software Quality</a></li>
+                     <li><a href="telecom_tutorials.htm">Telecom</a></li>
+                     <li><a href="web_development_tutorials.htm">Web Development</a></li>
+                     <li><a href="xml_technologies_tutorials.htm">XML Technologies</a></li>
+                     <li><a href="multi_language_tutorials.htm">Multi Language Tutorials</a></li>
+                  </ul>
+                 </div>
+              </div>
+            </div>
+         </li>
+       </ul>
+               </li>
+               <li class="dropdown"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground</a> </li>
+                  <li class="dropdown"> 							
+                     <a class="dropdown-toggle tut-plus" href="absoluteclasses.htm">Absolute Classes</a>                     <ul class="dropdown-menu" id="submenu1">
+                                                <li class="current-menu-ancestor current-menu-parent active dropdown-submenu" style="border-bottom:none;">
+                        </li><li style="border-bottom:none;"><a href="absoluteclasses/userlogin.htm"><i class="fa-sign-in"></i>&nbsp;Login</a></li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px" class="stickyhide">&nbsp;</li>
+                        <li><a href="absoluteclasses/usersignup.htm"><i class="fa-pencil-square-o"></i>&nbsp;Sign Up&nbsp;</a></li>
+                        <li style="border-bottom:none;"><a href="absoluteclasses/upcomingclasses.htm" style="border-bottom:none;"><i class="fa-book book-head"></i> Upcoming Classes </a></li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px">&nbsp;</li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px">&nbsp;</li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/allcourses.htm" style="border-bottom:none;"><i class="fa-book book-head"></i> All Courses </a></li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/testimonials.htm" style="border-bottom:none;"><i class="fa-check check"></i> Testimonial</a></li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/help.htm" style="border-bottom:none;"><i class="fa-question book-head"></i> Help/FAQ</a></li>
+                        <li style="border-bottom:none;"><a href="absoluteclasses/contact_abc.htm" style="border-bottom:none;"><i class="fa fa-envelope-o"></i> Contact</a></li>
+                                             
+                     </ul>
+                  
+            </li></ul>
+         </nav>
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="../images/java-mini-logo.png" alt="Swing Tutorial" />
+</div>
+<ul class="nav nav-list primary left-menu"><li><a target="_top" href="../index.htm"><b>Back to Home</b></a></li></ul><ul class="nav nav-list primary left-menu">
+<li class="heading">SWING GUI Library</li>
+
+<li><a target="_top" href="swing_overview.htm">SWING - Overview</a></li>
+<li><a target="_top" href="swing_environment.htm">SWING - Environment</a></li>
+<li><a target="_top" href="swing_controls.htm">SWING - Controls</a></li>
+<li><a target="_top" href="swing_event_handling.htm">SWING - Event Handling</a></li>
+<li><a target="_top" href="swing_event_classes.htm">SWING - Event Classes</a></li>
+<li><a target="_top" href="swing_event_listeners.htm">SWING - Event Listeners</a></li>
+<li><a target="_top" href="swing_event_adapters.htm">SWING - Event Adapters</a></li>
+<li><a target="_top" href="swing_layouts.htm">SWING - Layouts</a></li>
+<li><a target="_top" href="swing_menu.htm">SWING - Menu</a></li>
+<li><a target="_top" href="swing_containers.htm">SWING - Containers</a></li>
+</ul>
+
+
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>SWING - JComponent Class</h1>
+<div class="topgooglead">
+<hr />
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js"></script></div> 
+<div class="pre-btn">
+<a href="swing_controls.htm"> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="swing_controls.htm">Next Page &nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr />
+<h2>Introduction</h2>
+<p>The class <b>JComponent</b> is the base class for all Swing components except top-level containers. To use a component that inherits from JComponent, you must place the component in a containment hierarchy whose root is a top-level Swing container.</p>
+<h2>Class declaration</h2>
+<p>Following is the declaration for <b>javax.swing.JComponent</b> class:</p>
+<pre class="prettyprint notranslate">
+public abstract class JComponent
+   extends Container
+      implements Serializable
+</pre>
+<h2>Field</h2>
+<p>Following are the fields for <b>java.awt.Component</b> class:</p>
+<ul class="list">
+<li><p><b>protected AccessibleContext accessibleContext</b> -- The AccessibleContext associated with this JComponent.</p></li>
+<li><p><b>protected EventListenerList listenerList</b> -- A list of event listeners for this component.</p></li>
+<li><p><b>static String TOOL_TIP_TEXT_KEY</b> -- The comment to display when the cursor is over the component, also known as a "value tip", "flyover help", or "flyover label".</p></li>
+<li><p><b>protected ComponentUI ui</b> -- The look and feel delegate for this component.</p></li>
+<li><p><b>static int UNDEFINED_CONDITION</b> -- Constant used by some of the APIs to mean that no condition is defined.</p></li>
+<li><p><b>static int WHEN_ANCESTOR_OF_FOCUSED_COMPONENT</b> -- Constant used for registerKeyboardAction that means that the command should be invoked when the receiving component is an ancestor of the focused component or is itself the focused component.</p></li>
+<li><p><b>static int WHEN_FOCUSED</b> -- Constant used for registerKeyboardAction that means that the command should be invoked when the component has the focus.</p></li>
+<li><p><b>static int WHEN_IN_FOCUSED_WINDOW</b> -- Constant used for registerKeyboardAction that means that the command should be invoked when the receiving component is in the window that has the focus or is itself the focused component.</p></li>
+</ul>
+<h2>Class constructors</h2>
+<table class="table table-bordered">
+<tr>
+<th style="width:5%">S.N.</th>
+<th>Constructor &amp; Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td><b>JComponent() </b><p>Default JComponent constructor.</p></td>
+</tr>
+</table>
+<h2>Class methods</h2>
+<table class="table table-bordered">
+<tr>
+<th style="width:5%">S.N.</th>
+<th>Method &amp; Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td><b>void addAncestorListener(AncestorListener listener)</b><p>Registers listener so that it will receive AncestorEvents when it or any of its ancestors move or are made visible or invisible.</p></td>
+</tr>
+<tr>
+<td>2</td>
+<td><b>void addNotify() </b><p>Notifies this component that it now has a parent component.</p></td>
+</tr>
+<tr>
+<td>3</td>
+<td><b>void addVetoableChangeListener(VetoableChangeListener listener) </b><p>Adds a VetoableChangeListener to the listener list.</p></td>
+</tr>
+<tr>
+<td>4</td>
+<td><b>void computeVisibleRect(Rectangle visibleRect) </b><p>Returns the Component's "visible rect rectangle" - the intersection of the visible rectangles for this component and all of its ancestors.</p></td>
+</tr>
+<tr>
+<td>5</td>
+<td><b>boolean contains(int x, int y) </b><p>Gives the UI delegate an opportunity to define the precise shape of this component for the sake of mouse processing.</p></td>
+</tr>
+<tr>
+<td>6</td>
+<td><b>JToolTip createToolTip() </b><p>Returns the instance of JToolTip that should be used to display the tooltip.</p></td>
+</tr>
+<tr>
+<td>7</td>
+<td><b>void disable() </b><p>Deprecated.As of JDK version 1.1, replaced by java.awt.Component.setEnabled(boolean).</p></td>
+</tr>
+<tr>
+<td>8</td>
+<td><b>void enable() </b><p>Deprecated. As of JDK version 1.1, replaced by java.awt.Component.setEnabled(boolean).</p></td>
+</tr>
+<tr>
+<td>9</td>
+<td><b>void firePropertyChange(String propertyName, boolean oldValue, boolean newValue) </b><p>Support for reporting bound property changes for boolean properties.</p></td>
+</tr>
+<tr>
+<td>10</td>
+<td><b>void firePropertyChange(String propertyName, char oldValue, char newValue) </b><p>Reports a bound property change.</p></td>
+</tr>
+<tr>
+<td>11</td>
+<td><b>void firePropertyChange(String propertyName, int oldValue, int newValue) </b><p>Support for reporting bound property changes for integer properties.</p></td>
+</tr>
+<tr>
+<td>12</td>
+<td><b>protected void fireVetoableChange(String propertyName, Object oldValue, Object newValue) </b><p>Supports reporting constrained property changes.</p></td>
+</tr>
+<tr>
+<td>13</td>
+<td><b>AccessibleContext getAccessibleContext() </b><p>Returns the AccessibleContext associated with this JComponent.</p></td>
+</tr>
+<tr>
+<td>14</td>
+<td><b>ActionListener getActionForKeyStroke(KeyStroke aKeyStroke) </b><p>Returns the object that will perform the action registered for a given keystroke.</p></td>
+</tr>
+<tr>
+<td>15</td>
+<td><b>ActionMap getActionMap()</b><p>Returns the ActionMap used to determine what Action to fire for particular KeyStroke binding.</p></td>
+</tr>
+<tr>
+<td>16</td>
+<td><b>float getAlignmentX()</b><p>Overrides Container.getAlignmentX to return the vertical alignment.</p></td>
+</tr>
+<tr>
+<td>17</td>
+<td><b>float getAlignmentY() </b><p>Overrides Container.getAlignmentY to return the horizontal alignment.</p></td>
+</tr>
+<tr>
+<td>18</td>
+<td><b>AncestorListener[]getAncestorListeners() </b><p>Returns an array of all the ancestor listeners registered on this component.</p></td>
+</tr>
+<tr>
+<td>19</td>
+<td><b>boolean getAutoscrolls() </b><p>Gets the autoscrolls property.</p></td>
+</tr>
+<tr>
+<td>20</td>
+<td><b>int getBaseline(int width, int height) </b><p>Returns the baseline.</p></td>
+</tr>
+<tr>
+<td>21</td>
+<td><b>Component.BaselineResizeBehavior getBaselineResizeBehavior() </b><p>Returns an enum indicating how the baseline of the component changes as the size changes.</p></td>
+</tr>
+<tr>
+<td>22</td>
+<td><b>Border getBorder() </b><p>Returns the border of this component or null if no border is currently set.</p></td>
+</tr>
+<tr>
+<td>23</td>
+<td><b>Rectangle getBounds(Rectangle rv) </b><p>Stores the bounds of this component into "return value" rv and returns rv.</p></td>
+</tr>
+<tr>
+<td>24</td>
+<td><b>Object getClientProperty(Object key) </b><p>Returns the value of the property with the specified key.</p></td>
+</tr>
+<tr>
+<td>25</td>
+<td><b>protected Graphics getComponentGraphics(Graphics g) </b><p>Returns the graphics object used to paint this component.</p></td>
+</tr>
+<tr>
+<td>26</td>
+<td><b>JPopupMenu getComponentPopupMenu() </b><p>Returns JPopupMenu that assigned for this component.</p></td>
+</tr>
+<tr>
+<td>27</td>
+<td><b>int getConditionForKeyStroke(KeyStroke aKeyStroke) </b><p>Returns the condition that determines whether a registered action occurs in response to the specified keystroke.</p></td>
+</tr>
+<tr>
+<td>28</td>
+<td><b>int getDebugGraphicsOptions() </b><p>Returns the state of graphics debugging.</p></td>
+</tr>
+<tr>
+<td>29</td>
+<td><b>static Locale getDefaultLocale() </b><p>Returns the default locale used to initialize each JComponent's locale property upon creation.</p></td>
+</tr>
+<tr>
+<td>30</td>
+<td><b>FontMetrics getFontMetrics(Font font) </b><p>Gets the FontMetrics for the specified Font.</p></td>
+</tr>
+<tr>
+<td>31</td>
+<td><b>Graphics getGraphics() </b><p>Returns this component's graphics context, which lets you draw on a component.</p></td>
+</tr>
+<tr>
+<td>32</td>
+<td><b>int getHeight() </b><p>Returns the current height of this component.</p></td>
+</tr>
+<tr>
+<td>33</td>
+<td><b>boolean getInheritsPopupMenu() </b><p>Returns true if the JPopupMenu should be inherited from the parent.</p></td>
+</tr>
+<tr>
+<td>34</td>
+<td><b>InputMap getInputMap() </b><p>Returns the InputMap that is used when the component has focus.</p></td>
+</tr>
+<tr>
+<td>35</td>
+<td><b>InputMap getInputMap(int condition) </b><p>Returns the InputMap that is used during condition.</p></td>
+</tr>
+<tr>
+<td>36</td>
+<td><b>InputVerifier getInputVerifier() </b><p>Returns the input verifier for this component.</p></td>
+</tr>
+<tr>
+<td>37</td>
+<td><b>Insets getInsets() </b><p>If a border has been set on this component, returns the border's insets; otherwise calls super.getInsets.</p></td>
+</tr>
+<tr>
+<td>38</td>
+<td><b>Insets getInsets(Insets insets) </b><p>Returns an Insets object containing this component's inset values.</p></td>
+</tr>
+<tr>
+<td>39</td>
+<td><b>&lt;T extends EventListener&gt; T[] getListeners(Class&lt;T&gt; listenerType) </b><p>Returns an array of all the objects currently registered as FooListeners upon this JComponent.</p></td>
+</tr>
+<tr>
+<td>40</td>
+<td><b>Point getLocation(Point rv) </b><p>Stores the x,y origin of this component into "return value" rv and returns rv.</p></td>
+</tr>
+<tr>
+<td>41</td>
+<td><b>Dimension getMaximumSize() </b><p>If the maximum size has been set to a non-null value just returns it.</p></td>
+</tr>
+<tr>
+<td>42</td>
+<td><b>Dimension getMinimumSize() </b><p>If the minimum size has been set to a non-null value just returns it.</p></td>
+</tr>
+<tr>
+<td>43</td>
+<td><b>Component getNextFocusableComponent() </b><p>Deprecated. As of 1.4, replaced by FocusTraversalPolicy.</p></td>
+</tr>
+<tr>
+<td>44</td>
+<td><b>Point getPopupLocation(MouseEvent event) </b><p>Returns the preferred location to display the popup menu in this component's coordinate system.</p></td>
+</tr>
+<tr>
+<td>45</td>
+<td><b>Dimension getPreferredSize() </b><p>If the preferredSize has been set to a non-null value just returns it.</p></td>
+</tr>
+<tr>
+<td>46</td>
+<td><b>KeyStroke[] getRegisteredKeyStrokes() </b><p>Returns the KeyStrokes that will initiate registered actions.</p></td>
+</tr>
+<tr><td>47</td>
+<td><b>JRootPane getRootPane() </b><p>Returns the JRootPane ancestor for this component.</p></td>
+</tr>
+<tr>
+<td>48</td>
+<td><b> Dimension getSize(Dimension rv) </b><p>Stores the width/height of this component into "return value" rv and returns rv.</p></td>
+</tr>
+<tr>
+<td>49</td>
+<td><b>Point	getToolTipLocation(MouseEvent event) </b><p>Returns the tooltip location in this component's coordinate system.</p></td>
+</tr>
+<tr>
+<td>50</td>
+<td><b>String getToolTipText() </b><p>Returns the tooltip string that has been set with setToolTipText.</p></td>
+</tr>
+<tr>
+<td>51</td>
+<td><b>String getToolTipText(MouseEvent event) </b><p>Returns the string to be used as the tooltip for event.</p></td>
+</tr>
+<tr><td>52</td><td><b>Container	getTopLevelAncestor() </b><p>Returns the top-level ancestor of this component (either the containing Window or Applet), or null if this component has not been added to any container.</p></td>
+</tr>
+<tr>
+<td>53</td>
+<td><b>TransferHandler getTransferHandler() </b><p>Gets the transferHandler property.</p></td>
+</tr>
+<tr>
+<td>54</td>
+<td><b> String getUIClassID() </b><p>Returns the UIDefaults key used to look up the name of the swing.plaf.ComponentUI class that defines the look and feel for this component.</p></td>
+</tr>
+<tr>
+<td>55</td>
+<td><b>boolean getVerifyInputWhenFocusTarget() </b><p>Returns the value that indicates whether the input verifier for the current focus owner will be called before this component requests focus.</p></td>
+</tr>
+<tr>
+<td>56</td>
+<td><b>VetoableChangeListener[]	getVetoableChangeListeners() </b><p>Returns an array of all the vetoable change listeners registered on this component.</p></td>
+</tr>
+<tr>
+<td>57</td>
+<td><b>Rectangle	getVisibleRect() </b><p>Returns the Component's "visible rectangle" - the intersection of this component's visible rectangle, new Rectangle(0, 0, getWidth(), getHeight()) , and all of its ancestors' visible rectangles.</p></td>
+</tr>
+<tr>
+<td>58</td>
+<td><b>int getWidth() </b><p>Returns the current width of this component.</p></td>
+</tr>
+<tr>
+<td>59</td>
+<td><b>int getX() </b><p>Returns the current x coordinate of the component's origin.</p></td>
+</tr>
+<tr>
+<td>60</td>
+<td><b>int getY() </b><p>Returns the current y coordinate of the component's origin.</p></td>
+</tr>
+<tr>
+<td>61</td>
+<td><b>void grabFocus() </b><p>Requests that this Component get the input focus, and that this Component's top-level ancestor become the focused Window.</p></td>
+</tr>
+<tr>
+<td>62</td>
+<td><b>boolean isDoubleBuffered() </b><p>Returns whether this component should use a buffer to paint.</p></td></tr>
+<tr>
+<td>63</td>
+<td><b>static boolean isLightweightComponent(Component c) </b><p>Returns true if this component is lightweight, that is, if it doesn't have a native window system peer.</p></td>
+</tr>
+<tr>
+<td>64</td>
+<td><b>boolean isManagingFocus() </b><p>Deprecated.As of 1.4, replaced by Component.setFocusTraversalKeys(int, Set)  and Container.setFocusCycleRoot(boolean).</p></td>
+</tr>
+<tr>
+<td>65</td>
+<td><b>boolean isOpaque() </b><p>Returns true if this component is completely opaque.</p></td>
+</tr>
+<tr>
+<td>66</td>
+<td><b>boolean isOptimizedDrawingEnabled() </b><p>Returns true if this component tiles its children -- that is, if it can guarantee that the children will not overlap.</p></td>
+</tr>
+<tr>
+<td>67</td>
+<td><b>boolean isPaintingForPrint() </b><p>Returns true if the current painting operation on this component is part of a print operation.</p></td>
+</tr>
+<tr>
+<td>68</td>
+<td><b>boolean isPaintingTile() </b><p>Returns true if the component is currently painting a tile.</p></td>
+</tr>
+<tr>
+<td>69</td>
+<td><b>boolean isRequestFocusEnabled() </b><p>Returns true if this JComponent should get focus; otherwise returns false.</p></td>
+</tr>
+<tr>
+<td>70</td>
+<td><b>boolean isValidateRoot() </b><p>If this method returns true, revalidate calls by descendants of this component will cause the entire tree beginning with this root to be validated.</p></td>
+</tr>
+<tr>
+<td>71</td>
+<td><b>void paint(Graphics g) </b><p>Invoked by Swing to draw components.</p></td>
+</tr>
+<tr>
+<td>72</td>
+<td><b>protected void paintBorder(Graphics g) </b><p>Paints the component's border.</p></td>
+</tr>
+<tr>
+<td>73</td>
+<td><b>protected void paintChildren(Graphics g) </b><p>Paints this component's children.</p></td>
+</tr>
+<tr>
+<td>74</td>
+<td><b>protected void paintComponent(Graphics g) </b><p>Calls the UI delegate's paint method, if the UI delegate is non-null.</p></td>
+</tr>
+<tr>
+<td>75</td>
+<td><b>void paintImmediately(int x, int y, int w, int h) </b><p>Paints the specified region in this component and all of its descendants that overlap the region, immediately.</p></td>
+</tr>
+<tr>
+<td>76</td>
+<td><b>void paintImmediately(Rectangle r) </b><p>Paints the specified region now.</p></td>
+</tr>
+<tr>
+<td>77</td>
+<td><b>protected  String	paramString() </b><p>Returns a string representation of this JComponent.</p></td>
+</tr>
+<tr>
+<td>78</td>
+<td><b>void print(Graphics g) </b><p>Invoke this method to print the component to the specified Graphics.</p></td>
+</tr>
+<tr>
+<td>79</td>
+<td><b>void printAll(Graphics g) </b><p>Invoke this method to print the component.</p></td>
+</tr>
+<tr>
+<td>80</td>
+<td><b>protected void printBorder(Graphics g) </b><p>Prints the component's border.</p></td>
+</tr>
+<tr>
+<td>81</td>
+<td><b>protected void printChildren(Graphics g) </b><p>Prints this component's children.</p></td>
+</tr>
+<tr>
+<td>82</td>
+<td><b>protected void printComponent(Graphics g) </b><p>This is invoked during a printing operation.</p></td>
+</tr>
+<tr>
+<td>82</td>
+<td><b>protected void processComponentKeyEvent(KeyEvent e) </b><p>Processes any key events that the component itself recognizes.</p></td>
+</tr>
+<tr>
+<td>84</td>
+<td><b>protected boolean processKeyBinding(KeyStroke ks, KeyEvent e, int condition, boolean pressed) </b><p>Invoked to process the key bindings for ks as the result of the KeyEvent e.</p></td>
+</tr>
+<tr>
+<td>85</td>
+<td><b>protected void processKeyEvent(KeyEvent e) </b><p>Overrides processKeyEvent to process events.</p></td>
+</tr>
+<tr>
+<td>86</td>
+<td><b>protected void processMouseEvent(MouseEvent e) </b><p>Processes mouse events occurring on this component by dispatching them to any registered MouseListener objects, refer to Component.processMouseEvent(MouseEvent) for a complete description of this method.</p></td>
+</tr>
+<tr>
+<td>87</td>
+<td><b>protected void processMouseMotionEvent(MouseEvent e) </b><p>Processes mouse motion events, such as MouseEvent.MOUSE_DRAGGED.</p></td>
+</tr>
+<tr>
+<td>88</td>
+<td><b>void putClientProperty(Object key, Object value) </b><p>Adds an arbitrary key/value "client property" to this component.</p></td>
+</tr>
+<tr>
+<td>89</td>
+<td><b>void registerKeyboardAction(ActionListener anAction, KeyStroke aKeyStroke, int aCondition) </b><p />This method is now obsolete, please use a combination of getActionMap() <p /> and getInputMap() <p> for similiar behavior.</p></td>
+</tr>
+<tr>
+<td>90</td>
+<td><b>void registerKeyboardAction(ActionListener anAction, String aCommand, KeyStroke aKeyStroke, int aCondition) </b><p />This method is now obsolete, please use a combination of getActionMap() <p /> and getInputMap() <p> for similiar behavior.</p></td>
+</tr>
+<tr>
+<td>91</td>
+<td><b>void removeAncestorListener(AncestorListener listener) </b><p>Unregisters listener so that it will no longer receive AncestorEvents.</p></td>
+</tr>
+<tr>
+<td>92</td>
+<td><b>void removeNotify() </b><p>Notifies this component that it no longer has a parent component.</p></td>
+</tr>
+<tr>
+<td>93</td>
+<td><b>void removeVetoableChangeListener(VetoableChangeListener listener) </b><p>Removes a VetoableChangeListener from the listener list.</p></td>
+</tr>
+<tr>
+<td>94</td>
+<td><b>void repaint(long tm, int x, int y, int width, int height) </b><p>Adds the specified region to the dirty region list if the component is showing.</p></td>
+</tr>
+<tr>
+<td>95</td>
+<td><b>void repaint(Rectangle r) </b><p>Adds the specified region to the dirty region list if the component is showing.</p></td>
+</tr>
+<tr>
+<td>96</td>
+<td><b>boolean requestDefaultFocus() </b><p>Deprecated.As of 1.4, replaced by FocusTraversalPolicy.getDefaultComponent(Container).requestFocus()</p></td>
+</tr>
+<tr>
+<td>97</td>
+<td><b>void requestFocus() </b><p>Requests that this Component gets the input focus.</p></td>
+</tr>
+<tr>
+<td>98</td>
+<td><b>boolean requestFocus(boolean temporary) </b><p>Requests that this Component gets the input focus.</p></td>
+</tr>
+<tr>
+<td>99</td>
+<td><b>boolean requestFocusInWindow() </b><p>Requests that this Component gets the input focus.</p></td>
+</tr>
+<tr>
+<td>100</td>
+<td><b>protected boolean requestFocusInWindow(boolean temporary) </b><p>Requests that this Component gets the input focus.</p></td>
+</tr>
+<tr>
+<td>101</td>
+<td><b>void resetKeyboardActions() </b><p>Unregisters all the bindings in the first tier InputMaps and ActionMap.</p></td>
+</tr>
+<tr>
+<td>102</td>
+<td><b>void reshape(int x, int y, int w, int h) </b><p>Deprecated.As of JDK 5, replaced by Component.setBounds(int, int, int, int).Moves and resizes this component.</p></td>
+</tr>
+<tr>
+<td>103</td>
+<td><b>void revalidate() </b><p>Supports deferred automatic layout.</p></td>
+</tr>
+<tr>
+<td>104</td>
+<td><b>void scrollRectToVisible(Rectangle aRect) </b><p />Forwards the scrollRectToVisible() <p> message to the JComponent's parent.</p></td>
+</tr>
+<tr>
+<td>105</td>
+<td><b>void setActionMap(ActionMap am) </b><p>Sets the ActionMap to am.</p></td>
+</tr>
+<tr>
+<td>106</td>
+<td><b>void setAlignmentX(float alignmentX) </b><p>Sets the the vertical alignment.</p></td>
+</tr>
+<tr>
+<td>107</td>
+<td><b>void setAlignmentY(float alignmentY) </b><p>Sets the the horizontal alignment.</p></td>
+</tr>
+<tr>
+<td>108</td>
+<td><b>void setAutoscrolls(boolean autoscrolls) </b><p>Sets the autoscrolls property.</p></td>
+</tr>
+<tr>
+<td>109</td>
+<td><b>void setBackground(Color bg) </b><p>Sets the background color of this component.</p></td>
+</tr>
+<tr>
+<td>110</td>
+<td><b>void setBorder(Border border) </b><p>Sets the border of this component.</p></td>
+</tr>
+<tr>
+<td>111</td>
+<td><b>void setComponentPopupMenu(JPopupMenu popup) </b><p>Sets the JPopupMenu for this JComponent.</p></td>
+</tr>
+<tr>
+<td>112</td>
+<td><b>void setDebugGraphicsOptions(int debugOptions) </b><p>Enables or disables diagnostic information about every graphics operation performed within the component or one of its children.</p></td>
+</tr>
+<tr>
+<td>113</td>
+<td><b>static void setDefaultLocale(Locale l) </b><p>Sets the default locale used to initialize each JComponent's locale property upon creation.</p></td>
+</tr>
+<tr>
+<td>114</td>
+<td><b>void setDoubleBuffered(boolean aFlag) </b><p>Sets whether this component should use a buffer to paint.</p></td>
+</tr>
+<tr>
+<td>115</td>
+<td><b>void setEnabled(boolean enabled) </b><p>Sets whether or not this component is enabled.</p></td>
+</tr>
+<tr>
+<td>116</td>
+<td><b>void setFocusTraversalKeys(int id, Set&lt;? extends AWTKeyStroke&gt; keystrokes) </b><p>Sets the focus traversal keys for a given traversal operation for this Component.</p></td>
+</tr>
+<tr>
+<td>117</td>
+<td><b>void setFont(Font font) </b><p>Sets the font for this component.</p></td>
+</tr>
+<tr>
+<td>118</td>
+<td><b>void setForeground(Color fg) </b><p>Sets the foreground color of this component.</p></td>
+</tr>
+<tr>
+<td>119</td>
+<td><b>void setInheritsPopupMenu(boolean value) </b><p>Sets whether or not getComponentPopupMenu should delegate to the parent if this component does not have a JPopupMenu assigned to it.</p></td>
+</tr>
+<tr>
+<td>120</td>
+<td><b>void setInputMap(int condition, InputMap map) </b><p>Sets the InputMap to use under the condition condition to map.</p></td>
+</tr>
+<tr>
+<td>121</td>
+<td><b>void setInputVerifier(InputVerifier inputVerifier) </b><p>Sets the input verifier for this component.</p></td>
+</tr>
+<tr>
+<td>122</td>
+<td><b>void setMaximumSize(Dimension maximumSize) </b><p>Sets the maximum size of this component to a constant value.</p></td>
+</tr>
+<tr>
+<td>123</td>
+<td><b>void setMinimumSize(Dimension minimumSize) </b><p>Sets the minimum size of this component to a constant value.</p></td>
+</tr>
+<tr>
+<td>124</td>
+<td><b>void setNextFocusableComponent(Component aComponent) </b><p>Deprecated. As of 1.4, replaced by FocusTraversalPolicy</p></td>
+</tr>
+<tr>
+<td>125</td>
+<td><b>void setOpaque(boolean isOpaque) </b><p>If true the component paints every pixel within its bounds.</p></td>
+</tr>
+<tr>
+<td>126</td>
+<td><b>void setPreferredSize(Dimension preferredSize) </b><p>Sets the preferred size of this component.</p></td>
+</tr>
+<tr>
+<td>127</td>
+<td><b>void setRequestFocusEnabled(boolean requestFocusEnabled) </b><p>Provides a hint as to whether or not this JComponent should get focus.</p></td>
+</tr>
+<tr>
+<td>128</td>
+<td><b>void setToolTipText(String text) </b><p>Registers the text to display in a tool tip.</p></td>
+</tr>
+<tr>
+<td>129</td>
+<td><b>void setTransferHandler(TransferHandler newHandler) </b><p>Sets the transferHandler property, which is null if the component does not support data transfer operations.</p></td>
+</tr>
+<tr>
+<td>130</td>
+<td><b>protected void setUI(ComponentUI newUI) </b><p>Sets the look and feel delegate for this component.</p></td>
+</tr>
+<tr>
+<td>131</td>
+<td><b>void setVerifyInputWhenFocusTarget(boolean verifyInputWhenFocusTarget) </b><p>Sets the value to indicate whether input verifier for the current focus owner will be called before this component requests focus.</p></td>
+</tr>
+<tr>
+<td>132</td>
+<td><b>void setVisible(boolean aFlag) </b><p>Makes the component visible or invisible.</p></td>
+</tr>
+<tr>
+<td>133</td>
+<td><b>void unregisterKeyboardAction(KeyStroke aKeyStroke) </b><p>This method is now obsolete.</p></td>
+</tr>
+<tr>
+<td>134</td>
+<td><b>void update(Graphics g) </b><p>Calls paint.</p></td>
+</tr>
+<tr>
+<td>135</td>
+<td><b>void updateUI() </b><p>Resets the UI property to a value from the current look and feel.</p></td>
+</tr>
+</table>
+<h2>Methods inherited</h2>
+<p>This class inherits methods from the following classes:</p>
+<ul class="list">
+<li><p>java.awt.Container</p></li>
+<li><p>java.awt.Component</p></li>
+<li><p>java.lang.Object</p></li>
+</ul>
+<hr style="margin-bottom:1.25% !important;"><div class="pre-btn">
+<a href="swing_controls.htm"> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="/cgi-bin/printpage.cgi" target="_blank Print</a>
+</div>
+<div class="nxt-btn">
+<a href="swing_controls.htm">Next Page &nbsp;</a>
+</div>
+<div class="parent-file">swing_controls.htm</div>
+<hr />
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<!-- AddThis Button BEGIN -->
+<!--
+<div class="simple-ad">
+<div class="addthis_sharing_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f661ec623a400f0"></script>
+</div>
+-->
+<!-- AddThis Button END -->
+<!--
+<div class="google-ad" style="position:relative; left:20px;">Advertisements</div>
+-->
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="inner">
+<div class="container">
+<div class="row">
+<div class="footer-ribon">
+<span>Extras</span>
+</div>
+<div class="col-md-2">
+<h4>Mobile First</h4>
+<ul class="list icons list-unstyled">
+<li><a id="iphone" href="https://itunes.apple.com/om/app/tutorials-point/id914891263?mt=8" target="_blank" rel="nofollow"><img alt="tutorialspoint iPhone App" src="../cdn/images/apple_store.jpg" class="mobile-apps" /></a></li>
+<li><a id="android" href="https://play.google.com/store/apps/details?id=com.tutorialspoint.onlineviewer" target="_blank" rel="nofollow"><img alt="tutorialspoint Android app" src="../cdn/images/google_play.jpg" class="mobile-apps" /></a></li>
+<li><a id="microsoft" href="http://www.windowsphone.com/s?appid=91249671-7184-4ad6-8a5f-d11847946b09" target="_blank" rel="nofollow"><img alt="tutorialspoint Windows app" src="../cdn/images/windows_store.jpg" class="mobile-apps" /></a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<h4>About us</h4>
+<ul class="list icons list-unstyled">
+<li><i class="icon icon-caret-right"></i> <a href="/about/index.htm">Company</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_team.htm">Team</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_careers.htm">Careers</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_privacy.htm">Privacy Policy</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_terms_of_use.htm">Terms of use</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<h4>Extra Links</h4>
+<ul class="list icons list-unstyled">
+<li><i class="icon icon-caret-right"></i> <a href="forums/index.php">Forums</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="shorttutorials/">Articles</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="shared-tutorials.php">Shared</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="seo_tools.htm">Seo Tools</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="about/contact_us.htm">Contact</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<div class="contact-details">
+<h4>Contact Us</h4>
+<ul class="contact">
+<li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> 388-A , Road no 22, Jubilee Hills, Hyderabad Telangana, INDIA-500033</p></li>
+<li><p><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="about/contact_us.htm">Click Here</a></p></li>
+<li><p><i class="icon icon-dribbble"></i> <strong>Website:</strong> <a href="http://www.tutorialspoint.com">www.tutorialspoint.com</a></p></li>
+</ul>
+</div>
+<div class="social-icons">
+<ul class="social-icons">
+<li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+<li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+<li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+<li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+<li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="index.htm" class="logo">
+<img alt="Tutorials Point" class="img-responsive" src="../cdn/scripts/img/logo-footer.png" />
+</a>
+</div>
+<div class="col-md-6">
+<p>&copy; Copyright 2015. All Rights Reserved.</p>
+</div>
+<div class="col-md-4">
+<nav id="sub-menu">
+<ul>
+<li><a href="/about/tutorials_writing.htm">Write for us</a></li>
+<li><a href="/about/faq.htm">FAQ's</a></li>
+<li><a href="/about/about_helping.htm">Helping</a></li>
+<li><a href="/about/contact_us.htm">Contact</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="../cdn/theme/js/custom-min.js"></script>
+<script src="../../www.google-analytics.com/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+</div>
+</body>
+</html>

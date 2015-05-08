@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8"> </html><![endif]-->
+<!--[if IE 9]><html class="ie ie9"> </html><![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+<!-- Original URL: http://www.tutorialspoint.com./swing_component.htm
+Date Downloaded: 2015-05-08 11:38:30 AM !-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Basic -->
+<meta charset="utf-8" />
+<title>SWING Component Class</title>
+<meta name="Description" content="Swing Component Class -  Learn Swing Framework in simple and easy steps using this beginner's tutorial containing basic to advanced knowledge starting from Environment Setup, Swing, Graphical User Interface, Swing Controls, Event Handling, Event Classes, Event listener interfaces, Layout Managers, Adapters, Layouts, Menus" />
+<meta name="Keywords" content="Swing, Graphical User Interface, Swing Controls, Event Handling, Event Classes, Event listener interfaces, Layout Managers, Adapters, Layouts, Menus " />
+
+<link rel="shortcut icon" href="../cdn/favicon.png" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+<meta name="author" content="tutorialspoint.com" />
+<meta property="fb:app_id" content="471319149685276" />
+<script type="text/javascript" src="../cdn/theme/js/script-min-v1.js"></script>
+<link rel="stylesheet" href="../cdn/theme/css/style-min-v1.css" />
+<link rel="stylesheet" href="../css/tomorrow-night.css" />
+<!--[if IE]>
+<link rel="stylesheet" href="../cdn/theme/css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<script src="../cdn/theme/vendor/respond.js"></script>
+<![endif]-->
+<!--[if IE]>
+<link rel="stylesheet" href="../cdn/theme/css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<script src="../cdn/theme/vendor/respond.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="../cdn/theme/css/ie8.css" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="../cdn/theme/css/ie9.css" />
+<![endif]-->
+<!-- Front Page related changes -->
+<style>
+
+
+
+
+img.mobile-apps { border: 1px solid #507a9b !important; }
+footer i.icon, footer ul.list.icons li i { color: #507a9b !important; }
+button.btn-responsive-nav, header div.search button.btn-default { background: #507a9b !important;}
+.social-icons-top { display:none; }
+</style>
+</head>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+<body onload="prettyPrint()">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="../cdn/images/loading-cg.gif" alt="" width="70" height="70" />
+   </div>
+</div>
+<div id="divGoogle"></div>
+<div class="body">
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="index.htm" title="tutorialspoint">
+      <img alt="JavaDox" src="../images/logo.png" />
+      </a>
+      </h1>			
+      <div class="search" id="searchBar">
+         <form method="get" id="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="www.tutorialspoint.com" />
+            <div class="input-group">
+               <input type="text" class="form-control search" name="q" id="q" autocomplete="off" placeholder="Search your tutorials..." onfocus="if (this.value == 'Search your tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your tutorials...';}" />
+               <input value="FORID:11" name="cof" type="hidden" />
+               <input type="hidden" name="ie" value="ISO-8859-1" />
+               <span class="input-group-btn"> <button class="btn btn-default" type="submit" onclick="javascript:void(0);"><i class="icon icon-search"></i></button> </span>
+            </div>
+         </form>
+      </div>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li><a id="free-training-icon" href="absoluteclasses.htm"><img src="../cdn/images/free-training.jpg" style="width:100px; position:absolute;left:-158px; top:-7px; z-index:99;" title="Free Online Training" /></a></li>
+            <li> <a href="shared-tutorials.php"><i class="icon icon-user"></i> &nbsp;Shared</a> </li>
+            <li> <a href="shorttutorials"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>
+            <li>
+            <div class="social-icons social-icons-top">
+               <ul class="social-icons">
+               <li class="facebook"><a href="http://www.facebook.com/tutorialspointindia" target="_blank" title="Facebook">Facebook</a></li>
+               <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" title="Twitter">Twitter</a></li>
+               <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+               <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+               </ul>
+            </div>
+            </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button>
+   </div>
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown"><a class="dropdown-toggle tut-lib" href="tutorialslibrary.htm"> Tutorials Library </a>
+      <ul class="dropdown-menu" id="submenu">
+         <li>
+            <div class="mega-menu-content">
+              <div class="row">
+                 <div class="col-md-6">
+                    <ul class="sub-menu">
+                     <li><a href="academic_tutorials.htm">Academic</a></li>
+                     <li><a href="big_data_tutorials.htm">Big Data</a></li>
+                     <li><a href="database_tutorials.htm">Databases</a></li>
+                     <li><a href="java_technology_tutorials.htm">Java Technologies</a></li>
+                     <li><a href="mainframe_tutorials.htm">Mainframe</a></li>
+                     <li><a href="management_tutorials.htm">Management</a></li>
+                     <li><a href="microsoft_technologies_tutorials.htm">Microsoft Technologies</a></li>
+                     <li><a href="misc_tutorials.htm">Miscellaneous</a></li>
+                   </ul>
+                 </div>
+                 <div class="col-md-6">
+                  <ul class="sub-menu">
+                     <li><a href="mobile_development_tutorials.htm">Mobile Development</a></li>
+                     <li><a href="computer_programming_tutorials.htm">Programming</a></li>
+                     <li><a href="scripting_lnaguage_tutorials.htm">Scripts</a></li>
+                     <li><a href="software_quality_tutorials.htm">Software Quality</a></li>
+                     <li><a href="telecom_tutorials.htm">Telecom</a></li>
+                     <li><a href="web_development_tutorials.htm">Web Development</a></li>
+                     <li><a href="xml_technologies_tutorials.htm">XML Technologies</a></li>
+                     <li><a href="multi_language_tutorials.htm">Multi Language Tutorials</a></li>
+                  </ul>
+                 </div>
+              </div>
+            </div>
+         </li>
+       </ul>
+               </li>
+               <li class="dropdown"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground</a> </li>
+                  <li class="dropdown"> 							
+                     <a class="dropdown-toggle tut-plus" href="absoluteclasses.htm">Absolute Classes</a>                     <ul class="dropdown-menu" id="submenu1">
+                                                <li class="current-menu-ancestor current-menu-parent active dropdown-submenu" style="border-bottom:none;">
+                        </li><li style="border-bottom:none;"><a href="absoluteclasses/userlogin.htm"><i class="fa-sign-in"></i>&nbsp;Login</a></li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px" class="stickyhide">&nbsp;</li>
+                        <li><a href="absoluteclasses/usersignup.htm"><i class="fa-pencil-square-o"></i>&nbsp;Sign Up&nbsp;</a></li>
+                        <li style="border-bottom:none;"><a href="absoluteclasses/upcomingclasses.htm" style="border-bottom:none;"><i class="fa-book book-head"></i> Upcoming Classes </a></li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px">&nbsp;</li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px">&nbsp;</li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/allcourses.htm" style="border-bottom:none;"><i class="fa-book book-head"></i> All Courses </a></li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/testimonials.htm" style="border-bottom:none;"><i class="fa-check check"></i> Testimonial</a></li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/help.htm" style="border-bottom:none;"><i class="fa-question book-head"></i> Help/FAQ</a></li>
+                        <li style="border-bottom:none;"><a href="absoluteclasses/contact_abc.htm" style="border-bottom:none;"><i class="fa fa-envelope-o"></i> Contact</a></li>
+                                             
+                     </ul>
+                  
+            </li></ul>
+         </nav>
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="../images/java-mini-logo.png" alt="Swing Tutorial" />
+</div>
+<ul class="nav nav-list primary left-menu"><li><a target="_top" href="../index.htm"><b>Back to Home</b></a></li></ul><ul class="nav nav-list primary left-menu">
+<li class="heading">SWING GUI Library</li>
+
+<li><a target="_top" href="swing_overview.htm">SWING - Overview</a></li>
+<li><a target="_top" href="swing_environment.htm">SWING - Environment</a></li>
+<li><a target="_top" href="swing_controls.htm">SWING - Controls</a></li>
+<li><a target="_top" href="swing_event_handling.htm">SWING - Event Handling</a></li>
+<li><a target="_top" href="swing_event_classes.htm">SWING - Event Classes</a></li>
+<li><a target="_top" href="swing_event_listeners.htm">SWING - Event Listeners</a></li>
+<li><a target="_top" href="swing_event_adapters.htm">SWING - Event Adapters</a></li>
+<li><a target="_top" href="swing_layouts.htm">SWING - Layouts</a></li>
+<li><a target="_top" href="swing_menu.htm">SWING - Menu</a></li>
+<li><a target="_top" href="swing_containers.htm">SWING - Containers</a></li>
+</ul>
+
+
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>SWING - Component Class</h1>
+<div class="topgooglead">
+<hr />
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js"></script></div> 
+<div class="pre-btn">
+<a href="swing_controls.htm"> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="swing_controls.htm">Next Page &nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr />
+<h2>Introduction</h2>
+<p>The class <b>Component</b> is the abstract base class for the non menu user-interface controls of AWT. Component represents an object with graphical representation.</p>
+<h2>Class declaration</h2>
+<p>Following is the declaration for <b>java.awt.Component</b> class:</p>
+<pre class="prettyprint notranslate">
+public abstract class Component
+   extends Object
+      implements ImageObserver, MenuContainer, Serializable
+</pre>
+<h2>Field</h2>
+<p>Following are the fields for <b>java.awt.Component</b> class:</p>
+<ul class="list">
+<li><p><b>static float BOTTOM_ALIGNMENT</b> -- Ease-of-use constant for getAlignmentY.</p></li>
+<li><p><b>static float CENTER_ALIGNMENT</b> -- Ease-of-use constant for getAlignmentY and getAlignmentX.</p></li>
+<li><p><b>static float LEFT_ALIGNMENT</b> -- Ease-of-use constant for getAlignmentX.</p></li>
+<li><p><b>static float RIGHT_ALIGNMENT</b> -- Ease-of-use constant for getAlignmentX.</p></li>
+<li><p><b>static float TOP_ALIGNMENT</b> -- Ease-of-use constant for getAlignmentY().</p></li>
+</ul>
+<h2>Class constructors</h2>
+<table class="table table-bordered">
+<tr>
+<th style="width:5%">S.N.</th>
+<th>Constructor &amp; Description</th>
+</tr>
+<tr><td>1</td>
+<td><b>protected Component() </b><p>This creates a new Component.</p></td>
+</tr>
+</table>
+<h2>Class methods</h2>
+<table class="table table-bordered">
+<tr>
+<th style="width:5%">S.N.</th>
+<th>Method &amp; Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td><b>boolean action(Event evt, Object what) </b><p>Deprecated. As of JDK version 1.1, should register this component as ActionListener on component which fires action events.</p></td>
+</tr>
+<tr>
+<td>2</td>
+<td><b>void add(PopupMenu popup)</b><p>Adds the specified popup menu to the component.</p></td>
+</tr>
+<tr>
+<td>3</td>
+<td><b>void addComponentListener(ComponentListener l) </b><p>Adds the specified component listener to receive component events from this component.</p></td>
+</tr>
+<tr>
+<td>4</td>
+<td><b>void addFocusListener(FocusListener l) </b><p>Adds the specified focus listener to receive focus events from this component when this component gains input focus.</p></td>
+</tr>
+<tr>
+<td>5</td>
+<td><b>void addHierarchyBoundsListener(HierarchyBoundsListener l)</b><p>Adds the specified hierarchy bounds listener to receive hierarchy bounds events from this component when the hierarchy to which this container belongs changes.</p></td>
+</tr>
+<tr>
+<td>6</td>
+<td><b>void addHierarchyListener(HierarchyListener l)</b><p>Adds the specified hierarchy listener to receive hierarchy changed events from this component when the hierarchy to which this container belongs changes.</p></td>
+</tr>
+<tr>
+<td>7</td>
+<td><b>void addInputMethodListener(InputMethodListener l)</b><p>Adds the specified input method listener to receive input method events from this component.</p></td>
+</tr>
+<tr>
+<td>8</td>
+<td><b>void addKeyListener(KeyListener l)</b><p>Adds the specified key listener to receive key events from this component.</p></td>
+</tr>
+<tr>
+<td>9</td>
+<td><b>void addMouseListener(MouseListener l)</b><p>Adds the specified mouse listener to receive mouse events from this component.</p></td>
+</tr>
+<tr>
+<td>10</td>
+<td><b>void addMouseMotionListener(MouseMotionListener l)</b><p>Adds the specified mouse motion listener to receive mouse motion events from this component.</p></td>
+</tr>
+<tr>
+<td>11</td>
+<td><b>void addMouseWheelListener(MouseWheelListener l)</b><p>Adds the specified mouse wheel listener to receive mouse wheel events from this component.</p></td>
+</tr>
+<tr>
+<td>12</td>
+<td><b>void addNotify()</b><p>Makes this Component displayable by connecting it to a native screen resource.</p></td>
+</tr>
+<tr><td>13</td>
+<td><b>void addPropertyChangeListener(PropertyChangeListener listener)</b><p>Adds a PropertyChangeListener to the listener list.</p></td>
+</tr>
+<tr>
+<td>14</td>
+<td><b>void addPropertyChangeListener(String propertyName, PropertyChangeListener listener)</b><p>Adds a PropertyChangeListener to the listener list for a specific property.</p></td>
+</tr>
+<tr>
+<td>15</td>
+<td>
+<b>void applyComponentOrientation(ComponentOrientation orientation)</b><p>Sets the ComponentOrientation property of this component and all components contained within it.</p></td>
+</tr>
+<tr>
+<td>16</td>
+<td><b>boolean areFocusTraversalKeysSet(int id)</b><p>Returns whether the Set of focus traversal keys for the given focus traversal operation has been explicitly defined for this Component.</p></td>
+</tr>
+<tr>
+<td>17</td>
+<td><b>int  checkImage(Image image, ImageObserver observer)</b><p>Returns the status of the construction of a screen representation of the specified image.</p></td>
+</tr>
+<tr>
+<td>18</td>
+<td><b>int  checkImage(Image image,int  width,int  height, ImageObserver observer)</b><p>Returns the status of the construction of a screen representation of the specified image.</p></td>
+</tr>
+<tr>
+<td>19</td>
+<td><b>boolean contains(int x,int  y)</b><p>Checks whether this component "contains" the specified point, where x and y are defined to be relative to the coordinate system of this component.</p></td>
+</tr>
+<tr>
+<td>20</td>
+<td><b>boolean contains(Point p)</b><p>Checks whether this component "contains" the specified point, where the point's x and y coordinates are defined to be relative to the coordinate system of this component.</p></td>
+</tr>
+<tr>
+<td>21</td>
+<td><b>Image createImage(ImageProducer producer)</b><p>Creates an image from the specified image producer.</p></td>
+</tr>
+<tr>
+<td>22</td>
+<td><b>Image createImage(int width,int  height)</b><p>Creates an off-screen drawable image to be used for double buffering.</p></td>
+</tr>
+<tr>
+<td>23</td>
+<td><b>VolatileImage createVolatileImage(int width,int  height)</b><p>Creates a volatile off-screen drawable image to be used for double buffering.</p></td>
+</tr>
+<tr>
+<td>24</td>
+<td><b>VolatileImage createVolatileImage(int width,int  height, ImageCapabilities caps)</b><p>Creates a volatile off-screen drawable image, with the given capabilities.</p></td>
+</tr>
+<tr>
+<td>25</td>
+<td><b>void deliverEvent(Event e)</b><p>Deprecated. As of JDK version 1.1, replaced by dispatchEvent(AWTEvent e).</p></td>
+</tr>
+<tr>
+<td>26</td>
+<td><b>void disable()</b><p>Deprecated. As of JDK version 1.1, replaced by setEnabled(boolean).</p></td>
+</tr>
+<tr>
+<td>27</td>
+<td><b>protected void disableEvents(long eventsToDisable)</b><p>Disables the events defined by the specified event mask parameter from being delivered to this component.</p></td>
+</tr>
+<tr>
+<td>28</td>
+<td><b>void dispatchEvent(AWTEvent e)</b><p>Dispatches an event to this component or one of its sub components.</p></td>
+</tr>
+<tr>
+<td>29</td>
+<td><b>void doLayout()</b><p>Prompts the layout manager to lay out this component.</p></td>
+</tr>
+<tr>
+<td>30</td>
+<td><b>void enable()</b><p>Deprecated. As of JDK version 1.1, replaced by setEnabled(boolean).</p></td>
+</tr>
+<tr>
+<td>31</td>
+<td><b>void enable(boolean b)</b><p>Deprecated. As of JDK version 1.1, replaced by setEnabled(boolean).</p></td>
+</tr>
+<tr>
+<td>32</td>
+<td><b>protected void	enableEvents(long eventsToEnable)</b><p>Enables the events defined by the specified event mask parameter to be delivered to this component.</p></td>
+</tr>
+<tr><td>33</td><td><b>void enableInputMethods(boolean enable)</b><p>Enables or disables input method support for this component.</p></td>
+</tr>
+<tr>
+<td>34</td>
+<td><b>protected void firePropertyChange(String propertyName, boolean oldValue, boolean newValue)</b><p>Support for reporting bound property changes for boolean properties.</p></td>
+</tr>
+<tr>
+<td>35</td>
+<td><b>void firePropertyChange(String propertyName, byte oldValue, byte newValue)</b><p>Reports a bound property change.</p></td>
+</tr>
+<tr>
+<td>36</td>
+<td><b>void firePropertyChange(String propertyName, char oldValue, char newValue)</b><p>Reports a bound property change.</p></td>
+</tr>
+<tr>
+<td>37</td>
+<td><b>void firePropertyChange(String propertyName, double oldValue, double newValue)</b><p>Reports a bound property change.</p></td>
+</tr>
+<tr>
+<td>38</td>
+<td><b>void firePropertyChange(String propertyName, float oldValue, float newValue)</b><p>Reports a bound property change.</p></td>
+</tr>
+<tr>
+<td>39</td>
+<td><b>void firePropertyChange(String propertyName, long oldValue, long newValue)</b><p>Reports a bound property change.</p></td>
+</tr>
+<tr><td>40</td><td><b>protected void firePropertyChange(String propertyName, Object oldValue, Object newValue)</b><p>Support for reporting bound property changes for Object properties.</p></td>
+</tr>
+<tr>
+<td>41</td>
+<td><b>void firePropertyChange(String propertyName, short oldValue, short newValue)</b><p>Reports a bound property change.</p></td></tr>
+<tr>
+<td>42</td>
+<td><b>AccessibleContext getAccessibleContext()</b><p>Gets the AccessibleContext associated with this Component.</p></td>
+</tr>
+<tr>
+<td>43</td>
+<td><b>float getAlignmentX()</b><p>Returns the alignment along the x axis.</p></td>
+</tr>
+<tr>
+<td>44</td>
+<td><b>float getAlignmentY()</b><p>Returns the alignment along the y axis.</p></td>
+</tr>
+<tr>
+<td>45</td>
+<td><b>Color getBackground()</b><p>Gets the background color of this component.</p></td>
+</tr>
+<tr>
+<td>46</td>
+<td><b>int  getBaseline(int width,int  height)</b><p>Returns the baseline. </p></td>
+</tr>
+<tr>
+<td>47</td>
+<td><b>Component.BaselineResizeBehavior getBaselineResizeBehavior()</b><p>Returns an enum indicating how the baseline of the component changes as the size changes.</p></td>
+</tr>
+<tr>
+<td>48</td>
+<td><b>Rectangle getBounds()</b><p>Gets the bounds of this component in the form of a Rectangle object.</p></td>
+</tr>
+<tr>
+<td>49</td>
+<td><b>Rectangle getBounds(Rectangle rv)</b><p>Stores the bounds of this component into <b>return value</b> rv and return rv.</p></td>
+</tr>
+<tr>
+<td>50</td>
+<td><b>ColorModel getColorModel()</b><p>Gets the instance of ColorModel used to display the component on the output device.</p></td>
+</tr>
+<tr>
+<td>51</td>
+<td><b>Component getComponentAt(int x,int  y)</b><p>Determines if this component or one of its immediate subcomponents contains the (x, y) location, and if so, returns the containing component.</p></td>
+</tr>
+<tr>
+<td>52</td>
+<td><b>Component getComponentAt(Point p)</b><p>Returns the component or subcomponent that contains the specified point.</p></td>
+</tr>
+<tr>
+<td>53</td>
+<td><b>ComponentListener[] getComponentListeners()</b><p>Returns an array of all the component listeners registered on this component.</p></td>
+</tr>
+<tr>
+<td>54</td>
+<td><b>ComponentOrientation getComponentOrientation()</b><p>Retrieves the language-sensitive orientation that is to be used to order the elements or text within this component.</p></td>
+</tr>
+<tr>
+<td>55</td>
+<td><b>Cursor getCursor()</b><p>Gets the cursor set in the component.</p></td>
+</tr>
+<tr>
+<td>56</td>
+<td><b>DropTarget getDropTarget()</b><p>Gets the DropTarget associated with this Component.</p></td>
+</tr>
+<tr>
+<td>57</td>
+<td><b>Container getFocusCycleRootAncestor()</b><p>Returns the Container which is the focus cycle root of this Component's focus traversal cycle.</p></td>
+</tr>
+<tr>
+<td>58</td>
+<td><b>FocusListener[] getFocusListeners()</b><p>Returns an array of all the focus listeners registered on this component.</p></td>
+</tr>
+<tr>
+<td>59</td>
+<td><b>Set&lt;AWTKeyStroke&gt; getFocusTraversalKeys(int id)</b><p>Returns the Set of focus traversal keys for a given traversal operation for this Component.</p></td></tr>
+<tr>
+<td>60</td>
+<td><b>boolean getFocusTraversalKeysEnabled()</b><p>Returns whether focus traversal keys are enabled for this Component.</p></td></tr>
+<tr>
+<td>61</td>
+<td><b>Font getFont()</b><p>Gets the font of this component.</p></td>
+</tr>
+<tr>
+<td>62</td>
+<td><b>FontMetrics getFontMetrics(Font font)</b><p>Gets the font metrics for the specified font.</p></td>
+</tr>
+<tr>
+<td>63</td>
+<td><b>Color getForeground()</b><p>Gets the foreground color of this component.</p></td>
+</tr>
+<tr>
+<td>64</td>
+<td><b>Graphics getGraphics()</b><p>Creates a graphics context for this component.</p></td>
+</tr>
+<tr>
+<td>65</td>
+<td><b>GraphicsConfiguration getGraphicsConfiguration()</b><p>Gets the GraphicsConfiguration associated with this Component.</p></td>
+</tr>
+<tr>
+<td>66</td>
+<td><b>int  getHeight()</b><p>Returns the current height of this component.</p></td>
+</tr>
+<tr>
+<td>67</td>
+<td><b>HierarchyBoundsListener[] getHierarchyBoundsListeners()</b><p>Returns an array of all the hierarchy bounds listeners registered on this component.</p></td>
+</tr>
+<tr>
+<td>68</td>
+<td><b>HierarchyListener[] getHierarchyListeners()</b><p>Returns an array of all the hierarchy listeners registered on this component.</p></td>
+</tr>
+<tr>
+<td>69</td>
+<td><b>boolean getIgnoreRepaint()</b><p /> 
+</td></tr><tr>
+<td>70</td>
+<td><b>InputContext getInputContext()</b><p>Gets the input context used by this component for handling the communication with input methods when text is entered in this component.</p></td>
+</tr>
+<tr>
+<td>71</td>
+<td><b>InputMethodListener[] getInputMethodListeners()</b><p>Returns an array of all the input method listeners registered on this component.</p></td>
+</tr>
+<tr>
+<td>72</td>
+<td><b>InputMethodRequests getInputMethodRequests()</b><p>Gets the input method request handler which supports requests from input methods for this component.</p></td>
+</tr>
+<tr>
+<td>73</td>
+<td><b>KeyListener[] getKeyListeners()</b><p>Returns an array of all the key listeners registered on this component.</p></td>
+</tr>
+<tr>
+<td>74</td>
+<td><b>&lt;T extends EventListener&gt; T[] getListeners(Class&lt;T&gt; listenerType)</b><p>Returns an array of all the objects currently registered as FooListeners upon this Component.</p></td>
+</tr>
+<tr>
+<td>75</td>
+<td><b>Locale getLocale()</b><p>Gets the locale of this component.</p></td>
+</tr>
+<tr>
+<td>76</td>
+<td><b>Point getLocation()</b><p>Gets the location of this component in the form of a point specifying the component's top-left corner.</p></td>
+</tr>
+<tr>
+<td>77</td>
+<td><b>Point getLocation(Point rv)</b><p>Stores the x,y origin of this component into <b>return value</b> rv and return rv.</p></td>
+</tr>
+<tr>
+<td>78</td>
+<td><b>Point getLocationOnScreen()</b><p>Gets the location of this component in the form of a point specifying the component's top-left corner in the screen's coordinate space.</p></td>
+</tr>
+<tr><td>79</td><td><b>Dimension getMaximumSize()</b><p>Gets the maximum size of this component.</p></td>
+</tr>
+<tr>
+<td>80</td>
+<td><b>Dimension getMinimumSize()</b><p>Gets the mininimum size of this component.</p></td>
+</tr>
+<tr>
+<td>81</td>
+<td><b>MouseListener[] getMouseListeners()</b><p>Returns an array of all the mouse listeners registered on this component.</p></td>
+</tr>
+<tr>
+<td>82</td>
+<td><b>MouseMotionListener[] getMouseMotionListeners()</b><p>Returns an array of all the mouse motion listeners registered on this component.</p></td>
+</tr>
+<tr>
+<td>83</td>
+<td><b>Point getMousePosition()</b><p>Returns the position of the mouse pointer in this Component's coordinate space if the Component is directly under the mouse pointer, otherwise returns null.</p></td>
+</tr>
+<tr>
+<td>84</td>
+<td><b>MouseWheelListener[] getMouseWheelListeners()</b><p>Returns an array of all the mouse wheel listeners registered on this component.</p></td>
+</tr>
+<tr>
+<td>85</td>
+<td><b>String getName()</b><p>Gets the name of the component.</p></td>
+</tr>
+<tr>
+<td>86</td>
+<td><b>Container getParent()</b><p>Gets the parent of this component.</p></td>
+</tr>
+<tr>
+<td>87</td>
+<td><b>java.awt.peer.ComponentPeer getPeer() Deprecated. As of JDK version 1.1, programs should not directly manipulate peers; replaced by boolean isDisplayable().<p /></b></td>
+</tr>
+<tr>
+<td>88</td>
+<td><b>Dimension getPreferredSize()</b><p>Gets the preferred size of this component.</p></td>
+</tr>
+<tr>
+<td>89</td>
+<td><b>PropertyChangeListener[] getPropertyChangeListeners()</b><p>Returns an array of all the property change listeners registered on this component.</p></td>
+</tr>
+<tr>
+<td>90</td>
+<td><b>PropertyChangeListener[] getPropertyChangeListeners(String propertyName)</b><p>Returns an array of all the listeners which have been associated with the named property.</p></td>
+</tr>
+<tr>
+<td>91</td>
+<td><b>Dimension getSize()</b><p>Returns the size of this component in the form of a Dimension object.</p></td>
+</tr>
+<tr>
+<td>92</td>
+<td><b>Dimension getSize(Dimension rv)Stores the width/height of this component into <b>return value</b> rv and return rv.<p /></b></td>
+</tr>
+<tr>
+<td>93</td>
+<td><b>Toolkit getToolkit()</b><p>Gets the toolkit of this component.</p></td>
+</tr>
+<tr>
+<td>94</td>
+<td><b>Object getTreeLock()</b><p />Gets this component's locking object (the object that owns the thread sychronization monitor)<p> for AWT component-tree and layout operations.</p></td>
+</tr>
+<tr>
+<td>95</td>
+<td><b>int  getWidth()</b><p>Returns the current width of this component.</p></td>
+</tr>
+<tr>
+<td>96</td>
+<td><b>int getX()</b><p>Returns the current x coordinate of the components origin.</p></td>
+</tr>
+<tr>
+<td>97</td>
+<td><b>int getY()</b><p>Returns the current y coordinate of the components origin.</p></td>
+</tr>
+<tr>
+<td>98</td>
+<td><b>boolean gotFocus(Event evt, Object what)</b><p>Deprecated. As of JDK version 1.1, replaced by processFocusEvent(FocusEvent)</p></td>
+</tr>
+<tr>
+<td>99</td>
+<td><b>boolean handleEvent(Event evt)</b><p>Deprecated. As of JDK version 1.1 replaced by processEvent(AWTEvent).</p></td>
+</tr>
+<tr>
+<td>100</td>
+<td><b>boolean hasFocus()</b><p>Returns true if this Component is the focus owner.</p></td>
+</tr>
+<tr>
+<td>101</td>
+<td><b>void hide()</b><p>Deprecated. As of JDK version 1.1, replaced by setVisible(boolean).</p></td>
+</tr>
+<tr>
+<td>102</td>
+<td><b>boolean imageUpdate(Image img,int  infoflags,int  x,int  y,int  w,int  h)</b><p>Repaints the component when the image has changed.</p></td>
+</tr>
+<tr><td>103</td><td><b>boolean inside(int x,int  y)</b><p>Deprecated. As of JDK version 1.1, replaced by contains(int, int).</p></td>
+</tr>
+<tr>
+<td>104</td>
+<td><b>void invalidate()</b><p>Invalidates this component.</p></td>
+</tr>
+<tr>
+<td>105</td>
+<td><b>boolean isBackgroundSet()</b><p>Returns whether the background color has been explicitly set for this Component.</p></td>
+</tr>
+<tr>
+<td>106</td>
+<td><b>boolean isCursorSet()</b><p>Returns whether the cursor has been explicitly set for this Component.</p></td>
+</tr>
+<tr>
+<td>107</td>
+<td><b>boolean isDisplayable()</b><p>Determines whether this component is displayable.</p></td>
+</tr>
+<tr><td>108</td><td><b>boolean isDoubleBuffered()</b><p />Returns true if this component is painted to an offscreen image (<b>buffer</b>)<p> that's copied to the screen later.</p></td>
+</tr>
+<tr>
+<td>109</td>
+<td><b>boolean isEnabled()</b><p>Determines whether this component is enabled.</p></td>
+</tr>
+<tr>
+<td>110</td>
+<td><b>boolean isFocusable()</b><p>Returns whether this Component can be focused.</p></td>
+</tr>
+<tr>
+<td>111</td>
+<td><b>boolean isFocusCycleRoot(Container container)</b><p>Returns whether the specified Container is the focus cycle root of this Component's focus traversal cycle.</p></td>
+</tr>
+<tr>
+<td>112</td>
+<td><b>boolean isFocusOwner()</b><p>Returns true if this Component is the focus owner.</p></td>
+</tr>
+<tr>
+<td>113</td>
+<td><b>boolean isFocusTraversable()</b><p>Deprecated. As of 1.4, replaced by isFocusable().</p></td></tr>
+<tr>
+<td>114</td>
+<td><b>boolean isFontSet()</b><p>Returns whether the font has been explicitly set for this Component.</p></td></tr>
+<tr>
+<td>115</td>
+<td><b>boolean isForegroundSet()</b><p>Returns whether the foreground color has been explicitly set for this Component.</p></td></tr>
+<tr>
+<td>116</td>
+<td><b>boolean isLightweight()</b><p>A lightweight component doesn't have a native toolkit peer.</p></td>
+</tr>
+<tr>
+<td>117</td>
+<td><b>boolean isMaximumSizeSet()</b><p>Returns true if the maximum size has been set to a non-null value otherwise returns false.</p></td>
+</tr>
+<tr>
+<td>118</td>
+<td><b>boolean isMinimumSizeSet()</b><p>Returns whether or not setMinimumSize has been invoked with a non-null value.</p></td>
+</tr>
+<tr>
+<td>119</td>
+<td><b>boolean isOpaque()</b><p>Returns true if this component is completely opaque, returns false by default.</p></td>
+</tr>
+<tr>
+<td>120</td>
+<td><b>boolean isPreferredSizeSet()</b><p>Returns true if the preferred size has been set to a non-null value otherwise returns false.</p></td>
+</tr>
+<tr>
+<td>121</td>
+<td><b>boolean isShowing()</b><p>Determines whether this component is showing on screen.</p></td>
+</tr>
+<tr>
+<td>122</td>
+<td><b>boolean isValid()</b><p>Determines whether this component is valid.</p></td>
+</tr>
+<tr>
+<td>123</td>
+<td><b>boolean isVisible()</b><p>Determines whether this component should be visible when its parent is visible.</p></td>
+</tr>
+<tr>
+<td>124</td>
+<td><b>boolean keyDown(Event evt,int  key)</b><p>Deprecated. As of JDK version 1.1, replaced by processKeyEvent(KeyEvent).</p></td>
+</tr>
+<tr>
+<td>125</td>
+<td><b>boolean keyUp(Event evt,int  key)</b><p>Deprecated. As of JDK version 1.1, replaced by processKeyEvent(KeyEvent).</p></td>
+</tr>
+<tr>
+<td>126</td>
+<td><b>void layout()</b><p>Deprecated. As of JDK version 1.1, replaced by doLayout().</p></td>
+</tr>
+<tr>
+<td>127</td>
+<td><b>void list()</b><p>Prints a listing of this component to the standard system output stream System.out.</p></td>
+</tr>
+<tr>
+<td>128</td>
+<td><b>void list(PrintStream out)</b><p>Prints a listing of this component to the specified output stream.</p></td>
+</tr>
+<tr>
+<td>129</td>
+<td><b>void list(PrintStream out,int  indent)</b><p>Prints out a list, starting at the specified indentation, to the specified print stream.</p></td>
+</tr>
+<tr>
+<td>130</td>
+<td><b>void list(PrintWriter out)</b><p>Prints a listing to the specified print writer.</p></td>
+</tr>
+<tr>
+<td>131</td>
+<td><b>void list(PrintWriter out,int  indent)</b><p>Prints out a list, starting at the specified indentation, to the specified print writer.</p></td>
+</tr>
+<tr>
+<td>132</td>
+<td><b>Component locate(int x,int  y)</b><p>Deprecated. As of JDK version 1.1, replaced by getComponentAt(int, int).</p></td>
+</tr>
+<tr>
+<td>133</td>
+<td><b>Point location()</b><p>Deprecated. As of JDK version 1.1, replaced by getLocation().</p></td>
+</tr>
+<tr>
+<td>134</td>
+<td><b>boolean lostFocus(Event evt, Object what)</b><p>Deprecated. As of JDK version 1.1, replaced by processFocusEvent(FocusEvent).</p></td>
+</tr>
+<tr>
+<td>135</td>
+<td><b>boolean mouseDown(Event evt,int  x,int  y)</b><p>Deprecated. As of JDK version 1.1, replaced by processMouseEvent(MouseEvent).</p></td>
+</tr>
+<tr>
+<td>136</td>
+<td><b>boolean mouseDrag(Event evt,int  x,int  y)</b><p>Deprecated. As of JDK version 1.1, replaced by processMouseMotionEvent(MouseEvent).</p></td>
+</tr>
+<tr>
+<td>137</td>
+<td><b>boolean mouseEnter(Event evt,int  x,int  y)</b><p>Deprecated. As of JDK version 1.1, replaced by processMouseEvent(MouseEvent).</p></td>
+</tr>
+<tr>
+<td>138</td>
+<td><b>boolean mouseExit(Event evt,int  x,int  y)</b><p>Deprecated. As of JDK version 1.1, replaced by processMouseEvent(MouseEvent)..</p></td>
+</tr>
+<tr>
+<td>139</td>
+<td><b>boolean mouseMove(Event evt,int  x,int  y)</b><p>Deprecated. As of JDK version 1.1, replaced by processMouseMotionEvent(MouseEvent)..</p></td>
+</tr>
+<tr>
+<td>140</td>
+<td><b>boolean mouseUp(Event evt,int  x,int  y)</b><p>Deprecated. As of JDK version 1.1, replaced by processMouseEvent(MouseEvent).</p></td>
+</tr>
+<tr>
+<td>141</td>
+<td><b>void move(int x,int  y)</b><p>Deprecated. As of JDK version 1.1, replaced by setLocation(int, int).</p></td>
+</tr>
+<tr>
+<td>142</td>
+<td><b>void nextFocus()</b><p>Deprecated. As of JDK version 1.1, replaced by transferFocus().</p></td>
+</tr>
+<tr>
+<td>143</td>
+<td><b>void paint(Graphics g)</b><p>Paints this component.</p></td>
+</tr>
+<tr>
+<td>144</td>
+<td><b>void paintAll(Graphics g)</b><p>Paints this component and all of its subcomponents.</p></td>
+</tr>
+<tr>
+<td>145</td>
+<td><b>boolean postEvent(Event e)</b><p>Deprecated. As of JDK version 1.1, replaced by dispatchEvent(AWTEvent).</p></td>
+</tr>
+<tr>
+<td>146</td>
+<td><b>boolean prepareImage(Image image,int  width,int  height, ImageObserver observer)</b><p>Prepares an image for rendering on this component at the specified width and height.</p></td>
+</tr>
+<tr>
+<td>147</td>
+<td><b>void print(Graphics g)</b><p>Prints this component.</p></td>
+</tr>
+<tr>
+<td>148</td>
+<td><b>void printAll(Graphics g)</b><p>Prints this component and all of its subcomponents.</p></td>
+</tr>
+<tr>
+<td>149</td>
+<td><b>protectedvoid processComponentEvent(ComponentEvent e)</b><p>Processes component events occurring on this component by dispatching them to any registered ComponentListener objects.</p></td>
+</tr>
+<tr>
+<td>150</td>
+<td><b>protected void processEvent(AWTEvent e)</b><p>Processes events occurring on this component.</p></td>
+</tr>
+<tr>
+<td>151</td>
+<td><b>protected void processFocusEvent(FocusEvent e)</b><p>Processes focus events occurring on this component by dispatching them to any registered FocusListener objects.</p></td>
+</tr>
+<tr>
+<td>152</td>
+<td><b>protected void processHierarchyBoundsEvent(HierarchyEvent e)</b><p>Processes hierarchy bounds events occurring on this component by dispatching them to any registered HierarchyBoundsListener objects.</p></td>
+</tr>
+<tr>
+<td>153</td>
+<td><b>protected void processHierarchyEvent(HierarchyEvent e)</b><p>Processes hierarchy events occurring on this component by dispatching them to any registered HierarchyListener objects.</p></td>
+</tr>
+<tr>
+<td>154</td>
+<td><b>protectedvoid processInputMethodEvent(InputMethodEvent e)</b><p>Processes input method events occurring on this component by dispatching them to any registered InputMethodListener objects.</p></td>
+</tr>
+<tr>
+<td>155</td>
+<td><b>protected void processKeyEvent(KeyEvent e)</b><p>Processes key events occurring on this component by dispatching them to any registered KeyListener objects.</p></td>
+</tr>
+<tr>
+<td>156</td>
+<td><b>protected void processMouseEvent(MouseEvent e)</b><p>Processes mouse events occurring on this component by dispatching them to any registered MouseListener objects.</p></td>
+</tr>
+<tr>
+<td>157</td>
+<td><b>protected void processMouseMotionEvent(MouseEvent e)</b><p>Processes mouse motion events occurring on this component by dispatching them to any registered MouseMotionListener objects.</p></td>
+</tr>
+<tr>
+<td>158</td>
+<td><b>protected void processMouseWheelEvent(MouseWheelEvent e)</b><p>Processes mouse wheel events occurring on this component by dispatching them to any registered MouseWheelListener objects.</p></td>
+</tr>
+<tr>
+<td>159</td>
+<td><b>void remove(MenuComponent popup)</b><p>Removes the specified popup menu from the component.</p></td>
+</tr>
+<tr>
+<td>160</td>
+<td><b>void removeComponentListener(ComponentListener l)</b><p>Removes the specified component listener so that it no longer receives component events from this component.</p></td>
+</tr>
+<tr>
+<td>161</td>
+<td><b>void removeFocusListener(FocusListener l)</b><p>Removes the specified focus listener so that it no longer receives focus events from this component.</p></td>
+</tr>
+<tr>
+<td>162</td>
+<td><b>void removeHierarchyBoundsListener(HierarchyBoundsListener l)</b><p>Removes the specified hierarchy bounds listener so that it no longer receives hierarchy bounds events from this component.</p></td>
+</tr>
+<tr>
+<td>163</td>
+<td><b>void removeHierarchyListener(HierarchyListener l)</b><p>Removes the specified hierarchy listener so that it no longer receives hierarchy changed events from this component.</p></td>
+</tr>
+<tr>
+<td>164</td>
+<td><b>void removeInputMethodListener(InputMethodListener l)</b><p>Removes the specified input method listener so that it no longer receives input method events from this component.</p></td>
+</tr>
+<tr>
+<td>165</td>
+<td><b>void removeKeyListener(KeyListener l)</b><p>Removes the specified key listener so that it no longer receives key events from this component.</p></td>
+</tr>
+<tr>
+<td>166</td>
+<td><b>void removeMouseListener(MouseListener l)</b><p>Removes the specified mouse listener so that it no longer receives mouse events from this component.</p></td>
+</tr>
+<tr>
+<td>167</td>
+<td><b>void removeMouseMotionListener(MouseMotionListener l)</b><p>Removes the specified mouse motion listener so that it no longer receives mouse motion events from this component.</p></td>
+</tr>
+<tr>
+<td>168</td>
+<td><b>void removeMouseWheelListener(MouseWheelListener l)</b><p>Removes the specified mouse wheel listener so that it no longer receives mouse wheel events from this component.</p></td>
+</tr>
+<tr>
+<td>169</td>
+<td><b>void removeNotify()</b><p>Makes this Component undisplayable by destroying it native screen resource.</p></td>
+</tr>
+<tr>
+<td>170</td>
+<td><b>void removePropertyChangeListener(PropertyChangeListener listener)</b><p>Removes a PropertyChangeListener from the listener list.</p></td>
+</tr>
+<tr>
+<td>171</td>
+<td><b>void removePropertyChangeListener(String propertyName, PropertyChangeListener listener)</b><p>Removes a PropertyChangeListener from the listener list for a specific property.</p></td>
+</tr>
+<tr>
+<td>172</td>
+<td><b>void repaint()</b><p>Repaints this component.</p></td>
+</tr>
+<tr>
+<td>173</td>
+<td><b>void repaint(int x,int  y,int  width,int  height)</b><p>Repaints the specified rectangle of this component.</p></td>
+</tr>
+<tr>
+<td>174</td>
+<td><b>void repaint(long tm)</b><p>Repaints the component.</p></td></tr>
+<tr>
+<td>175</td>
+<td><b>void repaint(long tm,int  x,int  y,int  width,int  height)</b><p>Repaints the specified rectangle of this component within tm milliseconds.</p></td>
+</tr>
+<tr>
+<td>176</td>
+<td><b>void requestFocus()</b><p>Requests that this Component get the input focus, and that this Component's top-level ancestor become the focused Window.</p></td>
+</tr>
+<tr>
+<td>177</td>
+<td><b>protected boolean requestFocus(boolean temporary)</b><p>Requests that this Component get the input focus, and that this Component's top-level ancestor become the focused Window.</p></td>
+</tr>
+<tr>
+<td>178</td>
+<td><b>boolean requestFocusInWindow()</b><p>Requests that this Component get the input focus, if this Component's top-level ancestor is already the focused Window.</p></td>
+</tr>
+<tr>
+<td>179</td>
+<td><b>protected boolean requestFocusInWindow(boolean temporary)</b><p>Requests that this Component get the input focus, if this Component's top-level ancestor is already the focused Window.</p></td></tr>
+<tr>
+<td>180</td>
+<td><b>void reshape(int x,int  y,int  width,int  height)</b><p>Deprecated. As of JDK version 1.1, replaced by setBounds(int, int, int, int).</p></td>
+</tr>
+<tr>
+<td>181</td>
+<td><b>void resize(Dimension d)</b><p>Deprecated. As of JDK version 1.1, replaced by setSize(Dimension).</p></td>
+</tr>
+<tr>
+<td>182</td>
+<td><b>void resize(int width,int  height)</b><p>Deprecated. As of JDK version 1.1, replaced by setSize(int, int).</p></td>
+</tr>
+<tr>
+<td>183</td>
+<td><b>void setBackground(Color c)</b><p>Sets the background color of this component.</p></td>
+</tr>
+<tr>
+<td>184</td>
+<td><b>void setBounds(int x,int  y,int  width,int  height)</b><p>Moves and resizes this component.</p></td>
+</tr>
+<tr>
+<td>185</td>
+<td><b>void setBounds(Rectangle r)</b><p>Moves and resizes this component to conform to the new bounding rectangle r.</p></td>
+</tr>
+<tr>
+<td>186</td>
+<td><b>void setComponentOrientation(ComponentOrientation o)</b><p>Sets the language-sensitive orientation that is to be used to order the elements or text within this component.</p></td>
+</tr>
+<tr>
+<td>187</td>
+<td><b>void setCursor(Cursor cursor)</b><p>Sets the cursor image to the specified cursor.</p></td>
+</tr>
+<tr>
+<td>188</td>
+<td><b>void setDropTarget(DropTarget dt)</b><p>Associate a DropTarget with this component.</p></td>
+</tr>
+<tr>
+<td>189</td>
+<td><b>void setEnabled(boolean b)</b><p>Enables or disables this component, depending on the value of the parameter b.</p></td>
+</tr>
+<tr>
+<td>190</td>
+<td><b>void setFocusable(boolean focusable)</b><p>Sets the focusable state of this Component to the specified value.</p></td>
+</tr>
+<tr>
+<td>191</td>
+<td><b>void setFocusTraversalKeys(int id, Set&lt;? extends AWTKeyStroke&gt; keystrokes)</b><p>Sets the focus traversal keys for a given traversal operation for this Component.</p></td>
+</tr>
+<tr><td>192</td><td><b>void setFocusTraversalKeysEnabled(boolean focusTraversalKeysEnabled)</b><p>Sets whether focus traversal keys are enabled for this Component.</p></td>
+</tr>
+<tr><td>193</td><td><b>void setFont(Font f)</b><p>Sets the font of this component.</p></td>
+</tr>
+<tr><td>194</td><td><b>void setForeground(Color c)</b><p>Sets the foreground color of this component.</p></td>
+</tr>
+<tr><td>195</td><td><b>void setIgnoreRepaint(boolean ignoreRepaint)</b><p>Sets whether or not paint messages received from the operating system should be ignored.</p></td>
+</tr>
+<tr>
+<td>196</td>
+<td><b>void setLocale(Locale l)</b><p>Sets the locale of this component.</p></td>
+</tr>
+<tr>
+<td>197</td>
+<td><b>void setLocation(int x,int  y)</b><p>Moves this component to a new location.</p></td>
+</tr>
+<tr>
+<td>198</td>
+<td><b>void setLocation(Point p)</b><p>Moves this component to a new location.</p></td>
+</tr>
+<tr>
+<td>199</td>
+<td><b>void setMaximumSize(Dimension maximumSize)</b><p>Sets the maximum size of this component to a constant value.</p></td>
+</tr>
+<tr>
+<td>200</td>
+<td><b>void setMinimumSize(Dimension minimumSize)</b><p>Sets the minimum size of this component to a constant value.</p></td>
+</tr>
+<tr>
+<td>201</td>
+<td><b>void setName(String name)</b><p>Sets the name of the component to the specified string.</p></td>
+</tr>
+<tr>
+<td>202</td>
+<td><b>void setPreferredSize(Dimension preferredSize)</b><p>Sets the preferred size of this component to a constant value.</p></td></tr>
+<tr>
+<td>203</td>
+<td><b>void setSize(Dimension d)</b><p>Resizes this component so that it has width d.width and height d.height.</p></td>
+</tr>
+<tr>
+<td>204</td>
+<td><b>void setSize(int width,int  height)</b><p>Resizes this component so that it has width width and height height.</p></td>
+</tr>
+<tr>
+<td>205</td>
+<td><b>void setVisible(boolean b)</b><p>Shows or hides this component depending on the value of parameter b.</p></td>
+</tr>
+<tr>
+<td>206</td>
+<td><b>void show()</b><p>Deprecated. As of JDK version 1.1, replaced by setVisible(boolean).</p></td>
+</tr>
+<tr>
+<td>207</td>
+<td><b>void show(boolean b)</b><p>Deprecated. As of JDK version 1.1, replaced by setVisible(boolean).</p></td>
+</tr>
+<tr>
+<td>208</td>
+<td><b>Dimension size()</b><p>Deprecated. As of JDK version 1.1, replaced by getSize().</p></td>
+</tr>
+<tr>
+<td>209</td>
+<td><b>String toString()</b><p>Returns a string representation of this component and its values.</p></td>
+</tr>
+<tr>
+<td>210</td>
+<td><b>void transferFocus()</b><p>Transfers the focus to the next component, as though this Component were the focus owner.</p></td>
+</tr>
+<tr>
+<td>211</td>
+<td><b>void transferFocusBackward()</b><p>Transfers the focus to the previous component, as though this Component were the focus owner.</p></td>
+</tr>
+<tr>
+<td>212</td>
+<td><b>void transferFocusUpCycle()</b><p>Transfers the focus up one focus traversal cycle.</p></td>
+</tr>
+<tr>
+<td>213</td>
+<td><b>void update(Graphics g)</b><p>Updates this component.</p></td>
+</tr>
+<tr>
+<td>214</td>
+<td><b>void validate()</b><p>Ensures that this component has a valid layout.</p></td>
+</tr>
+<tr>
+<td>215</td>
+<td><b>Rectangle bounds()</b><p>Deprecated. As of JDK version 1.1, replaced by getBounds().</p></td>
+</tr>
+<tr>
+<td>216</td>
+<td><b>protected  AWTEvent	coalesceEvents(AWTEvent existingEvent, AWTEvent newEvent)</b><p>Potentially coalesce an event being posted with an existing event.</p></td>
+</tr>
+<tr>
+<td>217</td>
+<td><b>protected String paramString()</b><p>Returns a string representing the state of this component.</p></td>
+</tr>
+<tr>
+<td>218</td>
+<td><b>protected void firePropertyChange(String propertyName,int  oldValue,int  newValue)</b><p>Support for reporting bound property changes for integer properties.</p></td>
+</tr>
+<tr>
+<td>219</td>
+<td><b>Dimension preferredSize()</b><p>Deprecated. As of JDK version 1.1, replaced by getPreferredSize().</p></td>
+</tr>
+<tr>
+<td>220</td>
+<td><b>boolean prepareImage(Image image, ImageObserver observer)</b><p>Prepares an image for rendering on this component.</p></td>
+</tr>
+<tr>
+<td>221</td>
+<td><b>Dimension minimumSize()</b><p>Deprecated. As of JDK version 1.1, replaced by getMinimumSize().</p></td>
+</tr>
+</table>
+<h2>Methods inherited</h2>
+<p>This class inherits methods from the following classes:</p>
+<ul class="list">
+<li><p>java.lang.Object</p></li>
+</ul>
+<hr style="margin-bottom:1.25% !important;"><div class="pre-btn">
+<a href="swing_controls.htm"> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="/cgi-bin/printpage.cgi" target="_blank Print</a>
+</div>
+<div class="nxt-btn">
+<a href="swing_controls.htm">Next Page &nbsp;</a>
+</div>
+<div class="parent-file">swing_controls.htm</div>
+<hr />
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<!-- AddThis Button BEGIN -->
+<!--
+<div class="simple-ad">
+<div class="addthis_sharing_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f661ec623a400f0"></script>
+</div>
+-->
+<!-- AddThis Button END -->
+<!--
+<div class="google-ad" style="position:relative; left:20px;">Advertisements</div>
+-->
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="inner">
+<div class="container">
+<div class="row">
+<div class="footer-ribon">
+<span>Extras</span>
+</div>
+<div class="col-md-2">
+<h4>Mobile First</h4>
+<ul class="list icons list-unstyled">
+<li><a id="iphone" href="https://itunes.apple.com/om/app/tutorials-point/id914891263?mt=8" target="_blank" rel="nofollow"><img alt="tutorialspoint iPhone App" src="../cdn/images/apple_store.jpg" class="mobile-apps" /></a></li>
+<li><a id="android" href="https://play.google.com/store/apps/details?id=com.tutorialspoint.onlineviewer" target="_blank" rel="nofollow"><img alt="tutorialspoint Android app" src="../cdn/images/google_play.jpg" class="mobile-apps" /></a></li>
+<li><a id="microsoft" href="http://www.windowsphone.com/s?appid=91249671-7184-4ad6-8a5f-d11847946b09" target="_blank" rel="nofollow"><img alt="tutorialspoint Windows app" src="../cdn/images/windows_store.jpg" class="mobile-apps" /></a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<h4>About us</h4>
+<ul class="list icons list-unstyled">
+<li><i class="icon icon-caret-right"></i> <a href="/about/index.htm">Company</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_team.htm">Team</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_careers.htm">Careers</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_privacy.htm">Privacy Policy</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_terms_of_use.htm">Terms of use</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<h4>Extra Links</h4>
+<ul class="list icons list-unstyled">
+<li><i class="icon icon-caret-right"></i> <a href="forums/index.php">Forums</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="shorttutorials/">Articles</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="shared-tutorials.php">Shared</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="seo_tools.htm">Seo Tools</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="about/contact_us.htm">Contact</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<div class="contact-details">
+<h4>Contact Us</h4>
+<ul class="contact">
+<li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> 388-A , Road no 22, Jubilee Hills, Hyderabad Telangana, INDIA-500033</p></li>
+<li><p><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="about/contact_us.htm">Click Here</a></p></li>
+<li><p><i class="icon icon-dribbble"></i> <strong>Website:</strong> <a href="http://www.tutorialspoint.com">www.tutorialspoint.com</a></p></li>
+</ul>
+</div>
+<div class="social-icons">
+<ul class="social-icons">
+<li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+<li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+<li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+<li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+<li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="index.htm" class="logo">
+<img alt="Tutorials Point" class="img-responsive" src="../cdn/scripts/img/logo-footer.png" />
+</a>
+</div>
+<div class="col-md-6">
+<p>&copy; Copyright 2015. All Rights Reserved.</p>
+</div>
+<div class="col-md-4">
+<nav id="sub-menu">
+<ul>
+<li><a href="/about/tutorials_writing.htm">Write for us</a></li>
+<li><a href="/about/faq.htm">FAQ's</a></li>
+<li><a href="/about/about_helping.htm">Helping</a></li>
+<li><a href="/about/contact_us.htm">Contact</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="../cdn/theme/js/custom-min.js"></script>
+<script src="../../www.google-analytics.com/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+</div>
+</body>
+</html>
