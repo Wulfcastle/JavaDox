@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8"> </html><![endif]-->
+<!--[if IE 9]><html class="ie ie9"> </html><![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+<!-- Original URL: http://www.tutorialspoint.com/java/java_string_concat.htm
+Date Downloaded: 2015-05-05 08:52:12 PM !-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Basic -->
+<meta charset="utf-8" />
+<title>Java - How To Use the Debugger in Netbeans IDE</title>
+<meta name="description" content="Java - String concat() Method - Learning Java in simple and easy steps : A beginner's tutorial containing complete knowledge of Java Syntax Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
+<meta name="keywords" content="Java, Tutorials, Learning, Beginners, Basics, Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
+
+<link rel="shortcut icon" href="./cdn/favicon.png" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+<meta name="author" content="tutorialspoint.com" />
+<meta property="fb:app_id" content="471319149685276" />
+<script type="text/javascript" src="./cdn/theme/js/script-min-v1.js"></script>
+<link rel="stylesheet" href="./cdn/theme/css/style-min-v1.css" />
+<link rel="stylesheet" href="./css/tomorrow-night.css" />
+<!--[if IE]>
+<link rel="stylesheet" href="./cdn/theme/css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<script src="./cdn/theme/vendor/respond.js"></script>
+<![endif]-->
+<!--[if IE]>
+<link rel="stylesheet" href="./cdn/theme/css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<script src="./cdn/theme/vendor/respond.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="./cdn/theme/css/ie8.css" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="./cdn/theme/css/ie9.css" />
+<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<style>
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, footer div.footer-ribon, div.footer-copyright { background:  url(../images/pattern.png) repeat center center !important; }
+header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;} 
+header nav ul.nav-main li.dropdown:hover > ul{ border:2px solid }
+header nav ul.nav-main ul.dropdown-menu > li > a:hover, #mainMenu > li:hover, header nav.mega-menu ul.nav-main .mega-menu-content ul.sub-menu li:hover{ background:  !important;}
+img.mobile-apps { border: 1px solid  !important; }
+footer i.icon, footer ul.list.icons li i { color:  !important; }
+button.btn-responsive-nav, header div.search button.btn-default { background:  !important;}
+.social-icons-top { display:none; }
+</style>
+</head>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+<body onload="prettyPrint()">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="./cdn/images/loading-cg.gif" alt="" width="70" height="70" />
+   </div>
+</div>
+<div id="divGoogle"></div>
+<div class="body">
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="images/logo.png" />
+      </a>
+      </h1>			
+      <div class="search" id="searchBar">
+         <form method="get" id="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="www.tutorialspoint.com" />
+            <div class="input-group">
+               <input type="text" class="form-control search" name="q" id="q" autocomplete="off" placeholder="Search your tutorials..." onfocus="if (this.value == 'Search your tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your tutorials...';}" />
+               <input value="FORID:11" name="cof" type="hidden" />
+               <input type="hidden" name="ie" value="ISO-8859-1" />
+               <span class="input-group-btn"> <button class="btn btn-default" type="submit" onclick="javascript:void(0);"><i class="icon icon-search"></i></button> </span>
+            </div>
+         </form>
+      </div>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li><a id="free-training-icon" href="absoluteclasses.htm"><img src="./cdn/images/free-training.jpg" style="width:100px; position:absolute;left:-158px; top:-7px; z-index:99;" title="Free Online Training" /></a></li>
+            <li> <a href="shared-tutorials.php"><i class="icon icon-user"></i> &nbsp;Shared</a> </li>
+            <li> <a href="shorttutorials"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>
+            <li>
+            <div class="social-icons social-icons-top">
+               <ul class="social-icons">
+               <li class="facebook"><a href="http://www.facebook.com/tutorialspointindia" target="_blank" title="Facebook">Facebook</a></li>
+               <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" title="Twitter">Twitter</a></li>
+               <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+               <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+               </ul>
+            </div>
+            </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse"  data-target=".nav-main-collapse" id="pull"></button>
+   </div>
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown"><a class="dropdown-toggle tut-lib" href="tutorialslibrary.htm"> Tutorials Library </a>
+      <ul class="dropdown-menu" id="submenu">
+         <li>
+            <div class="mega-menu-content">
+              <div class="row">
+                 <div class="col-md-6">
+                    <ul class="sub-menu">
+                     <li><a href="academic_tutorials.htm">Academic</a></li>
+                     <li><a href="big_data_tutorials.htm">Big Data</a></li>
+                     <li><a href="database_tutorials.htm">Databases</a></li>
+                     <li><a href="java_technology_tutorials.htm">Java Technologies</a></li>
+                     <li><a href="mainframe_tutorials.htm">Mainframe</a></li>
+                     <li><a href="management_tutorials.htm">Management</a></li>
+                     <li><a href="microsoft_technologies_tutorials.htm">Microsoft Technologies</a></li>
+                     <li><a href="misc_tutorials.htm">Miscellaneous</a></li>
+                   </ul>
+                 </div>
+                 <div class="col-md-6">
+                  <ul class="sub-menu">
+                     <li><a href="mobile_development_tutorials.htm">Mobile Development</a></li>
+                     <li><a href="computer_programming_tutorials.htm">Programming</a></li>
+                     <li><a href="scripting_lnaguage_tutorials.htm">Scripts</a></li>
+                     <li><a href="software_quality_tutorials.htm">Software Quality</a></li>
+                     <li><a href="telecom_tutorials.htm">Telecom</a></li>
+                     <li><a href="web_development_tutorials.htm">Web Development</a></li>
+                     <li><a href="xml_technologies_tutorials.htm">XML Technologies</a></li>
+                     <li><a href="multi_language_tutorials.htm">Multi Language Tutorials</a></li>
+                  </ul>
+                 </div>
+              </div>
+            </div>
+         </li>
+       </ul>
+               </li>
+               <li class="dropdown"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground</a> </li>
+                  <li class="dropdown"> 							
+                     <a class="dropdown-toggle tut-plus" href="absoluteclasses.htm">Absolute Classes</a>                     <ul class="dropdown-menu" id="submenu1">
+                                                <li class="current-menu-ancestor current-menu-parent active dropdown-submenu" style="border-bottom:none;">
+                        </li><li style="border-bottom:none;"><a href="absoluteclasses/userlogin.htm"><i class="fa-sign-in"></i>&nbsp;Login</a></li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px" class="stickyhide">&nbsp;</li>
+                        <li><a href="absoluteclasses/usersignup.htm"><i class="fa-pencil-square-o"></i>&nbsp;Sign Up&nbsp;</a></li>
+                        <li style="border-bottom:none;"><a href="absoluteclasses/upcomingclasses.htm" style="border-bottom:none;"><i class="fa-book book-head"></i> Upcoming Classes </a></li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px">&nbsp;</li>
+                        <li style="border-bottom:1px dashed #ccc; height:1px; padding:0px; margin:0px 10px 0px 10px">&nbsp;</li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/allcourses.htm" style="border-bottom:none;"><i class="fa-book book-head"></i> All Courses </a></li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/testimonials.htm" style="border-bottom:none;"><i class="fa-check check"></i> Testimonial</a></li>
+                        <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/help.htm" style="border-bottom:none;"><i class="fa-question book-head"></i> Help/FAQ</a></li>
+                        <li style="border-bottom:none;"><a href="absoluteclasses/contact_abc.htm" style="border-bottom:none;"><i class="fa fa-envelope-o"></i> Contact</a></li>
+                                             
+                     </ul>
+                  
+            </li></ul>
+         </nav>
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+  <div class="mini-logo">
+<img src="images/java-mini-logo.png" alt="Java Tutorial" />
+</div>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Components</li>
+<li><a target="_top" href="index.htm">Home</a></li>
+<li><a target="_top" href="java_overview.htm">Overview</a></li>
+<li><a target="_top" href="java_environment_setup.htm">Java - Environment Setup</a></li>
+<li><a target="_top" href="java_basic_syntax.htm">Java - Basic Syntax</a></li>
+<li><a target="_top" href="java_object_classes.htm">Java - Object &amp; Classes</a></li>
+<li><a target="_top" href="java_basic_datatypes.htm">Java - Datatypes</a></li>
+<li><a target="_top" href="java_variable_types.htm">Java - Variable Types</a></li>
+<li><a target="_top" href="java_modifier_types.htm">Java - Modifier Types</a></li>
+<li><a target="_top" href="java_basic_operators.htm">Java - Operators</a></li>
+<li><a target="_top" href="java_loop_control.htm">Java - Loops</a></li>
+<li><a target="_top" href="java_decision_making.htm">Java - Decision Making</a></li>
+<li><a target="_top" href="java_numbers.htm">Java - Numbers</a></li>
+<li><a target="_top" href="java_characters.htm">Java - Characters</a></li>
+<li><a target="_top" href="java_strings.htm">Java - Strings</a></li>
+<li><a target="_top" href="java_arrays.htm">Java - Arrays</a></li><li><a target="_top" href="java_two_dimensional_arrays.htm">Java - Two-Dimensional Arrays</a></li>
+<li><a target="_top" href="java_arraylist_class.htm">Java - ArrayLists</a></li><li><a target="_top" href="java_date_time.htm">Java - Date &amp; Time</a></li>
+<li><a target="_top" href="java_regular_expressions.htm">Java - Regular Expressions</a></li>
+<li><a target="_top" href="java_methods.htm">Java - Methods</a></li>
+<li><a target="_top" href="java_files_io.htm">Java - Files and I/O</a></li>
+<li><a target="_top" href="java_exceptions.htm">Java - Exceptions</a></li><li><a target="_top" href="swing_components.htm">Java - Swing Components</a></li><li><a target="_top" href="./swing/swing_overview.htm">Java - Swing GUI Library</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Object Oriented Programming</li>
+<li><a target="_top" href="java_inheritance.htm">Java - Inheritance</a></li>
+<li><a target="_top" href="java_overriding.htm">Java - Overriding</a></li>
+<li><a target="_top" href="java_polymorphism.htm">Java - Polymorphism</a></li>
+<li><a target="_top" href="java_abstraction.htm">Java - Abstraction</a></li>
+<li><a target="_top" href="java_encapsulation.htm">Java - Encapsulation</a></li>
+<li><a target="_top" href="java_interfaces.htm">Java - Interfaces</a></li>
+<li><a target="_top" href="java_packages.htm">Java - Packages</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Advanced</li>
+<li><a target="_top" href="java_data_structures.htm">Java - Data Structures</a></li>
+<li><a target="_top" href="java_collections.htm">Java - Collections</a></li>
+<li><a target="_top" href="java_generics.htm">Java - Generics</a></li>
+<li><a target="_top" href="java_serialization.htm">Java - Serialization</a></li>
+<li><a target="_top" href="java_networking.htm">Java - Networking</a></li>
+<li><a target="_top" href="java_sending_email.htm">Java - Sending Email</a></li>
+<li><a target="_top" href="java_multithreading.htm">Java - Multithreading</a></li>
+<li><a target="_top" href="java_applet_basics.htm">Java - Applet Basics</a></li>
+<li><a target="_top" href="java_documentation.htm">Java - Documentation</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">How To</li><li><a target="_top" href="java_howto_string_to_date.htm">Convert String to Date</a></li><li><a target="_top" href="java_howto_textfile_into_array.htm">Read Textfile into Array</a></li><li><a target="_top" href="java_howto_use_debugger_netbeans.htm">Use the Debugger in Netbeans IDE</a></li>
+    
+    
+
+
+
+
+
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+
+
+
+
+
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>How To - Use the Debugger in Netbeans IDE</h1>
+<div class="pre-btn">
+<a href="java_strings.htm"> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="java_strings.htm">Next Page &nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr />
+<p>The NetBeans Debugger lets you place breakpoints in your source code, add field watches, step through your code, run into methods, take snapshots and monitor execution as it occurs. You can also attach the debugger to an already running process.</p>
+<blockquote><h2 style="padding-top:0% !important;">The Importance of the Debugger</h2><p>Using the Debugger is <b>absolutely critical</b> to program development. It is one of the most important and useful tools to aid the development of your application. With the use of the Debugger you can look at the state of your application without needing to write custom software to inspect your own code. The Debugger lets you take a look at the values of your variables, memory usage and view almost every aspect of how your application is running and more specificaly how your code is being executed.</p></blockquote>
+    
+    <h2>Walkthrough of Debugger:</h2>
+    
+    <iframe width="760" height="570" src="https://www.youtube.com/embed/joWldbcp1So" frameborder="0" allowfullscreen></iframe>
+    
+    <blockquote><p><a href="https://netbeans.org/project_downloads/usersguide/nbfieldguide/Chapter5-Debugging.pdf" style="font-weight:700; font-size:12px;"><b><i>View Official Debugging Documentation from Netbeans.org</i></b></a></p></blockquote>
+    
+<h2>Setting Breakpoints</h2>
+    <p>A breakpoint is a marker that you can set to specify where execution should pause when you
+are running your application in the IDE's debugger. Breakpoints are stored in the IDE (not in
+your application's code) and persist between debugging sessions and IDE sessions.
+When execution pauses on a breakpoint, the line where execution has paused is highlighted
+in green in the Source Editor and a message is printed in the Debugger Console with information
+on the breakpoint that has been reached.
+In their simplest form, breakpoints provide a way for you to pause the running program at a
+specific point so that you can:</p>
+        <ul class="list">
+            <li>Monitor the values of variables at that point in the program's execution.</li>
+            <li>Take control of program execution by stepping through code line by line or
+method by method. However, you can also use breakpoints as a diagnostic tool to do things such as:</li>
+            <li>Detect when the value of a field or local variable is changed (which, for
+example, could help you determine what part of code assigned an
+inappropriate value to a field).</li>
+            <li>Detect when an object is created (which might, for example, be useful when
+trying to track down a memory leak).</li>
+            </ul>
+    <p>
+You can set multiple breakpoints and you can set different types of breakpoints. The
+simplest kind of breakpoint is a line breakpoint, where execution of the program stops at a
+specific line. You can also set breakpoints on other situations, such as the calling of a method,
+the throwing of an exception, or the changing of a variable's value. In addition, you can set
+conditions in some types of breakpoints so that they suspend execution of the program only
+under specific circumstances. See Table 5-5 for a summary of the types of breakpoints.
+</p>
+    <br>
+    <table class="table table-bordered">
+<tbody><tr>
+<th>Breakpoint Type</th><th>Description</th></tr>
+<tr>
+<td><b>Line</b></td>
+<td>Set on a line of code. When the debugger reaches that line, it stops before executing
+the line. The breakpoint is marked by pink background highlighting and the "breakpoint" icon.
+You can also specify conditions for line breakpoints </td>
+</tr>
+<tr>
+<td><b>Class</b></td>
+<td>Execution is suspended when the class is referenced from another class and before
+any lines of the class with the breakpoint are executed </td>
+</tr>
+<tr>
+<td><b>Exception</b></td>
+<td>Execution is suspended when an exception occurs. You can specify whether
+execution stops on caught exceptions, uncaught exceptions, or both.
+ </td>
+</tr>
+<tr>
+<td><b>Method</b></td>
+<td>Execution is suspended when the method is called.</td>
+</tr>
+<tr>
+<td><b>Variable</b></td>
+<td>Execution is suspended when the variable is accessed. You can also configure the
+breakpoint to have execution suspended only when the variable is modified. </td>
+</tr>
+<tr>
+<td><b>Thread</b></td>
+<td>Execution is suspended whenever a thread is started or terminated. You can also set
+the breakpoint on the thread's death (or both the start and death of the thread).
+</td>
+</tr>
+</tbody></table>
+    
+    <h2>Starting a Debugging Session</h2>
+    <p>To start a debugging session, first ensure that all your breakpoints have been set. Once you've set your breakpoints, click on the "Debugger" button to start the debugger. <br><br>
+    <img src="images/debugging/start-debugging.PNG"></p>
+    
+    <h2>Debugger Windows</h2>
+    <p>When you start debugging a program, the Debugger Console appears as a tab in the lower
+left corner of the IDE (as shown in Figure 5-3). The Debugger Console logs the execution status
+of the debugged program (such as whether the code is stopped at a breakpoint). In addition, a tab
+opens in the Output to log any application output (as well the output from the Ant build script the
+IDE uses when running the command).<br>
+In the lower right hand corner, several windows (Watches, Local Variables, and Call Stack)
+open as tabs and provide current information on the debugging session, such as the current values
+of variables and a list of current method calls. You can also open individual debugging windows
+by choosing from the <i><b>Windows | Debugging menu.</b></i>
+    <br><br>
+    <img src="./images/debugging/debugging-window.PNG">
+    </p>
+    <br>
+    <br>
+     <table class="table table-bordered" style="width: 112.5%; max-width: 120%;">
+<tbody><tr>
+<th>Debugger Window</th><th style="width: 25%;">Open With</th><th>Description</th></tr>
+<tr>
+<td><b>Local Variables</b></td>
+    <td>Alt-Shift-1 (or Window |
+Debugging | Local Variables)</td>
+<td>Displays all fields and local variables in the debugger's current
+context and their current values. Fields are listed under the
+<b><i>this</i></b> node </td>
+</tr>
+<tr>
+<td><b>Watches </b></td>
+    <td>Alt-Shift-2 (or Window |
+Debugging | Watches)
+</td>
+<td>Displays the names of fields, local variables, or expressions that
+you have placed a watch on. Though all of your watches are
+displayed no matter the current context, the value displayed is
+the value for that context (not for the context that the watch was
+set in). For example, if you have a watch on the <b><i>this</i></b> keyword,
+the <b><i>this</i></b> referred to in the Watches window will always
+correspond to the object referred to from the current method call </td>
+</tr>
+<tr>
+<td><b>Call Stack</b></td>
+    <td>Alt-Shift-3 (or Window |
+Debugging | Call Stack)
+</td>
+<td>Displays all method calls in the current chain of calls. The Call
+Stack window enables you to jump directly to code of a method
+call, back up the program's execution to a previous method call,
+or select a context for viewing local variable values.
+
+ </td>
+</tr>
+<tr>
+<td><b>Classes </b></td>
+    <td>Alt-Shift-4 (or Window |
+Debugging | Classes)
+</td>
+<td>Provides a tree view of classes for the currently debugged
+application grouped by classloader.</td>
+</tr>
+<tr>
+<td><b>Breakpoints</b></td>
+    <td>Alt-Shift-5 (or Window |
+Debugging | Breakpoints)</td>
+<td>Displays all breakpoints that you have set in all running
+debugging sessions.
+ </td>
+</tr>
+<tr>
+<td><b>Threads</b></td>
+    <td>Alt-Shift-6 (or Window |
+Debugging | Threads)</td>
+<td>Displays the threads in the current session. In this window, you
+can switch the context by designated another thread is the current
+thread.
+
+</td>
+</tr>
+    <tr>
+<td><b>Sessions</b></td>
+    <td>Alt-Shift-7 (or Window |
+Debugging | Sessions)
+</td>
+<td>Displays a node for each debugging session in the IDE. From
+this window, you can switch the current session
+</td>
+</tr>
+    <tr>
+<td><b>Sources</b></td>
+    <td>Alt-Shift-8 (or Window |
+Debugging | Sources)</td>
+<td>Displays sources that are available for debugging and enables
+you to specify which ones to use. For example, you can use this
+window to enable debugging with JDK sources
+</td>
+</tr>
+</tbody></table>
+    
+    <h2>Managing Breakpoints</h2>
+    <p>You can use the Breakpoints window as shown in Figure 5-5 to manage breakpoints in one
+place. You can put breakpoints in groups, temporarily disable breakpoints, and provide
+customizations to the breakpoints from this window. To open the Breakpoints window, choose
+<i><b>Window | Debugging | Breakpoints</b></i> or press <i><b>Alt-Shift-5.</b></i>
+        <br><br>
+        <img src="./images/debugging/breakpoints.PNG">
+</p>
+    
+    <h2>Stepping Through Code</h2>
+    <p>Once execution of your program is paused, you have several ways of resuming execution of
+the code. You can step through code line by line (Step In) or in greater increments. See Table 5-4
+for the commands available for stepping or continuing execution or the following sub-topics for a
+task-based look at the commands.
+        <br><br>
+        <img src="images/debugging/controls.PNG">
+</p>
+    <br><br><br>
+    
+    <table class="table table-bordered">
+<tbody><tr>
+<th>Step Command</th><th>Description</th></tr>
+<tr>
+<td><b>Step Into (F7)</b></td>
+<td>Executes the current line. If the line is a call to a method or constructor and there is source
+available for the called code, the program counter moves to the declaration of the method or
+constructor. Otherwise, the program counter moves to the next line in the file.
+</td>
+</tr>
+<tr>
+<td><b>Step Over (F8) </b></td>
+<td>Executes the current line and moves the program counter to the next line in the file. If the
+executed line is a call to a method or constructor, the code in the method or constructor is
+also executed.</td>
+</tr>
+<tr>
+<td><b>Step Out of (Alt-ShiftF7)
+</b></td>
+<td>Executes the rest of the code in the current method or constructor and moves the program
+counter to the line after the caller of the method or constructor. This command is useful if
+you have stepped into a method that you do not need to analyze.
+
+ </td>
+</tr>
+<tr>
+<td><b>Run to Cursor (F4) </b></td>
+<td>Executes all of the lines in the program between the current line and the insertion point in
+the Source Editor</td>
+</tr>
+<tr>
+<td><b>Pause</b></td>
+<td>Stop all threads in the current session.
+ </td>
+</tr>
+<tr>
+<td><b>Continue (Ctrl-F5)</b></td>
+<td>Resume execution of the program until the next breakpoint.
+
+</td>
+</tr>
+</tbody></table>
+    
+    <h2>Monitoring Variables & Expressions</h2>
+    <p>As you step through a program, you can monitor the running values of fields and local
+variables in the following ways:</p>
+    <ul class="list">
+    <li>By holding the cursor over an identifier in the Source Editor to display a
+tooltip containing the value of the identifier in the current debugging context.
+</li>
+        <li>By monitoring the values of variables and fields displayed in the Local
+Variables window</li>
+        <li>By setting a watch for an identifier or other expression and monitoring its
+value in the Watches window.
+</li>
+    </ul>
+
+       <p> The Local Variables window (as shown in Figure 5-6) displays all variables that are
+currently in relevant in the current execution context of the program and provides and lists their
+types and values. If the value of the variable is an object reference, the value is given with the
+pound sign (#) and a number which serves as an identifier of the object's instance. You can jump
+to the source code for a variable by double-clicking the variable name.
+<br><br>
+        <img src="./images/debugging/variables.PNG">
+</p>
+    
+    
+
+    
+
+    
+
+    
+ 
+
+
+
+
+
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<!-- AddThis Button BEGIN -->
+<!--
+<div class="simple-ad">
+<div class="addthis_sharing_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f661ec623a400f0"></script>
+</div>
+-->
+<!-- AddThis Button END -->
+<!--
+<div class="google-ad" style="position:relative; left:20px;">Advertisements</div>
+-->
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="inner">
+<div class="container">
+<div class="row">
+<div class="footer-ribon">
+<span>Extras</span>
+</div>
+<div class="col-md-2">
+<h4>Mobile First</h4>
+<ul class="list icons list-unstyled">
+<li><a id="iphone" href="https://itunes.apple.com/om/app/tutorials-point/id914891263?mt=8" target="_blank" rel="nofollow"><img alt="tutorialspoint iPhone App" src="./cdn/images/apple_store.jpg" class="mobile-apps" /></a></li>
+<li><a id="android" href="https://play.google.com/store/apps/details?id=com.tutorialspoint.onlineviewer" target="_blank" rel="nofollow"><img alt="tutorialspoint Android app" src="./cdn/images/google_play.jpg" class="mobile-apps" /></a></li>
+<li><a id="microsoft" href="http://www.windowsphone.com/s?appid=91249671-7184-4ad6-8a5f-d11847946b09" target="_blank" rel="nofollow"><img alt="tutorialspoint Windows app" src="./cdn/images/windows_store.jpg" class="mobile-apps" /></a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<h4>About us</h4>
+<ul class="list icons list-unstyled">
+<li><i class="icon icon-caret-right"></i> <a href="/about/index.htm">Company</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_team.htm">Team</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_careers.htm">Careers</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_privacy.htm">Privacy Policy</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_terms_of_use.htm">Terms of use</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<h4>Extra Links</h4>
+<ul class="list icons list-unstyled">
+<li><i class="icon icon-caret-right"></i> <a href="forums/index.php">Forums</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="shorttutorials/">Articles</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="shared-tutorials.php">Shared</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="seo_tools.htm">Seo Tools</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="about/contact_us.htm">Contact</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<div class="contact-details">
+<h4>Contact Us</h4>
+<ul class="contact">
+<li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> 388-A , Road no 22, Jubilee Hills, Hyderabad Telangana, INDIA-500033</p></li>
+<li><p><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="about/contact_us.htm">Click Here</a></p></li>
+<li><p><i class="icon icon-dribbble"></i> <strong>Website:</strong> <a href="../index.html">www.tutorialspoint.com</a></p></li>
+</ul>
+</div>
+<div class="social-icons">
+<ul class="social-icons">
+<li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+<li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+<li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+<li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+<li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="index.htm" class="logo">
+<img alt="Tutorials Point" class="img-responsive" src="./cdn/scripts/img/logo-footer.png" />
+</a>
+</div>
+<div class="col-md-6">
+<p>&copy; Copyright 2015. All Rights Reserved.</p>
+</div>
+<div class="col-md-4">
+<nav id="sub-menu">
+<ul>
+<li><a href="/about/tutorials_writing.htm">Write for us</a></li>
+<li><a href="/about/faq.htm">FAQ's</a></li>
+<li><a href="/about/about_helping.htm">Helping</a></li>
+<li><a href="/about/contact_us.htm">Contact</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="./cdn/theme/js/custom-min.js"></script>
+<script src="../../www.google-analytics.com/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+<script type="text/javascript" src="./cdn/theme/js/jquery.colorbox-min.js"></script>
+<script type="text/javascript">
+   var tryit = new $.TryIt('try_java.php.html');
+   tryit.compile();
+</script>
+<style>
+pre.prettyprint.tryit {
+    background: #494949 url('images/try-it.jpg') top right no-repeat !important;
+}
+</style></div>
+</body>
+</html>
