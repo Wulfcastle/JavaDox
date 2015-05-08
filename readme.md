@@ -2,7 +2,7 @@
 
 - [x] Add Two-Dimensional Arrays
 - [x] Create How-To Section
-- [ ] Add Swing Components
+- [x] Add Swing Components
 - [ ] String Formatting !IMPORTANT
 - [ ] Add Search Functionality
 - [ ] Refactor/Minimize Homepage Design
@@ -11,4 +11,4 @@
 ## How To 
 - [x] Read Text from a File into an Array
 - [x] Convert String to Date using SimpleDateFormat & Substring Methods
-- [ ] Debug Java Programs/Applications in Netbeans IDE
+- [x] Debug Java Programs/Applications in Netbeans IDE
