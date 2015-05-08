@@ -10,3 +10,4 @@
 ## How To 
 - [x] Read Text from a File into an Array
 - [x] Convert String to Date using SimpleDateFormat & Substring Methos
+- [ ] Debug Java Programs/Applications in Netbeans IDE
