@@ -2,6 +2,7 @@
 
 - [x] Add Two-Dimensional Arrays
 - [x] Create How-To Section
+- [ ] String Formatting !IMPORTANT
 - [ ] Add Search Functionality
 - [ ] Refactor/Minimize Homepage Design
 - [ ] Add Database Notes/Pages/Tutorials
