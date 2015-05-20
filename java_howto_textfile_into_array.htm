@@ -263,7 +263,35 @@ $(document).ready(function() {
 2014-12-09 Durban to Bloemfontein
 </pre>
     
-<h2>Easiest Method: Using Scanner & ArrayLists</h2>
+<h2>Most Common Method: Using Scanner & String[] Arrays</h2>
+<p><b>This is the most used method, as it is used to easily split the contents of a Text File line by line into a String Array:</b></p>
+<pre class="prettyprint notranslate tryit">
+public void readTextFile(String fileName) throws FileNotFoundException {
+        String content = "";
+        Scanner myTextFile = new Scanner(new File(fileName)).useDelimiter(",\\s*");
+
+        while (myTextFile.hasNext()) {
+            // All the contents of the Text File are added to the "content variable
+            content = myTextFile.next();
+        }
+        myTextFile.close();
+        // Creating a String Array to store each individual line
+        String[] lines = content.split("\n");
+        
+        /* The contents of the text file stored in the String variable "contents"
+        is being split line by line into the String Array.
+        
+        The contents are being split into lines using the String.split(Regex) method, where "Regex" stands for 
+        any given "regular expression" and "String" is your String variable
+        
+        The String.split(Regex) method splits this string around matches of the given regular expression.
+        
+        */
+    }
+</pre>
+
+    
+<h2>Alternate Method: Using Scanner & ArrayLists</h2>
 <p>Here is the code for this method:</p>
 <pre class="prettyprint notranslate tryit">
 public class ReadTextFile {
