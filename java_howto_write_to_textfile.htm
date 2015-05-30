@@ -3,13 +3,13 @@
 <!--[if IE 9]><html class="ie ie9"> </html><![endif]-->
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
 <head>
-<!-- Original URL: http://www.tutorialspoint.com/java/character_iswhitespace.htm
-Date Downloaded: 2015-05-05 08:52:02 PM !-->
+<!-- Original URL: http://www.tutorialspoint.com/java/java_string_concat.htm
+Date Downloaded: 2015-05-05 08:52:12 PM !-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Basic -->
 <meta charset="utf-8" />
-<title>Java - isWhitespace() Method</title>
-<meta name="description" content="Java isWhitespace() Method - Learning Java in simple and easy steps : A beginner's tutorial containing complete knowledge of Java Syntax Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
+<title>Java - Write to a TextFile</title>
+<meta name="description" content="Java - String concat() Method - Learning Java in simple and easy steps : A beginner's tutorial containing complete knowledge of Java Syntax Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
 <meta name="keywords" content="Java, Tutorials, Learning, Beginners, Basics, Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
 
 <link rel="shortcut icon" href="./cdn/favicon.png" type="image/x-icon" />
@@ -221,7 +221,10 @@ $(document).ready(function() {
 <li><a target="_top" href="java_documentation.htm">Java - Documentation</a></li>
 </ul>
 <ul class="nav nav-list primary left-menu">
-<li class="heading">How To</li><li><a target="_top" href="java_howto_string_to_date.htm">Convert String to Date</a></li><li><a target="_top" href="java_howto_date_to_string.htm">Convert Date to String</a></li><li><a target="_top" href="java_howto_textfile_into_array.htm">Read Textfile into Array</a></li><li><a target="_top" href="java_howto_write_to_textfile.htm">Create & Write to Text Files</a></li><li><a target="_top" href="java_howto_use_debugger_netbeans.htm">Use the Debugger in Netbeans IDE</a></li><li><a target="_top" href="java_howto_generate_random_int.htm">Generate Random Int In A Range</a></li><li><a target="_top" href="java_howto_dynamically_generate_components.htm">Dynamically Create GUI Components</a></li>
+<li class="heading">How To</li><li><a target="_top" href="java_howto_string_to_date.htm">Convert String to Date</a></li><li><a target="_top" href="java_howto_date_to_string.htm">Convert Date to String</a></li>
+    <li><a target="_top" href="java_howto_textfile_into_array.htm">Read Textfile into Array</a></li><li><a target="_top" href="java_howto_write_to_textfile.htm">Create & Write to Text Files</a></li>
+    <li><a target="_top" href="java_howto_use_debugger_netbeans.htm">Use the Debugger in Netbeans IDE</a></li><li><a target="_top" href="java_howto_generate_random_int.htm">Generate Random Int In A Range</a></li><li><a target="_top" href="java_howto_dynamically_generate_components.htm">Dynamically Create GUI Components</a></li>
+    
 
 
 
@@ -241,77 +244,49 @@ $(document).ready(function() {
 <div class="row">
 <div class="content">
 <div class="col-md-7 middle-col">
-<h1>Java - isWhitespace() Method</h1>
-<div class="topgooglead">
-<hr />
-<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
-<script type="text/javascript"><!--
-google_ad_client = "pub-7133395778201029";
-google_ad_width = 468;
-google_ad_height = 60;
-google_ad_format = "468x60_as";
-google_ad_type = "image";
-google_ad_channel = "";
-//--></script>
-<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js"> 
-</script>
-</div>
+<h1>How To - Create & Write to a TextFile</h1>
 <div class="pre-btn">
-<a href="java_characters.htm"> Previous Page</a>
+<a href="java_strings.htm"> Previous Page</a>
 </div>
 <div class="nxt-btn">
-<a href="java_characters.htm">Next Page &nbsp;</a>
+<a href="java_strings.htm">Next Page &nbsp;</a>
 </div>
 <div class="clearer"></div>
 <hr />
-<h2>Description:</h2>
-<p>The method determines whether the specified char value is a white space, which includes space, tab or new line.</p>
-<h2>Syntax:</h2>
-<pre class="prettyprint notranslate">
-boolean isWhitespace(char ch)
-</pre>
-<h2>Parameters:</h2>
-<p>Here is the detail of parameters:</p>
-<ul class="list">
-<li><p><b>ch</b> -- Primitive character type</p></li>
-</ul>
-<h2>Return Value:</h2>
-<ul class="list">
-<li><p>This method Returns true if passed character is really a white space.</p></li>
-</ul>
-<h2>Example:</h2>
-<pre class="prettyprint notranslate tryit">
-public class Test{
 
-   public static void main(String args[]){
-      System.out.println(Character.isWhitespace('c'));
-      System.out.println(Character.isWhitespace(' '));
-      System.out.println(Character.isWhitespace('\n'));
-      System.out.println(Character.isWhitespace('\t'));
-   }
-}
+    
+<h2>Creating & Writing to a TextFile</h2>
+<p>This is the easiest way to create and write to a Text File in Java, using the following I/O Components: </p>
+<ul class="list">
+<li><p>java.io.File</p></li>    
+<li><p>java.io.FileWriter</p></li>
+<li><p>java.io.BufferedWriter</p></li>
+</ul>
+<pre class="prettyprint notranslate tryit">
+public void writeToText(String fileName) {
+        BufferedWriter writer = null;
+        try {
+            // Creating A Temporary File
+            File logFile = new File(fileName = ".txt");
+
+            // This will output the full path where the file will be written to...
+            System.out.print(logFile.getCanonicalPath());
+
+            writer = new BufferedWriter(new FileWriter(logFile));
+            writer.write("Hello world!");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            // Close the writer regardless of what happens...
+            writer.close();
+        } catch (Exception e) {
+
+        }
+    }
 </pre>
-<p>This produces the following result:</p>
-<pre class="prettyprint notranslate">
-false
-true
-true
-true
-</pre>
-<hr style="margin-bottom:1.25% !important;"><div class="pre-btn">
-<a href="java_characters.htm"> Previous Page</a>
-</div>
-<div class="print-btn center">
-<a href="/cgi-bin/printpage.cgi" target="_blank"> Print</a>
-</div>
-<div class="pdf-btn">
-<a href="pdf/character_iswhitespace.pdf" title="Java - isWhitespace() Method" target="_blank"> PDF</a>
-</div>
-<div class="nxt-btn">
-<a href="java_characters.htm">Next Page &nbsp;</a>
-</div>
-<div class="parent-file">java_characters.htm</div>
-<hr />
+
 <!-- PRINTING ENDS HERE -->
 <div class="bottomgooglead">
 <div class="bottomadtag">Advertisements</div>
@@ -349,42 +324,8 @@ google_ad_channel ="";
 <!--
 <div class="google-ad" style="position:relative; left:20px;">Advertisements</div>
 -->
-<div class="rightgooglead">
-<script type="text/javascript"><!--
-google_ad_client = "pub-7133395778201029";
-google_ad_width = 300;
-google_ad_height = 250;
-google_ad_format = "300x250_as";
-google_ad_type = "image";
-google_ad_channel ="";
-//--></script>
-<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
-</script>
-</div>
-<div class="rightgooglead">
-<script type="text/javascript"><!--
-google_ad_client = "pub-7133395778201029";
-google_ad_width = 300;
-google_ad_height = 600;
-google_ad_format = "300x600_as";
-google_ad_type = "image";
-google_ad_channel ="";
-//--></script>
-<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
-</script>
-</div>
-<div class="rightgooglead">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-2537027957187252";
-/* Right Side Ad */
-google_ad_slot = "right_side_ad";
-google_ad_width = 300;
-google_ad_height = 250;
-//-->
-</script>
-<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
-</script>
-</div>
+
+
 </div>
 </div>
 </div>
