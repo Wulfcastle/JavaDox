@@ -265,6 +265,16 @@ google_ad_channel = "";
 </div>
 <div class="clearer"></div>
 <hr />
+    <blockquote>
+    <p>An array is a container object that holds a fixed number of values of a single type. The length of an array is established when the array is created. After creation, its length is fixed. You have seen an example of arrays already, in the main method of the "Hello World!" application. This section discusses arrays in greater detail.       
+<br>
+<br>
+<img src="images/basic_array.gif">
+<br>
+        <br>
+
+Each item in an array is called an element, and each element is accessed by its numerical index. As shown in the preceding illustration, numbering begins with 0. The 9th element, for example, would therefore be accessed at index 8.</p>
+    </blockquote>
 <p>Java provides a data structure, the <b>array</b>, which stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.</p>
 <p>Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to represent individual variables.</p>
 <p>This tutorial introduces how to declare array variables, create arrays, and process arrays using indexed variables.</p>
@@ -288,7 +298,7 @@ or
 double myList[];         //  works but not preferred way.
 </pre>
 <h2>Creating Arrays:</h2>
-<p>You can create an array by using the new operator with the following syntax:</p>
+<p>You can "create" an array by using the new operator with the following general syntax, however there are many different ways to create arrays in Java.</p>
 <pre class="prettyprint notranslate">
 arrayRefVar = new dataType[arraySize];
 </pre>
@@ -297,13 +307,119 @@ arrayRefVar = new dataType[arraySize];
 <li><p>It creates an array using new dataType[arraySize]; </p></li>
 <li><p>It assigns the reference of the newly created array to the variable arrayRefVar.</p></li>
 </ul>
-<p>Declaring an array variable, creating an array, and assigning the reference of the array to the variable can be combined in one statement, as shown below:</p>
+    
+    <br>
+
+    <blockquote>
+    <p>
+        <b style="font-size:12px;">assignment:</b><br> throwing away the old value of a variable and replacing it with a new one
+<br>
+
+<b style="font-size:12px;">initialization:</b><br> it's a special kind of assignment: the first. Before initialization objects have null value and primitive types have default values such as 0 or false. Can be done in conjunction with declaration.
+<br>
+
+<b style="font-size:12px;">declaration:</b> <br> declaration states the type of a variable, along with its name. A variable can be declared only once. It is used by the compiler to help programmers avoid mistakes such as assigning string values to integer variables. Before reading or assigning a variable, that variable must have been declared.
+        </p></blockquote> <br>
+    
+
+<h3 style="
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 40px;
+    padding-bottom: 10px;
+"> Difference between Array Contructors & Array Initializers</h3>
+    <ul class="list">
+    <li><b>Array Constructor Syntax</b><p>Denoted by <b>[]</b> brackets</p></li>
+    <li><b>Array Initializer Syntax</b><p>Denoted by <b>{}</b> brackets</p></li>
+    </ul>
 <pre class="prettyprint notranslate">
-dataType[] arrayRefVar = new dataType[arraySize];
+int[] arrMyNumbers = new int[10]            // Array Constructor Syntax
+int[] arrMyNumbers = {1, 2, 3, 4, 5, 6}     // Array Initializer Syntax
 </pre>
-<p>Alternatively you can create arrays as follows:</p>
+    <br>
+    
+    
+<h3 style="
+    text-transform: uppercase;
+    color: #B4EFC6;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 40px;
+    padding-bottom: 10px;
+"> 1. Declaring an Array</h3>
+<p>Declaring an array variable.</p>
 <pre class="prettyprint notranslate">
-dataType[] arrayRefVar = {value0, value1, ..., valuek};
+int[] arrMyNumbers;
+</pre>
+<h3 style="
+    text-transform: uppercase;
+    color: #B4EFC6;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 40px;
+    padding-bottom: 10px;
+"> 2.1 Declaring an Array with a fixed length in one statement</h3>
+<p>Declaring an array variable, creating an array, and assigning the reference of the array to the variable can be combined in one statement, as shown below. Remember that using this method the array will be initialized with <b><i>null</i></b> values</p>
+<pre class="prettyprint notranslate">
+double[] arrCurrency = new double[10];
+
+// "new double[10]" is an example of the array contructor syntax.
+</pre>
+    <br>
+    
+            <h3 style="
+    text-transform: uppercase;
+    color: #B4EFC6;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 40px;
+    padding-bottom: 10px;
+"> 2.2 Declaring an Array with a fixed length in two statements</h3>
+<p>Declaring an array variable, creating an array, and assigning the reference of the array to the variable can be combined in two statements, as shown below. Remember that using this method the array will be initialized with <b><i>null</i></b> values</p>
+<pre class="prettyprint notranslate">
+double[] arrCurrency;
+
+arrCurrency = new double[10];
+
+// "new double[10]" is an example of the array contructor syntax.
+</pre>
+    <br>
+    
+<h3 style="
+    text-transform: uppercase;
+    color: #B4EFC6;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 40px;
+    padding-bottom: 10px;
+"> 3.1 Declaring and Initializing an Array with Values in one statement</h3>
+    <p>Declaring an array variable, and initializing the array with values done in one statement, as shown below. This is <b><i>array initializer syntax</i></b>, denoted/shown by the <b><i>{} - curly brackets</i></b>, and it can only be used on the right-hand-side when declaring a variable of array type. Example:
+<pre class="prettyprint notranslate">
+String[] names = {"Sanjay", "Jill", "Sipho", "Jack", "Yin"};
+
+/* This is array initializer syntax, and it can only be used on the 
+right-hand-side when declaring a variable of array type. */
+</pre>
+    <br>
+    
+<h3 style="
+    text-transform: uppercase;
+    color: #B4EFC6;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 40px;
+    padding-bottom: 10px;
+"> 3.2 Declaring and Initializing an Array with Values in two statements</h3>
+    <p>Declaring an array variable, and initializing the array with values done in two seperate statements, as shown below. As mentioned above, the array initializer syntax is used again here, however if you're not on the right hand side of a variable declaration, an <b><i>array constructor</i></b> is used in conjunction with the array initializer syntax:
+<pre class="prettyprint notranslate">
+String[] names;
+
+names = new String[]{"Sanjay", "Jill", "Sipho", "Jack", "Yin"};
+
+/* If you're not on the right hand side of a variable declaration,
+an array constructor is used instead (ah shown in the code above) */
 </pre>
 <p>The array elements are accessed through the <b>index</b>. Array indices are 0-based; that is, they start from 0 to <b>arrayRefVar.length-1</b>.</p> 
 <h2>Example:</h2>
