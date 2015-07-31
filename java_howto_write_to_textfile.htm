@@ -40,7 +40,7 @@ Date Downloaded: 2015-05-05 08:52:12 PM !-->
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <style>
 div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, footer div.footer-ribon, div.footer-copyright { background:  url(../images/pattern.png) repeat center center !important; }
-header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;} 
+header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;}
 header nav ul.nav-main li.dropdown:hover > ul{ border:2px solid }
 header nav ul.nav-main ul.dropdown-menu > li > a:hover, #mainMenu > li:hover, header nav.mega-menu ul.nav-main .mega-menu-content ul.sub-menu li:hover{ background:  !important;}
 img.mobile-apps { border: 1px solid  !important; }
@@ -68,12 +68,12 @@ $(document).ready(function() {
 <div id="divGoogle"></div>
 <div class="body">
 <header>
-   <div class="container">			
+   <div class="container">
       <h1 class="logo">
       <a href="index.htm" title="tutorialspoint">
       <img alt="tutorialspoint" src="images/logo.png" />
       </a>
-      </h1>			
+      </h1>
       <div class="search" id="searchBar">
          <form method="get" id="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
             <input type="hidden" name="sitesearch" value="www.tutorialspoint.com" />
@@ -102,14 +102,14 @@ $(document).ready(function() {
             </li>
          </ul>
       </nav>
-         <!-- search code here  --> 
+         <!-- search code here  -->
       <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse"  data-target=".nav-main-collapse" id="pull"></button>
    </div>
    <div class="navbar nav-main">
       <div class="container">
          <nav class="nav-main mega-menu">
             <ul class="nav nav-pills nav-main" id="mainMenu">
-               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>
                <li class="dropdown"><a class="dropdown-toggle tut-lib" href="tutorialslibrary.htm"> Tutorials Library </a>
       <ul class="dropdown-menu" id="submenu">
          <li>
@@ -145,7 +145,7 @@ $(document).ready(function() {
        </ul>
                </li>
                <li class="dropdown"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground</a> </li>
-                  <li class="dropdown"> 							
+                  <li class="dropdown">
                      <a class="dropdown-toggle tut-plus" href="absoluteclasses.htm">Absolute Classes</a>                     <ul class="dropdown-menu" id="submenu1">
                                                 <li class="current-menu-ancestor current-menu-parent active dropdown-submenu" style="border-bottom:none;">
                         </li><li style="border-bottom:none;"><a href="absoluteclasses/userlogin.htm"><i class="fa-sign-in"></i>&nbsp;Login</a></li>
@@ -158,13 +158,13 @@ $(document).ready(function() {
                         <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/testimonials.htm" style="border-bottom:none;"><i class="fa-check check"></i> Testimonial</a></li>
                         <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/help.htm" style="border-bottom:none;"><i class="fa-question book-head"></i> Help/FAQ</a></li>
                         <li style="border-bottom:none;"><a href="absoluteclasses/contact_abc.htm" style="border-bottom:none;"><i class="fa fa-envelope-o"></i> Contact</a></li>
-                                             
+
                      </ul>
-                  
+
             </li></ul>
          </nav>
       </div>
-   </div>	
+   </div>
 </header>
 <div style="clear:both;"></div>
 <div role="main" class="main">
@@ -224,7 +224,7 @@ $(document).ready(function() {
 <li class="heading">How To</li><li><a target="_top" href="java_howto_string_to_date.htm">Convert String to Date</a></li><li><a target="_top" href="java_howto_date_to_string.htm">Convert Date to String</a></li>
     <li><a target="_top" href="java_howto_textfile_into_array.htm">Read Textfile into Array</a></li><li><a target="_top" href="java_howto_write_to_textfile.htm">Create & Write to Text Files</a></li>
     <li><a target="_top" href="java_howto_use_debugger_netbeans.htm">Use the Debugger in Netbeans IDE</a></li><li><a target="_top" href="java_howto_generate_random_int.htm">Generate Random Int In A Range</a></li><li><a target="_top" href="java_howto_dynamically_generate_components.htm">Dynamically Create GUI Components</a></li>
-    
+
 
 
 
@@ -254,15 +254,15 @@ $(document).ready(function() {
 <div class="clearer"></div>
 <hr />
 
-    
+
 <h2>Creating & Writing to a TextFile</h2>
 <p>The below methods is the easiest way to create and write to a Text File in Java, using the following I/O Components: </p>
 <ul class="list">
-<li><p>java.io.File</p></li>    
+<li><p>java.io.File</p></li>
 <li><p>java.io.FileWriter</p></li>
 <li><p>java.io.BufferedWriter</p></li>
 </ul>
-   
+
 <h2>Seperated Methods - More Dynamic to Use</h2>
 <pre class="prettyprint notranslate tryit">
 public File createFile(String fileName) throws IOException {
@@ -271,11 +271,11 @@ public File createFile(String fileName) throws IOException {
 
         // This will output the full path where the file will be written to...
         System.out.print(myFile.getCanonicalPath());
-        
+
         return myFile;
     }
 
-    public void writeToText(String fileName, String output)  {      
+    public void writeToText(String fileName, String output)  {
         BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new FileWriter(fileName));
@@ -306,6 +306,32 @@ public void writeToText(String fileName) {
             System.out.print(myFile.getCanonicalPath());
 
             writer = new BufferedWriter(new FileWriter(myFile));
+            writer.write("Hello world!");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            // Close the writer regardless of what happens...
+            writer.close();
+        } catch (Exception e) {
+
+        }
+    }
+</pre>
+
+<h2>Writing to an existing text file and keeping contents</h2>
+<pre class="prettyprint notranslate tryit">
+public void writeToText(String fileName) {
+        BufferedWriter writer = null;
+        try {
+            // Creating A Temporary File
+            File myFile = new File(fileName = ".txt");
+
+            // This will output the full path where the file will be written to...
+            System.out.print(myFile.getCanonicalPath());
+
+            writer = new BufferedWriter(new FileWriter(myFile, true)); // The "true" will append the new data
             writer.write("Hello world!");
 
         } catch (Exception e) {
