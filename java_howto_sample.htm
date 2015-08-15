@@ -40,7 +40,7 @@ Date Downloaded: 2015-05-05 08:52:12 PM !-->
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <style>
 div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, footer div.footer-ribon, div.footer-copyright { background:  url(../images/pattern.png) repeat center center !important; }
-header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;} 
+header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;}
 header nav ul.nav-main li.dropdown:hover > ul{ border:2px solid }
 header nav ul.nav-main ul.dropdown-menu > li > a:hover, #mainMenu > li:hover, header nav.mega-menu ul.nav-main .mega-menu-content ul.sub-menu li:hover{ background:  !important;}
 img.mobile-apps { border: 1px solid  !important; }
@@ -68,12 +68,12 @@ $(document).ready(function() {
 <div id="divGoogle"></div>
 <div class="body">
 <header>
-   <div class="container">			
+   <div class="container">
       <h1 class="logo">
       <a href="index.htm" title="tutorialspoint">
       <img alt="tutorialspoint" src="images/logo.png" />
       </a>
-      </h1>			
+      </h1>
       <div class="search" id="searchBar">
          <form method="get" id="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
             <input type="hidden" name="sitesearch" value="www.tutorialspoint.com" />
@@ -102,14 +102,14 @@ $(document).ready(function() {
             </li>
          </ul>
       </nav>
-         <!-- search code here  --> 
+         <!-- search code here  -->
       <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse"  data-target=".nav-main-collapse" id="pull"></button>
    </div>
    <div class="navbar nav-main">
       <div class="container">
          <nav class="nav-main mega-menu">
             <ul class="nav nav-pills nav-main" id="mainMenu">
-               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>
                <li class="dropdown"><a class="dropdown-toggle tut-lib" href="tutorialslibrary.htm"> Tutorials Library </a>
       <ul class="dropdown-menu" id="submenu">
          <li>
@@ -145,7 +145,7 @@ $(document).ready(function() {
        </ul>
                </li>
                <li class="dropdown"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground</a> </li>
-                  <li class="dropdown"> 							
+                  <li class="dropdown">
                      <a class="dropdown-toggle tut-plus" href="absoluteclasses.htm">Absolute Classes</a>                     <ul class="dropdown-menu" id="submenu1">
                                                 <li class="current-menu-ancestor current-menu-parent active dropdown-submenu" style="border-bottom:none;">
                         </li><li style="border-bottom:none;"><a href="absoluteclasses/userlogin.htm"><i class="fa-sign-in"></i>&nbsp;Login</a></li>
@@ -158,13 +158,13 @@ $(document).ready(function() {
                         <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/testimonials.htm" style="border-bottom:none;"><i class="fa-check check"></i> Testimonial</a></li>
                         <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/help.htm" style="border-bottom:none;"><i class="fa-question book-head"></i> Help/FAQ</a></li>
                         <li style="border-bottom:none;"><a href="absoluteclasses/contact_abc.htm" style="border-bottom:none;"><i class="fa fa-envelope-o"></i> Contact</a></li>
-                                             
+
                      </ul>
-                  
+
             </li></ul>
          </nav>
       </div>
-   </div>	
+   </div>
 </header>
 <div style="clear:both;"></div>
 <div role="main" class="main">
@@ -253,7 +253,7 @@ google_ad_format = "468x60_as";
 google_ad_type = "image";
 google_ad_channel = "";
 //--></script>
-<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js"> 
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
 </script>
 </div>
 <div class="pre-btn">
@@ -266,44 +266,44 @@ google_ad_channel = "";
 <hr />
 <h2>Description:</h2>
 <p>These are the two main ways to convert a string to a date.</p>
-    
+
 <h2>Method 1: Using SimpleDateFormatter</h2>
 <p>Here is the code for this method:</p>
 <pre class="prettyprint notranslate tryit">
 public class dateTester {
-    
+
     public String myBirthday = "1998/01/30";
-    
+
     public Date convertStringtoDate() {
         DateFormat format = new SimpleDateFormat("yyyy/MM/dd");
         Date birthDate = format.parse(myBirthday); // Handle the ParseException here
         return birthDate;
     }
-    
+
 }
 </pre>
-    
+
     <p><b>Result: </b></p>
     <pre class="prettyprint notranslate">
 Fri Jan 30 00:00:00 CAT 1998
 </pre>
-    
+
 <h2>Method 2: Using Substrings</h2>
 <p>Here is the code for this method:</p>
 <pre class="prettyprint notranslate tryit">
 public class dateTester {
-    
+
     public String myBirthday = "1998/01/30";
-    
+
     public Date convertStringtoDate() {
         String year = myBirthday.substring(0, 4);
         String month = myBirthday.substring(5,7);
         String day = myBirthday.substring(8,10);
         Date birthDate = new Date(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day));
         return birthDate;
-    }   
+    }
 
-    
+
 }
 </pre>
     <p><b>Result: </b></p>
