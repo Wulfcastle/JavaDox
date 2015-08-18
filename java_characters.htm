@@ -289,9 +289,21 @@ Character ch = new Character('a');
   <br><br>
 
 
-  Like other integer types, you can perform an assignment conversion from an integer constant to any integer type so long as it's in the appropriate range. <br><br>This allows you to perform <i><b>integer operations</b></i> on <b>char</b> variables, as each <b>char</b> variable has a <b>int</b> value that corresponds to it's <u>Unicode Character</u>.
+  Like other integer types, you can perform an assignment conversion from an integer constant to any integer type so long as it's in the appropriate range. <br><br>This allows you to perform <i><b>integer operations</b></i> on <b>char</b> variables, as each <b>char</b> variable has a <b>int</b> value that corresponds to it's <u>Unicode Code Point</u>.
 <b>int</b> can be cast/converted to <b>char</b> and <b>char</b> can be cast/converted to <b>int</b><br><br>
 </blockquote>
+
+<h2>Example: Incrementing Char Variables</h2>
+<p>In Java, char is a numeric type. When you add 1 to a char, you get to the next unicode code point. In case of 'A', the next code point is 'B'.</p>
+<pre class="prettyprint notranslate">
+char testCharOne = 'A';
+testCharOne++;
+
+System.out.print(testCharOne.toString());
+</pre>
+<pre class="prettyprint notranslate">
+Result : B
+</pre>
 
 
 
