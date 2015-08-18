@@ -273,7 +273,7 @@ $(document).ready(function() {
           if (file.exists() != true) { // Checking if the file exists or not. If it doesn't exist create a new file.
               file.createNewFile(); // Remeber to add catch clause for IOException
           }
-          FileWriter writer = new FileWriter(file); 
+          FileWriter writer = new FileWriter(file);
           writer.write(content); // Could also use -- writer.append() -- method.
           writer.flush();
           writer.close();
@@ -288,10 +288,11 @@ $(document).ready(function() {
 
       public void writeToTextFile(String content, String fileName) throws IOException {
           File file = new File(fileName);
-          if (file.exists() != true) { // Checking if the file exists or not. If it doesn't exist create a new file.
+          if (file.exists() != true) { // Checking if the file exists or not. If not create a new file.
               file.createNewFile(); // Remeber to add catch clause for IOException
           }
-          FileWriter writer = new FileWriter(file, true); // The "true" will append the new data, while retaining the old data.
+          // The "true" will append the new data, while retaining the old data.
+          FileWriter writer = new FileWriter(file, true);
           writer.write(content); // Could also use -- writer.append() -- method.
           writer.flush();
           writer.close();
