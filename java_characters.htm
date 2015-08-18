@@ -40,7 +40,7 @@ Date Downloaded: 2015-05-05 08:51:38 PM !-->
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <style>
 div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, footer div.footer-ribon, div.footer-copyright { background:  url(../images/pattern.png) repeat center center !important; }
-header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;} 
+header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;}
 header nav ul.nav-main li.dropdown:hover > ul{ border:2px solid }
 header nav ul.nav-main ul.dropdown-menu > li > a:hover, #mainMenu > li:hover, header nav.mega-menu ul.nav-main .mega-menu-content ul.sub-menu li:hover{ background:  !important;}
 img.mobile-apps { border: 1px solid  !important; }
@@ -68,12 +68,12 @@ $(document).ready(function() {
 <div id="divGoogle"></div>
 <div class="body">
 <header>
-   <div class="container">			
+   <div class="container">
       <h1 class="logo">
       <a href="index.htm" title="tutorialspoint">
       <img alt="tutorialspoint" src="images/logo.png" />
       </a>
-      </h1>			
+      </h1>
       <div class="search" id="searchBar">
          <form method="get" id="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
             <input type="hidden" name="sitesearch" value="www.tutorialspoint.com" />
@@ -102,14 +102,14 @@ $(document).ready(function() {
             </li>
          </ul>
       </nav>
-         <!-- search code here  --> 
+         <!-- search code here  -->
       <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse"  data-target=".nav-main-collapse" id="pull"></button>
    </div>
    <div class="navbar nav-main">
       <div class="container">
          <nav class="nav-main mega-menu">
             <ul class="nav nav-pills nav-main" id="mainMenu">
-               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>
                <li class="dropdown"><a class="dropdown-toggle tut-lib" href="tutorialslibrary.htm"> Tutorials Library </a>
       <ul class="dropdown-menu" id="submenu">
          <li>
@@ -145,7 +145,7 @@ $(document).ready(function() {
        </ul>
                </li>
                <li class="dropdown"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground</a> </li>
-                  <li class="dropdown"> 							
+                  <li class="dropdown">
                      <a class="dropdown-toggle tut-plus" href="absoluteclasses.htm">Absolute Classes</a>                     <ul class="dropdown-menu" id="submenu1">
                                                 <li class="current-menu-ancestor current-menu-parent active dropdown-submenu" style="border-bottom:none;">
                         </li><li style="border-bottom:none;"><a href="absoluteclasses/userlogin.htm"><i class="fa-sign-in"></i>&nbsp;Login</a></li>
@@ -158,13 +158,13 @@ $(document).ready(function() {
                         <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/testimonials.htm" style="border-bottom:none;"><i class="fa-check check"></i> Testimonial</a></li>
                         <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/help.htm" style="border-bottom:none;"><i class="fa-question book-head"></i> Help/FAQ</a></li>
                         <li style="border-bottom:none;"><a href="absoluteclasses/contact_abc.htm" style="border-bottom:none;"><i class="fa fa-envelope-o"></i> Contact</a></li>
-                                             
+
                      </ul>
-                  
+
             </li></ul>
          </nav>
       </div>
-   </div>	
+   </div>
 </header>
 <div style="clear:both;"></div>
 <div role="main" class="main">
@@ -253,7 +253,7 @@ google_ad_format = "468x60_as";
 google_ad_type = "image";
 google_ad_channel = "";
 //--></script>
-<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js"> 
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
 </script>
 </div>
 <div class="pre-btn">
@@ -270,10 +270,10 @@ google_ad_channel = "";
 char ch = 'a';
 
 // Unicode for uppercase Greek omega character
-char uniChar = '\u039A'; 
+char uniChar = '\u039A';
 
 // an array of chars
-char[] charArray ={ 'a', 'b', 'c', 'd', 'e' }; 
+char[] charArray ={ 'a', 'b', 'c', 'd', 'e' };
 </pre>
 <p>However in development, we come across situations where we need to use objects instead of primitive data types. In order to achieve this, Java provides wrapper class <b>Character</b> for  primitive data type char.</p>
 <p>The Character class offers a number of useful class (i.e., static) methods for manipulating characters. You can create a Character object with the Character constructor:</p>
@@ -281,6 +281,20 @@ char[] charArray ={ 'a', 'b', 'c', 'd', 'e' };
 Character ch = new Character('a');
 </pre>
 <p>The Java compiler will also create a Character object for you under some circumstances. For example, if you pass a primitive char into a method that expects an object, the compiler automatically converts the char to a Character for you. This feature is called autoboxing or unboxing, if the conversion goes the other way.</p>
+
+<br><br>
+<blockquote style="color:#fff;"><h2 style="padding-top:0% !important;">Similarities Between int & char Data Types</h2>
+
+  <i>A <b>char</b> is effectively an unsigned 16-bit integer type in Java.</i>
+  <br><br>
+
+
+  Like other integer types, you can perform an assignment conversion from an integer constant to any integer type so long as it's in the appropriate range. <br><br>This allows you to perform <i><b>integer operations</b></i> on <b>char</b> variables, as each <b>char</b> variable has a <b>int</b> value that corresponds to it's <u>Unicode Character</u>.
+<b>int</b> can be cast/converted to <b>char</b> and <b>char</b> can be cast/converted to <b>int</b><br><br>
+</blockquote>
+
+
+
 <h2>Example:</h2>
 <pre class="prettyprint notranslate">
 // Here following primitive char 'a'
