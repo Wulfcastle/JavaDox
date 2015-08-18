@@ -266,30 +266,38 @@ $(document).ready(function() {
 <br>
 <h2>Writing to a text file, replacing contents</h2>
 <pre class="prettyprint notranslate tryit">
-public void writeToTextFile(String content, String fileName) throws IOException {
-        File file = new File(fileName);
-        if (file.exists() != true) { // Checking if the file exists or not. If it doesn't exist create a new file.
-            file.createNewFile(); // Remeber to add catch clause for IOException
-        }
-        FileWriter writer = new FileWriter(file);
-        writer.write(content); // Could also use -- writer.append() -- method.
-        writer.flush();
-        writer.close();
-    }
+  public class IOTest {
+
+      public void writeToTextFile(String content, String fileName) throws IOException {
+          File file = new File(fileName);
+          if (file.exists() != true) { // Checking if the file exists or not. If it doesn't exist create a new file.
+              file.createNewFile(); // Remeber to add catch clause for IOException
+          }
+          FileWriter writer = new FileWriter(file); 
+          writer.write(content); // Could also use -- writer.append() -- method.
+          writer.flush();
+          writer.close();
+      }
+
+  }
 </pre>
 
 <h2>Writing to an existing text file and keeping contents</h2>
 <pre class="prettyprint notranslate tryit">
-  public void writeToTextFile(String content, String fileName) throws IOException {
-        File file = new File(fileName);
-        if (file.exists() != true) { // Checking if the file exists or not. If it doesn't exist create a new file.
-            file.createNewFile(); // Remeber to add catch clause for IOException
-        }
-        FileWriter writer = new FileWriter(file, true); // The "true" will append the new data, while retaining the old data.
-        writer.write(content); // Could also use -- writer.append() -- method.
-        writer.flush();
-        writer.close();
-    }
+  public class IOTest {
+
+      public void writeToTextFile(String content, String fileName) throws IOException {
+          File file = new File(fileName);
+          if (file.exists() != true) { // Checking if the file exists or not. If it doesn't exist create a new file.
+              file.createNewFile(); // Remeber to add catch clause for IOException
+          }
+          FileWriter writer = new FileWriter(file, true); // The "true" will append the new data, while retaining the old data.
+          writer.write(content); // Could also use -- writer.append() -- method.
+          writer.flush();
+          writer.close();
+      }
+
+  }
 </pre>
 
 <!-- PRINTING ENDS HERE -->
