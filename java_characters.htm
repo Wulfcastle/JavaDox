@@ -293,17 +293,7 @@ Character ch = new Character('a');
 <b>int</b> can be cast/converted to <b>char</b> and <b>char</b> can be cast/converted to <b>int</b><br><br>
 </blockquote>
 
-<h2>Example: Incrementing Char Variables</h2>
-<p>In Java, char is a numeric type. When you add 1 to a char, you get to the next unicode code point. In case of 'A', the next code point is 'B'.</p>
-<pre class="prettyprint notranslate">
-char testCharOne = 'A';
-testCharOne++;
 
-System.out.print(testCharOne.toString());
-</pre>
-<pre class="prettyprint notranslate">
-Result : B
-</pre>
 
 
 
@@ -421,6 +411,57 @@ She said "Hello!" to me.
 </tr>
 </table>
 <p>For a complete list of methods, please refer to the java.lang.Character API specification.</p>
+
+
+<h2>Example: Incrementing Char Variables</h2>
+<p>In Java, char is a numeric type. When you add 1 to a char, you get to the next unicode code point. In case of 'A', the next code point is 'B'.</p>
+<pre class="prettyprint notranslate tryit">
+char testCharOne = 'A';
+testCharOne++;
+
+System.out.print(testCharOne.toString());
+</pre>
+<pre class="prettyprint notranslate tryit">
+Result : B
+</pre>
+
+<h2>Example: Comparing Char Variables - Checking Alphabetic Order of Characters in String</h2>
+<p>In Java, char is a numeric type. When you add 1 to a char, you get to the next unicode code point. In case of 'A', the next code point is 'B'.</p>
+<pre class="prettyprint notranslate tryit">
+  public boolean checkAlphabeticOrder(String content) {
+      boolean isAlphabetic = true;
+
+      for (int i = 0; i < content.length() - 1; i++) {
+
+          char currentChar = content.charAt(i);
+          char nextChar = content.charAt(i + 1);
+
+          if (Character.toLowerCase(currentChar) > Character.toLowerCase(nextChar)) {
+
+              isAlphabetic = false;
+
+              /* If "currentChar" is greater than "nextChar", this means that the Unicode Code
+              Point/Value of "currentChar" is greater than the Unicode
+              Code Point/Value of "nextChar".The Unicode Code Point/Values of letters increase
+              with their position in the alphabet. Therefore "a" has a smaller value than "z".
+
+              However due to the way Unicode is designed letter cases
+              (e.g upper and lowercase letters) have different values. Uppercase letters
+              regardless of their position in the alphabet will
+              ALWAYS have a greater value than lowercase letters. For example "z", will have
+              a greater value than "A", which is why the Character.toLowerCase() method is used to
+              accureately compare characters. */
+          }
+      }
+      return isAlphabetic;
+  }
+}
+</pre>
+<pre class="prettyprint notranslate">
+Result : B
+</pre>
+
+
 <h2>What is Next?</h2>
 <p>In the next section, we will be going through the String class in Java. You will be learning how to declare and use Strings efficiently as well as some of the important methods in the String class.</p>
 <hr style="margin-bottom:1.25% !important;"><div class="pre-btn">
