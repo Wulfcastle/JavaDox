@@ -3,13 +3,13 @@
 <!--[if IE 9]><html class="ie ie9"> </html><![endif]-->
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
 <head>
-<!-- Original URL: http://www.tutorialspoint.com/java/java_string_tostring.htm
-Date Downloaded: 2015-05-05 08:52:05 PM !-->
+<!-- Original URL: http://www.tutorialspoint.com/java/java_string_concat.htm
+Date Downloaded: 2015-05-05 08:52:12 PM !-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Basic -->
 <meta charset="utf-8" />
-<title>Java - String toString() Method</title>
-<meta name="description" content="Java String toString() Method - Learning Java in simple and easy steps : A beginner's tutorial containing complete knowledge of Java Syntax Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
+<title>Java - Sorting Algorithms</title>
+<meta name="description" content="Java - String concat() Method - Learning Java in simple and easy steps : A beginner's tutorial containing complete knowledge of Java Syntax Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
 <meta name="keywords" content="Java, Tutorials, Learning, Beginners, Basics, Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
 
 <link rel="shortcut icon" href="./cdn/favicon.png" type="image/x-icon" />
@@ -40,7 +40,7 @@ Date Downloaded: 2015-05-05 08:52:05 PM !-->
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <style>
 div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, footer div.footer-ribon, div.footer-copyright { background:  url(../images/pattern.png) repeat center center !important; }
-header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;} 
+header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;}
 header nav ul.nav-main li.dropdown:hover > ul{ border:2px solid }
 header nav ul.nav-main ul.dropdown-menu > li > a:hover, #mainMenu > li:hover, header nav.mega-menu ul.nav-main .mega-menu-content ul.sub-menu li:hover{ background:  !important;}
 img.mobile-apps { border: 1px solid  !important; }
@@ -68,12 +68,12 @@ $(document).ready(function() {
 <div id="divGoogle"></div>
 <div class="body">
 <header>
-   <div class="container">			
+   <div class="container">
       <h1 class="logo">
       <a href="index.htm" title="tutorialspoint">
       <img alt="tutorialspoint" src="images/logo.png" />
       </a>
-      </h1>			
+      </h1>
       <div class="search" id="searchBar">
          <form method="get" id="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
             <input type="hidden" name="sitesearch" value="www.tutorialspoint.com" />
@@ -102,14 +102,14 @@ $(document).ready(function() {
             </li>
          </ul>
       </nav>
-         <!-- search code here  --> 
+         <!-- search code here  -->
       <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse"  data-target=".nav-main-collapse" id="pull"></button>
    </div>
    <div class="navbar nav-main">
       <div class="container">
          <nav class="nav-main mega-menu">
             <ul class="nav nav-pills nav-main" id="mainMenu">
-               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>
                <li class="dropdown"><a class="dropdown-toggle tut-lib" href="tutorialslibrary.htm"> Tutorials Library </a>
       <ul class="dropdown-menu" id="submenu">
          <li>
@@ -145,7 +145,7 @@ $(document).ready(function() {
        </ul>
                </li>
                <li class="dropdown"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground</a> </li>
-                  <li class="dropdown"> 							
+                  <li class="dropdown">
                      <a class="dropdown-toggle tut-plus" href="absoluteclasses.htm">Absolute Classes</a>                     <ul class="dropdown-menu" id="submenu1">
                                                 <li class="current-menu-ancestor current-menu-parent active dropdown-submenu" style="border-bottom:none;">
                         </li><li style="border-bottom:none;"><a href="absoluteclasses/userlogin.htm"><i class="fa-sign-in"></i>&nbsp;Login</a></li>
@@ -158,13 +158,13 @@ $(document).ready(function() {
                         <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/testimonials.htm" style="border-bottom:none;"><i class="fa-check check"></i> Testimonial</a></li>
                         <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/help.htm" style="border-bottom:none;"><i class="fa-question book-head"></i> Help/FAQ</a></li>
                         <li style="border-bottom:none;"><a href="absoluteclasses/contact_abc.htm" style="border-bottom:none;"><i class="fa fa-envelope-o"></i> Contact</a></li>
-                                             
+
                      </ul>
-                  
+
             </li></ul>
          </nav>
       </div>
-   </div>	
+   </div>
 </header>
 <div style="clear:both;"></div>
 <div role="main" class="main">
@@ -241,7 +241,7 @@ $(document).ready(function() {
 <div class="row">
 <div class="content">
 <div class="col-md-7 middle-col">
-<h1>Java - String toString() Method</h1>
+<h1>Sorting Algorithms</h1>
 <div class="topgooglead">
 <hr />
 <div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
@@ -253,7 +253,7 @@ google_ad_format = "468x60_as";
 google_ad_type = "image";
 google_ad_channel = "";
 //--></script>
-<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js"> 
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
 </script>
 </div>
 <div class="pre-btn">
@@ -264,39 +264,201 @@ google_ad_channel = "";
 </div>
 <div class="clearer"></div>
 <hr />
-<h2>Description:</h2>
-<p>This method returns itself a string</p>
-<h2>Syntax:</h2>
-<p>Here is the syntax of this method:</p>
-<pre class="prettyprint notranslate">
-public String toString()
+
+<blockquote><h2 style="margin-top:-5%;">Sorting Algorithms</h2><br><p>For more sorting algorithms & information : <a href="https://en.wikipedia.org/wiki/Sorting_algorithm">https://en.wikipedia.org/wiki/Sorting_algorithm</a> <br><br>
+
+  A sorting algorithm is an algorithm that puts elements of a list in a certain order. The most-used orders are numerical order and lexicographical order. Efficient sorting is important for optimizing the use of other algorithms (such as search and merge algorithms) which require input data to be in sorted lists; it is also often useful for canonicalizing data and for producing human-readable output. More formally, the output must satisfy two conditions:
+The output is in nondecreasing order (each element is no smaller than the previous element according to the desired total order);
+The output is a permutation (reordering) of the input.
+Further, the data is often taken to be in an array, which allows random access, rather than a list, which only allows sequential access, though often algorithms can be applied with suitable modification to either type of data.</p></blockquote>
+<h2>Bubble Sort Algorithm</h2>
+<ul class="list" style="color:#fff;">
+  <li style="color:#fff;">Simplest to Implement</li>
+  <li style="color:#fff;">Inefficient</li>
+  <li style="color:#fff;">Slow</li>
+</ul>
+
+
+<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>VISUALISATIONS</i></h3>
+<pre style="background:#2D6F45;color:#fff;border-radius:3px;padding:15px;">
+<center><iframe width="300" height="225" src="https://www.youtube.com/embed/6eA3FrFbO8Q" frameborder="0" allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<iframe width="300" height="225" src="https://www.youtube.com/embed/F13_wsHDIG4" frameborder="0" allowfullscreen></iframe></center>
 </pre>
-<h2>Parameters:</h2>
-<p>Here is the detail of parameters:</p>
-<ul class="list">
-<li><p><b>NA</b></p></li>
-</ul>
-<h2>Return Value:</h2>
-<ul class="list">
-<li><p>This method returns the string itself.</p></li>
-</ul>
-<h2>Example:</h2>
+
+<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>PSEUDOCODE</i></h3>
+<pre style="background:#78BD91;color:#fff;border-radius:3px;padding:15px;">
+  do
+    swapped = false
+    for i = 1 to indexOfLastUnsortedElement
+      if leftElement > rightElement
+        swap(leftElement, rightElement)
+        swapped = true
+  while swapped
+</pre>
+<br><br>
+<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>Java Implementation</i></h3>
 <pre class="prettyprint notranslate tryit">
-import java.io.*;
-
-public class Test {
-   public static void main(String args[]) {
-      String Str = new String("Welcome to Tutorialspoint.com");
-
-      System.out.print("Return Value :");
-      System.out.println(Str.toString());
-   }
-}
+public int[] bubbleSort(int[] array) {
+      for (int i = 0; i < array.length - 1; i++) {
+          for (int j = 0; j < array.length - 1 - i; j++) {
+              if (array[j] > array[j + 1]) {
+                  int temp = array[j]; // Adding current item in array to temporary variable.
+                  array[j] = array[j + 1]; // Swapping current item in array with next item
+                  array[j + 1] = temp; // Setting next item equal to previous item (stored in temp variable).
+              }
+          }
+      }
+      return array;
+  }
 </pre>
-<p>This  produces the following result:</p>
-<pre class="prettyprint notranslate">
-Return Value :Welcome to Tutorialspoint.com
+
+
+<br><hr>
+<h2>Selection Sort Algorithm</h2>
+<ul class="list" style="color:#fff;">
+  <li style="color:#fff;">Divides Input List into Two Sub Arrays</li>
+  <li style="color:#fff;">Much Faster & More Efficient than Bubble Sort</li>
+  <li style="color:#fff;">Lightweight Code - Simple to Implement</li>
+</ul>
+
+
+<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>VISUALISATIONS</i></h3>
+<pre style="background:#2D6F45;color:#fff;border-radius:3px;padding:15px;">
+<center><iframe width="300" height="225" src="https://www.youtube.com/embed/9MdE2kDz-Us" frameborder="0" allowfullscreen></iframe></center>
 </pre>
+
+<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>PSEUDOCODE</i></h3>
+<pre style="background:#78BD91;color:#fff;border-radius:3px;padding:15px;">
+  repeat (numOfElements - 1) times
+  set the first unsorted element as the minimum
+  for each of the unsorted elements
+    if element < currentMinimum
+      set element as new minimum
+  swap minimum with first unsorted position
+</pre>
+<br><br>
+<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>Java Implementation</i></h3>
+<pre class="prettyprint notranslate tryit">
+  public void selectionSort(int[] arr) {
+        int i, j, minIndex, tmp;
+        int n = arr.length;
+        for (i = 0; i < n - 1; i++) {
+              minIndex = i;
+              for (j = i + 1; j < n; j++)
+                    if (arr[j] < arr[minIndex])
+                          minIndex = j;
+              if (minIndex != i) {
+                    tmp = arr[i];
+                    arr[i] = arr[minIndex];
+                    arr[minIndex] = tmp;
+              }
+        }
+  }
+</pre>
+
+
+
+<br><hr>
+<h2>Quick Sort Algorithm</h2>
+<ul class="list" style="color:#fff;">
+  <li style="color:#fff;">Large amounts of code needed</li>
+  <li style="color:#fff;">More efficient than Bubble Sort</li>
+</ul>
+
+
+<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>VISUALISATIONS</i></h3>
+<pre style="background:#2D6F45;color:#fff;border-radius:3px;padding:15px;">
+<center><iframe width="300" height="225" src="https://www.youtube.com/embed/PGA_qq5AMAA" frameborder="0" allowfullscreen></iframe></center>
+</pre>
+
+<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>PSEUDOCODE</i></h3>
+<pre style="background:#78BD91;color:#fff;border-radius:3px;padding:15px;">
+  for each (unsorted) partition
+    set first element as pivot
+    storeIndex = pivotIndex + 1
+    for i = pivotIndex + 1 to rightmostIndex
+        if element[i] < element[pivot]
+          swap(i, storeIndex); storeIndex++
+    swap(pivot, storeIndex - 1)
+</pre>
+<br><br>
+<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>Java Implementation</i></h3>
+<pre class="prettyprint notranslate tryit">
+  public class MyQuickSort {
+
+      private int array[];
+      private int length;
+
+      public void sort(int[] inputArr) {
+
+          if (inputArr == null || inputArr.length == 0) {
+              return;
+          }
+          this.array = inputArr;
+          length = inputArr.length;
+          quickSort(0, length - 1);
+      }
+
+      private void quickSort(int lowerIndex, int higherIndex) {
+
+          int i = lowerIndex;
+          int j = higherIndex;
+          // calculate pivot number, I am taking pivot as middle index number
+          int pivot = array[lowerIndex + (higherIndex - lowerIndex) / 2];
+          // Divide into two arrays
+          while (i <= j) {
+              /**
+               * In each iteration, we will identify a number from left side which
+               * is greater then the pivot value, and also we will identify a
+               * number from right side which is less then the pivot value. Once
+               * the search is done, then we exchange both numbers.
+               */
+              while (array[i] < pivot) {
+                  i++;
+              }
+              while (array[j] > pivot) {
+                  j--;
+              }
+              if (i <= j) {
+                  exchangeNumbers(i, j);
+                  //move index to next position on both sides
+                  i++;
+                  j--;
+              }
+          }
+          // call quickSort() method recursively
+          if (lowerIndex < j) {
+              quickSort(lowerIndex, j);
+          }
+          if (i < higherIndex) {
+              quickSort(i, higherIndex);
+          }
+      }
+
+      private void exchangeNumbers(int i, int j) {
+          int temp = array[i];
+          array[i] = array[j];
+          array[j] = temp;
+      }
+
+      public static void main(String a[]) {
+
+          MyQuickSort sorter = new MyQuickSort();
+          int[] input = {24, 2, 45, 20, 56, 75, 2, 56, 99, 53, 12};
+          sorter.sort(input);
+          for (int i : input) {
+              System.out.print(i);
+              System.out.print(" ");
+          }
+      }
+  }
+</pre>
+
+
+
+
+
+
+
 <hr style="margin-bottom:1.25% !important;"><div class="pre-btn">
 <a href="java_strings.htm"> Previous Page</a>
 </div>
@@ -304,7 +466,7 @@ Return Value :Welcome to Tutorialspoint.com
 <a href="/cgi-bin/printpage.cgi" target="_blank"> Print</a>
 </div>
 <div class="pdf-btn">
-<a href="pdf/java_string_tostring.pdf" title="Java - String toString() Method" target="_blank"> PDF</a>
+<a href="pdf/java_string_concat.pdf" title="Java - String concat() Method" target="_blank"> PDF</a>
 </div>
 <div class="nxt-btn">
 <a href="java_strings.htm">Next Page &nbsp;</a>
