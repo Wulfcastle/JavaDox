@@ -271,60 +271,29 @@ google_ad_channel = "";
 The output is in nondecreasing order (each element is no smaller than the previous element according to the desired total order);
 The output is a permutation (reordering) of the input.
 Further, the data is often taken to be in an array, which allows random access, rather than a list, which only allows sequential access, though often algorithms can be applied with suitable modification to either type of data.</p></blockquote>
-<h2>Bubble Sort Algorithm</h2>
-<ul class="list" style="color:#fff;">
-  <li style="color:#fff;">Simplest to Implement</li>
-  <li style="color:#fff;">Inefficient</li>
-  <li style="color:#fff;">Slow</li>
-</ul>
 
 
-<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>VISUALISATIONS</i></h3>
-<pre style="background:#2D6F45;color:#fff;border-radius:3px;padding:15px;">
-<center><iframe width="300" height="225" src="https://www.youtube.com/embed/6eA3FrFbO8Q" frameborder="0" allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<iframe width="300" height="225" src="https://www.youtube.com/embed/F13_wsHDIG4" frameborder="0" allowfullscreen></iframe></center>
-</pre>
-
-<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>PSEUDOCODE</i></h3>
-<pre style="background:#78BD91;color:#fff;border-radius:3px;padding:15px;">
-  do
-    swapped = false
-    for i = 1 to indexOfLastUnsortedElement
-      if leftElement > rightElement
-        swap(leftElement, rightElement)
-        swapped = true
-  while swapped
-</pre>
-<br><br>
-<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>Java Implementation</i></h3>
-<pre class="prettyprint notranslate tryit">
-public int[] bubbleSort(int[] array) {
-      for (int i = 0; i < array.length - 1; i++) {
-          for (int j = 0; j < array.length - 1 - i; j++) {
-              if (array[j] > array[j + 1]) {
-                  int temp = array[j]; // Adding current item in array to temporary variable.
-                  array[j] = array[j + 1]; // Swapping current item in array with next item
-                  array[j + 1] = temp; // Setting next item equal to previous item (stored in temp variable).
-              }
-          }
-      }
-      return array;
-  }
-</pre>
-
-
-<br><hr>
 <h2>Selection Sort Algorithm</h2>
 <ul class="list" style="color:#fff;">
-  <li style="color:#fff;">Divides Input List into Two Sub Arrays</li>
-  <li style="color:#fff;">Much Faster & More Efficient than Bubble Sort</li>
-  <li style="color:#fff;">Lightweight Code - Simple to Implement</li>
+  <li style="color:#fff;">Divides Input List into Two "Sub" Arrays, One Sortet Part and One Unsorted Part</li>
+  <li style="color:#fff;">Simplest & Easiest Sorting Algorithm</li>
+  <li style="color:#fff;">Fundamental Sorting Algorithm</li>
 </ul>
 
 
+<blockquote style="background:rgb(131, 160, 190);"><p><strong>Selection sort is the most fundamental, simple and most importantly an in-place sorting algorithm.</strong></p><p>This algorithm divides the input list into two sub arrays.</p><ol><li><strong>A sub array of sorted elements</strong> which is empty at the beginning and keep on increasing with each item added to it.</li><li><strong>An unsorted sub array of remaining elements</strong>
+  . This is equal to the input size in the beginning and its size reduces to zero as we reach the end of algorithm.</li></ol>
+  <p>The basic idea is that in each iteration of this algorithm we pick an element (either largest or smallest, this depends on the sorting scenario) and appends it to the sorted element list, reducing the size of unsorted list by one.</p><h5 style="color:#444;">Let’s understand it with an example</h5><p><strong>Yellow</strong> – Sorted part of the list<br> <strong>Red</strong> – Key selected from the unsorted list, which is the smallest element of unsorted subarray in this case<br> <strong>Blue</strong> – This element in unsorted subarray, which is compared with the selected key (in red).<br>
+     <strong>Double headed Arrow</strong> – Show the elements swapped</p><img class="size-full wp-image-561" src="http://www.codingeek.com/wp-content/uploads/2015/05/word-image.gif" alt="Selection Sort Algorithm -Animation" width="100" height="371"><p class="wp-caption-text">Selection Sort Algorithm -Animation</p><p>So in the above picture we can see that in each iteration we choose the smallest element from the unsorted sub array and swaps it with the first element of unsorted sub array due to which sorted sub array keeps on increasing in size until complete array is sorted.
+     </p></blockquote>
+<br>
 <h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>VISUALISATIONS</i></h3>
 <pre style="background:#2D6F45;color:#fff;border-radius:3px;padding:15px;">
 <center><iframe width="300" height="225" src="https://www.youtube.com/embed/9MdE2kDz-Us" frameborder="0" allowfullscreen></iframe></center>
 </pre>
+
+
+
 
 <h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>PSEUDOCODE</i></h3>
 <pre style="background:#78BD91;color:#fff;border-radius:3px;padding:15px;">
@@ -365,7 +334,47 @@ public int[] bubbleSort(int[] array) {
         return arr;
     }
 </pre>
+<br>
+<hr>
+<h2>Bubble Sort Algorithm</h2>
+<ul class="list" style="color:#fff;">
+  <li style="color:#fff;">Simplest to Implement</li>
+  <li style="color:#fff;">Inefficient</li>
+  <li style="color:#fff;">Slow</li>
+</ul>
 
+
+<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>VISUALISATIONS</i></h3>
+<pre style="background:#2D6F45;color:#fff;border-radius:3px;padding:15px;">
+<center><iframe width="300" height="225" src="https://www.youtube.com/embed/6eA3FrFbO8Q" frameborder="0" allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<iframe width="300" height="225" src="https://www.youtube.com/embed/F13_wsHDIG4" frameborder="0" allowfullscreen></iframe></center>
+</pre>
+
+<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>PSEUDOCODE</i></h3>
+<pre style="background:#78BD91;color:#fff;border-radius:3px;padding:15px;">
+  do
+    swapped = false
+    for i = 1 to indexOfLastUnsortedElement
+      if leftElement > rightElement
+        swap(leftElement, rightElement)
+        swapped = true
+  while swapped
+</pre>
+<br><br>
+<h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>Java Implementation</i></h3>
+<pre class="prettyprint notranslate tryit">
+public int[] bubbleSort(int[] array) {
+      for (int i = 0; i < array.length - 1; i++) {
+          for (int j = 0; j < array.length - 1 - i; j++) {
+              if (array[j] > array[j + 1]) {
+                  int temp = array[j]; // Adding current item in array to temporary variable.
+                  array[j] = array[j + 1]; // Swapping current item in array with next item
+                  array[j + 1] = temp; // Setting next item equal to previous item (stored in temp variable).
+              }
+          }
+      }
+      return array;
+  }
+</pre>
 
 
 <br><hr>
