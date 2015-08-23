@@ -338,21 +338,31 @@ public int[] bubbleSort(int[] array) {
 <br><br>
 <h3 style="color:#fff;text-decoration:none;margin-bottom:2%;font-size:85%"><i>Java Implementation</i></h3>
 <pre class="prettyprint notranslate tryit">
-  public void selectionSort(int[] arr) {
-        int i, j, minIndex, tmp;
-        int n = arr.length;
-        for (i = 0; i < n - 1; i++) {
-              minIndex = i;
-              for (j = i + 1; j < n; j++)
-                    if (arr[j] < arr[minIndex])
-                          minIndex = j;
-              if (minIndex != i) {
-                    tmp = arr[i];
-                    arr[i] = arr[minIndex];
-                    arr[minIndex] = tmp;
+  public static int[] selectionSort(int[] arr) {
+          // Done in ascending order.
+          for (int i = 0; i < arr.length - 1; i++) {
+              int index = i;
+              for (int j = i + 1; j < arr.length; j++) {
+              /* For-loop to find the position of the lowest number, will loop through the whole array
+                  and set the "index" variable as the index (position) of the lowest number in the array. */
+                  if (arr[j] < arr[index]) {
+                      index = j; // Setting index variable to the "index" position of the lowest number in the array
+                  }
               }
-        }
-  }
+              /* Setting "smallerNumber" variable to the smallest number in the unsorted array,
+              determined by the index (position) of the lowest number in the array.*/
+              int smallerNumber = arr[index];
+              /* Setting the "index" variable to "i", which is the last element/item of the sorted part of the array
+              The "index" variable is set to "i", as it the index of the last element/item of the sorted part of the array,
+              from which every other item in the unsorted part of the array (from i to the end of the array) is checked against
+              */
+              arr[index] = arr[i];
+              /* Setting the number just determined as the smallest element/item of the unsorted array (see above) to the last
+              element of the sorted array */
+              arr[i] = smallerNumber;
+          }
+          return arr;
+      }
 </pre>
 
 
