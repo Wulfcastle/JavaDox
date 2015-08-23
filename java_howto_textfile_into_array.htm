@@ -268,7 +268,7 @@ $(document).ready(function() {
 <pre class="prettyprint notranslate tryit">
 public void readTextFile(String fileName) throws FileNotFoundException {
         String content = "";
-        Scanner myTextFile = new Scanner(new File(fileName)).useDelimiter(",\\s*");
+        Scanner myTextFile = new Scanner(new FileReader(fileName)).useDelimiter(",\\s*");
 
         while (myTextFile.hasNext()) {
             // All the contents of the Text File are added to the "content variable
@@ -303,7 +303,7 @@ public class ReadTextFile {
         String line = "";
 
         // create Scanner
-        Scanner myFile = new Scanner(new File("myTextFile.txt")).useDelimiter(",\\s*");
+        Scanner myFile = new Scanner(new FileReader("myTextFile.txt")).useDelimiter(",\\s*");
 
         ArrayList&#60;String&#62; tempArray = new ArrayList&#60;String&#62;(); // Using ArrayList to temporary store values.
         //ArrayLists are better suited than Arrays for this as you don't have to declare memory space for them.
