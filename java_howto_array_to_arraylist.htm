@@ -3,13 +3,13 @@
 <!--[if IE 9]><html class="ie ie9"> </html><![endif]-->
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
 <head>
-<!-- Original URL: http://www.tutorialspoint.com/java/character_isuppercase.htm
-Date Downloaded: 2015-05-05 08:52:01 PM !-->
+<!-- Original URL: http://www.tutorialspoint.com/java/java_string_concat.htm
+Date Downloaded: 2015-05-05 08:52:12 PM !-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Basic -->
 <meta charset="utf-8" />
-<title>Java - isUpperCase() Method</title>
-<meta name="description" content="Java isUpperCase() Method - Learning Java in simple and easy steps : A beginner's tutorial containing complete knowledge of Java Syntax Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
+<title>Java - Howto - Convert Between ArrayLists & Arrays</title>
+<meta name="description" content="Java - String concat() Method - Learning Java in simple and easy steps : A beginner's tutorial containing complete knowledge of Java Syntax Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
 <meta name="keywords" content="Java, Tutorials, Learning, Beginners, Basics, Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
 
 <link rel="shortcut icon" href="./cdn/favicon.png" type="image/x-icon" />
@@ -40,7 +40,7 @@ Date Downloaded: 2015-05-05 08:52:01 PM !-->
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <style>
 div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, footer div.footer-ribon, div.footer-copyright { background:  url(../images/pattern.png) repeat center center !important; }
-header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;} 
+header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;}
 header nav ul.nav-main li.dropdown:hover > ul{ border:2px solid }
 header nav ul.nav-main ul.dropdown-menu > li > a:hover, #mainMenu > li:hover, header nav.mega-menu ul.nav-main .mega-menu-content ul.sub-menu li:hover{ background:  !important;}
 img.mobile-apps { border: 1px solid  !important; }
@@ -68,12 +68,12 @@ $(document).ready(function() {
 <div id="divGoogle"></div>
 <div class="body">
 <header>
-   <div class="container">			
+   <div class="container">
       <h1 class="logo">
       <a href="index.htm" title="tutorialspoint">
       <img alt="tutorialspoint" src="images/logo.png" />
       </a>
-      </h1>			
+      </h1>
       <div class="search" id="searchBar">
          <form method="get" id="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
             <input type="hidden" name="sitesearch" value="www.tutorialspoint.com" />
@@ -102,14 +102,14 @@ $(document).ready(function() {
             </li>
          </ul>
       </nav>
-         <!-- search code here  --> 
+         <!-- search code here  -->
       <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse"  data-target=".nav-main-collapse" id="pull"></button>
    </div>
    <div class="navbar nav-main">
       <div class="container">
          <nav class="nav-main mega-menu">
             <ul class="nav nav-pills nav-main" id="mainMenu">
-               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>
                <li class="dropdown"><a class="dropdown-toggle tut-lib" href="tutorialslibrary.htm"> Tutorials Library </a>
       <ul class="dropdown-menu" id="submenu">
          <li>
@@ -145,7 +145,7 @@ $(document).ready(function() {
        </ul>
                </li>
                <li class="dropdown"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground</a> </li>
-                  <li class="dropdown"> 							
+                  <li class="dropdown">
                      <a class="dropdown-toggle tut-plus" href="absoluteclasses.htm">Absolute Classes</a>                     <ul class="dropdown-menu" id="submenu1">
                                                 <li class="current-menu-ancestor current-menu-parent active dropdown-submenu" style="border-bottom:none;">
                         </li><li style="border-bottom:none;"><a href="absoluteclasses/userlogin.htm"><i class="fa-sign-in"></i>&nbsp;Login</a></li>
@@ -158,13 +158,13 @@ $(document).ready(function() {
                         <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/testimonials.htm" style="border-bottom:none;"><i class="fa-check check"></i> Testimonial</a></li>
                         <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/help.htm" style="border-bottom:none;"><i class="fa-question book-head"></i> Help/FAQ</a></li>
                         <li style="border-bottom:none;"><a href="absoluteclasses/contact_abc.htm" style="border-bottom:none;"><i class="fa fa-envelope-o"></i> Contact</a></li>
-                                             
+
                      </ul>
-                  
+
             </li></ul>
          </nav>
       </div>
-   </div>	
+   </div>
 </header>
 <div style="clear:both;"></div>
 <div role="main" class="main">
@@ -221,8 +221,8 @@ $(document).ready(function() {
 <li><a target="_top" href="java_documentation.htm">Java - Documentation</a></li>
 </ul>
 <ul class="nav nav-list primary left-menu">
-<li class="heading">How To</li><li><a target="_top" href="java_howto_sorting_algorithms.htm">Sorting Algorithms</a></li><li><a target="_top" href="java_howto_string_to_date.htm">Convert String to Date</a></li><li><a target="_top" href="java_howto_date_to_string.htm">Convert Date to String</a></li><li><a target="_top" href="java_howto_textfile_into_array.htm">Read Textfile into Array</a></li><li><a target="_top" href="java_howto_write_to_textfile.htm">Create & Write to Text Files</a></li><li><a target="_top" href="java_howto_use_debugger_netbeans.htm">Use the Debugger in Netbeans IDE</a></li><li><a target="_top" href="java_howto_generate_random_int.htm">Generate Random Int In A Range</a></li><li><a target="_top" href="java_howto_test_for_prime_numbers.htm">Test for Prime Numbers</a></li><li><a target="_top" href="java_howto_dynamically_generate_components.htm">Dynamically Create GUI Components</a></li><li><a target="_top" href="java_howto_array_to_arraylist.htm">Convert Between ArrayLists & Arrays</a></li>
-
+<li class="heading">How To</li><li><a target="_top" href="java_howto_sorting_algorithms.htm">Sorting Algorithms</a></li><li><a target="_top" href="java_howto_string_to_date.htm">Convert String to Date</a></li><li><a target="_top" href="java_howto_date_to_string.htm">Convert Date to String</a></li><li><a target="_top" href="java_howto_textfile_into_array.htm">Read Textfile into Array</a></li><li><a target="_top" href="java_howto_write_to_textfile.htm">Create & Write to Text Files</a></li><li><a target="_top" href="java_howto_use_debugger_netbeans.htm">Use the Debugger in Netbeans IDE</a></li><li><a target="_top" href="java_howto_generate_random_int.htm">Generate Random Int In A Range</a></li><li><a target="_top" href="java_howto_test_for_prime_numbers.htm">Test for Prime Numbers</a></li>
+<li><a target="_top" href="java_howto_dynamically_generate_components.htm">Dynamically Create GUI Components</a></li><li><a target="_top" href="java_howto_array_to_arraylist.htm">Convert Between ArrayLists & Arrays</a></li>
 
 
 
@@ -241,7 +241,7 @@ $(document).ready(function() {
 <div class="row">
 <div class="content">
 <div class="col-md-7 middle-col">
-<h1>Java - isUpperCase() Method</h1>
+<h1>How To - Convert Between ArrayLists & Arrays</h1>
 <div class="topgooglead">
 <hr />
 <div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
@@ -253,64 +253,63 @@ google_ad_format = "468x60_as";
 google_ad_type = "image";
 google_ad_channel = "";
 //--></script>
-<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js"> 
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
 </script>
 </div>
 <div class="pre-btn">
-<a href="java_characters.htm"> Previous Page</a>
+<a href="java_strings.htm"> Previous Page</a>
 </div>
 <div class="nxt-btn">
-<a href="java_characters.htm">Next Page &nbsp;</a>
+<a href="java_strings.htm">Next Page &nbsp;</a>
 </div>
 <div class="clearer"></div>
 <hr />
-<h2>Description:</h2>
-<p>The method determines whether the specified char value is uppercase.</p>
-<h2>Syntax:</h2>
-<pre class="prettyprint notranslate">
-boolean isUpperCase(char ch)
-</pre>
-<h2>Parameters:</h2>
-<p>Here is the detail of parameters:</p>
-<ul class="list">
-<li><p><b>ch</b> -- Primitive character type</p></li>
-</ul>
-<h2>Return Value:</h2>
-<ul class="list">
-<li><p>This method Returns true if passed character is really an uppercase.</p></li>
-</ul>
-<h2>Example:</h2>
-<pre class="prettyprint notranslate tryit">
-public class Test{
 
-   public static void main(String args[]){
-      System.out.println( Character.isUpperCase('c'));
-      System.out.println( Character.isUpperCase('C'));
-      System.out.println( Character.isUpperCase('\n'));
-      System.out.println( Character.isUpperCase('\t'));
-   }
-}
+<h2>Convert ArrayList to an Array</h2>
+<p>Here is the code for this method:</p>
+<pre class="prettyprint notranslate tryit">
+  ArrayList&#60;String&#62; sampleList = new ArrayList&#60;String&#62;();
+
+  list.add("India");
+  list.add("Switzerland");
+  list.add("Italy");
+  list.add("France");
+
+  String[] countries = sampleList.toArray(new String[sampleList.size()]);
+  </pre>
+
+
+
+<h2>Converting Array to ArrayList</h2>
+<p>Here is the code for this method:</p>
+<pre class="prettyprint notranslate tryit">
+  import java.util.ArrayList;
+  import java.util.List;
+  import java.util.Arrays;
+
+   ...
+
+   String[] countries = {"India", "Switzerland", "Italy", "France"};
+   ArrayList&#60;String&#62; list = new ArrayList(Arrays.asList(countries));
+
 </pre>
-<p>This produces the following result:</p>
-<pre class="prettyprint notranslate">
-false
-true
-false
-false
-</pre>
+
+
+
+
 <hr style="margin-bottom:1.25% !important;"><div class="pre-btn">
-<a href="java_characters.htm"> Previous Page</a>
+<a href="java_strings.htm"> Previous Page</a>
 </div>
 <div class="print-btn center">
 <a href="/cgi-bin/printpage.cgi" target="_blank"> Print</a>
 </div>
 <div class="pdf-btn">
-<a href="pdf/character_isuppercase.pdf" title="Java - isUpperCase() Method" target="_blank"> PDF</a>
+<a href="pdf/java_string_concat.pdf" title="Java - String concat() Method" target="_blank"> PDF</a>
 </div>
 <div class="nxt-btn">
-<a href="java_characters.htm">Next Page &nbsp;</a>
+<a href="java_strings.htm">Next Page &nbsp;</a>
 </div>
-<div class="parent-file">java_characters.htm</div>
+<div class="parent-file">java_strings.htm</div>
 <hr />
 <!-- PRINTING ENDS HERE -->
 <div class="bottomgooglead">
