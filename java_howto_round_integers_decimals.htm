@@ -3,13 +3,13 @@
 <!--[if IE 9]><html class="ie ie9"> </html><![endif]-->
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
 <head>
-<!-- Original URL: http://www.tutorialspoint.com/java/java_collections.htm
-Date Downloaded: 2015-05-05 08:51:46 PM !-->
+<!-- Original URL: http://www.tutorialspoint.com/java/java_string_concat.htm
+Date Downloaded: 2015-05-05 08:52:12 PM !-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Basic -->
 <meta charset="utf-8" />
-<title>Java - Collections</title>
-<meta name="description" content="Java Collections Learning Java in simple and easy steps : A beginner's tutorial containing complete knowledge of Java Syntax Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
+<title>Java - How To - Round Integers & Decimals</title>
+<meta name="description" content="Java - String concat() Method - Learning Java in simple and easy steps : A beginner's tutorial containing complete knowledge of Java Syntax Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
 <meta name="keywords" content="Java, Tutorials, Learning, Beginners, Basics, Object Oriented Language, Methods, Overriding, Inheritance, Polymorphism, Interfaces, Packages, Collections, Networking, Multithreading, Generics, Multimedia, Serialization, GUI." />
 
 <link rel="shortcut icon" href="./cdn/favicon.png" type="image/x-icon" />
@@ -40,7 +40,7 @@ Date Downloaded: 2015-05-05 08:51:46 PM !-->
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <style>
 div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, footer div.footer-ribon, div.footer-copyright { background:  url(../images/pattern.png) repeat center center !important; }
-header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;} 
+header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: none;}
 header nav ul.nav-main li.dropdown:hover > ul{ border:2px solid }
 header nav ul.nav-main ul.dropdown-menu > li > a:hover, #mainMenu > li:hover, header nav.mega-menu ul.nav-main .mega-menu-content ul.sub-menu li:hover{ background:  !important;}
 img.mobile-apps { border: 1px solid  !important; }
@@ -68,12 +68,12 @@ $(document).ready(function() {
 <div id="divGoogle"></div>
 <div class="body">
 <header>
-   <div class="container">			
+   <div class="container">
       <h1 class="logo">
       <a href="index.htm" title="tutorialspoint">
       <img alt="tutorialspoint" src="images/logo.png" />
       </a>
-      </h1>			
+      </h1>
       <div class="search" id="searchBar">
          <form method="get" id="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
             <input type="hidden" name="sitesearch" value="www.tutorialspoint.com" />
@@ -102,14 +102,14 @@ $(document).ready(function() {
             </li>
          </ul>
       </nav>
-         <!-- search code here  --> 
+         <!-- search code here  -->
       <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse"  data-target=".nav-main-collapse" id="pull"></button>
    </div>
    <div class="navbar nav-main">
       <div class="container">
          <nav class="nav-main mega-menu">
             <ul class="nav nav-pills nav-main" id="mainMenu">
-               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>
                <li class="dropdown"><a class="dropdown-toggle tut-lib" href="tutorialslibrary.htm"> Tutorials Library </a>
       <ul class="dropdown-menu" id="submenu">
          <li>
@@ -145,7 +145,7 @@ $(document).ready(function() {
        </ul>
                </li>
                <li class="dropdown"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground</a> </li>
-                  <li class="dropdown"> 							
+                  <li class="dropdown">
                      <a class="dropdown-toggle tut-plus" href="absoluteclasses.htm">Absolute Classes</a>                     <ul class="dropdown-menu" id="submenu1">
                                                 <li class="current-menu-ancestor current-menu-parent active dropdown-submenu" style="border-bottom:none;">
                         </li><li style="border-bottom:none;"><a href="absoluteclasses/userlogin.htm"><i class="fa-sign-in"></i>&nbsp;Login</a></li>
@@ -158,13 +158,13 @@ $(document).ready(function() {
                         <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/testimonials.htm" style="border-bottom:none;"><i class="fa-check check"></i> Testimonial</a></li>
                         <li style="border-bottom:1px dashed #ccc;;"><a href="absoluteclasses/help.htm" style="border-bottom:none;"><i class="fa-question book-head"></i> Help/FAQ</a></li>
                         <li style="border-bottom:none;"><a href="absoluteclasses/contact_abc.htm" style="border-bottom:none;"><i class="fa fa-envelope-o"></i> Contact</a></li>
-                                             
+
                      </ul>
-                  
+
             </li></ul>
          </nav>
       </div>
-   </div>	
+   </div>
 </header>
 <div style="clear:both;"></div>
 <div role="main" class="main">
@@ -221,8 +221,8 @@ $(document).ready(function() {
 <li><a target="_top" href="java_documentation.htm">Java - Documentation</a></li>
 </ul>
 <ul class="nav nav-list primary left-menu">
-<li class="heading">How To</li><li><a target="_top" href="java_howto_sorting_algorithms.htm">Sorting Algorithms</a></li><li><a target="_top" href="java_howto_string_to_date.htm">Convert String to Date</a></li><li><a target="_top" href="java_howto_date_to_string.htm">Convert Date to String</a></li><li><a target="_top" href="java_howto_textfile_into_array.htm">Read Textfile into Array</a></li><li><a target="_top" href="java_howto_write_to_textfile.htm">Create & Write to Text Files</a></li><li><a target="_top" href="java_howto_use_debugger_netbeans.htm">Use the Debugger in Netbeans IDE</a></li><li><a target="_top" href="java_howto_generate_random_int.htm">Generate Random Int In A Range</a></li><li><a target="_top" href="java_howto_test_for_prime_numbers.htm">Test for Prime Numbers</a></li><li><a target="_top" href="java_howto_dynamically_generate_components.htm">Dynamically Create GUI Components</a></li><li><a target="_top" href="java_howto_array_to_arraylist.htm">Convert Between ArrayLists & Arrays</a></li><li><a target="_top" href="java_howto_round_integers_decimals.htm">Round Integers & Decimals</a></li>
-
+<li class="heading">How To</li><li><a target="_top" href="java_howto_sorting_algorithms.htm">Sorting Algorithms</a></li><li><a target="_top" href="java_howto_string_to_date.htm">Convert String to Date</a></li><li><a target="_top" href="java_howto_date_to_string.htm">Convert Date to String</a></li><li><a target="_top" href="java_howto_textfile_into_array.htm">Read Textfile into Array</a></li><li><a target="_top" href="java_howto_write_to_textfile.htm">Create & Write to Text Files</a></li><li><a target="_top" href="java_howto_use_debugger_netbeans.htm">Use the Debugger in Netbeans IDE</a></li><li><a target="_top" href="java_howto_generate_random_int.htm">Generate Random Int In A Range</a></li><li><a target="_top" href="java_howto_test_for_prime_numbers.htm">Test for Prime Numbers</a></li><li><a target="_top" href="java_howto_dynamically_generate_components.htm">Dynamically Create GUI Components</a></li>
+<li><a target="_top" href="java_howto_array_to_arraylist.htm">Convert Between ArrayLists & Arrays</a></li><li><a target="_top" href="java_howto_round_integers_decimals.htm">Round Integers & Decimals</a></li>
 
 
 
@@ -241,7 +241,7 @@ $(document).ready(function() {
 <div class="row">
 <div class="content">
 <div class="col-md-7 middle-col">
-<h1>Java Collections Framework</h1>
+<h1>Java - How To - Round Integers & Decimals</h1>
 <div class="topgooglead">
 <hr />
 <div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
@@ -253,299 +253,149 @@ google_ad_format = "468x60_as";
 google_ad_type = "image";
 google_ad_channel = "";
 //--></script>
-<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js"> 
+<script type="text/javascript" src="../../pagead2.googlesyndication.com/pagead/f.txt.js">
 </script>
 </div>
 <div class="pre-btn">
-<a href="java_data_structures.htm"> Previous Page</a>
+<a href="java_strings.htm"> Previous Page</a>
 </div>
 <div class="nxt-btn">
-<a href="java_generics.htm">Next Page &nbsp;</a>
+<a href="java_strings.htm">Next Page &nbsp;</a>
 </div>
 <div class="clearer"></div>
 <hr />
-<p>Prior to Java 2, Java provided ad hoc classes such as <b>Dictionary, Vector, Stack</b>, and <b>Properties</b> to store and manipulate groups of objects. Although these classes were quite useful, they lacked a central, unifying theme. Thus, the way that you used Vector was different from the way that you used Properties.</p>
-<p>The collections framework was designed to meet several goals.</p>
-<ul class="list">
-<li><p>The framework had to be high-performance. The implementations for the fundamental collections (dynamic arrays, linked lists, trees, and hashtables) are highly efficient.</p></li>
-<li><p>The framework had to allow different types of collections to work in a similar manner and with a high degree of interoperability.</p></li>
-<li><p>Extending and/or adapting a collection had to be easy.</p></li>
-</ul>
-<p>Towards this end, the entire collections framework is designed around a set of standard interfaces. Several standard implementations such as <b>LinkedList, HashSet,</b> and <b>TreeSet</b>, of these interfaces are provided that you may use as-is and you may also implement your own collection, if you choose.</p>
-<p>A collections framework is a unified architecture for representing and manipulating collections. All collections frameworks contain the following:</p>
-<ul class="list">
-<li><p><b>Interfaces:</b> These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation. In object-oriented languages, interfaces generally form a hierarchy.</p></li>
-<li><p><b>Implementations, i.e., Classes:</b> These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.</p></li>
-<li><p><b>Algorithms:</b> These are the methods that perform useful computations, such as searching and sorting, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same method can be used on many different implementations of the appropriate collection interface.</p></li>
-</ul>
-<p>In addition to collections, the framework defines several map interfaces and classes. Maps store key/value pairs. Although maps are not <i>collections</i> in the proper use of the term, but they are fully integrated with collections.</p>
-<h2>The Collection Interfaces:</h2>
-<p>The collections framework defines several interfaces. This section provides an overview of each interface:</p>
-<table class="table table-bordered">
-<tr>
-<th>SN</th>
-<th>Interfaces with Description</th>
-</tr>
-<tr>
-<td>1</td>
-<td><p><a href="java_collection_interface.htm">The Collection Interface</a></p>
-<p>This enables you to work with groups of objects; it is at the top of the
-collections hierarchy.</p>
-</td>
-</tr>
-<tr>
-<td>2</td>
-<td><p><a href="java_list_interface.htm">The List Interface</a></p>
-<p>This extends <b>Collection</b> and an instance of List stores an ordered collection of elements.</p> 
-</td>
-</tr>
-<tr>
-<td>3</td>
-<td><p><a href="java_set_interface.htm">The Set</a></p>
-<p> This extends Collection to handle sets, which must contain unique elements</p>
-</td>
-</tr>
-<tr>
-<td>4</td>
-<td><p><a href="java_sortedset_interface.htm">The SortedSet</a></p>
-<p> This extends Set to handle sorted sets</p>
-</td>
-</tr>
-<tr>
-<td>5</td>
-<td><p><a href="java_map_interface.htm">The Map</a></p>
-<p> This maps unique keys to values.</p>
-</td>
-</tr>
-<tr>
-<td>6</td>
-<td><p><a href="java_mapentry_interface.htm">The Map.Entry</a></p>
-<p> This describes an element (a key/value pair) in a map. This is an inner class of Map.</p>
-</td>
-</tr>
-<tr>
-<td>7</td>
-<td><p><a href="java_sortedmap_interface.htm">The SortedMap</a></p>
-<p> This extends Map so that the keys are maintained in ascending order.</p>
-</td>
-</tr>
-<tr>
-<td>8</td>
-<td><p><a href="java_enumeration_interface.htm">The Enumeration</a></p>
-<p> This is legacy interface and defines the methods by which you can enumerate (obtain one at a time) the elements in a collection of objects. This legacy interface has been superceded by Iterator.</p>
-</td>
-</tr>
-</table>
-<h2>The Collection Classes:</h2>
-<p>Java provides a set of standard collection classes that implement Collection interfaces. Some of the classes provide full implementations
-that can be used as-is and others are abstract class, providing skeletal implementations that are used as starting points for creating concrete collections.</p>
-<p>The standard collection classes are summarized in the following table:</p>
-<table class="table table-bordered">
-<tr>
-<th>SN</th>
-<th>Classes with Description</th>
-</tr>
-<tr>
-<td>1</td>
-<td><b>AbstractCollection </b>
-<p>Implements most of the Collection interface.</p>
-</td>
-</tr>
-<tr>
-<td>2</td>
-<td><b>AbstractList </b>
-<p>Extends AbstractCollection and implements most of the List interface.</p>
-</td>
-</tr>
-<tr>
-<td>3</td>
-<td><b>AbstractSequentialList </b>
-<p>Extends AbstractList for use by a collection that uses
-sequential rather than random access of its elements.</p>
-</td>
-</tr>
-<tr>
-<td>4</td>
-<td><p><a href="java_linkedlist_class.htm">LinkedList </a></p>
-<p>Implements a linked list by extending AbstractSequentialList.</p>
-</td>
-</tr>
-<tr>
-<td>5</td>
-<td><p><a href="java_arraylist_class.htm">ArrayList </a></p>
-<p>Implements a dynamic array by extending AbstractList.</p>
-</td>
-</tr>
-<tr>
-<td>6</td>
-<td><b>AbstractSet </b>
-<p>Extends AbstractCollection and implements most of the Set interface.</p>
-</td>
-</tr>
-<tr>
-<td>7</td>
-<td><p><a href="java_hashset_class.htm">HashSet </a></p>
-<p>Extends AbstractSet for use with a hash table.</p>
-</td>
-</tr>
-<tr>
-<td>8</td>
-<td><p><a href="java_linkedhashset_class.htm">LinkedHashSet </a></p>
-<p>Extends HashSet to allow insertion-order iterations.</p>
-</td>
-</tr>
-<tr>
-<td>9</td>
-<td><p><a href="java_treeset_class.htm">TreeSet </a></p>
-<p>Implements a set stored in a tree. Extends AbstractSet.</p>
-</td>
-</tr>
-<tr>
-<td>10</td>
-<td><b>AbstractMap </b>
-<p>Implements most of the Map interface.</p>
-</td>
-</tr>
-<tr>
-<td>11</td>
-<td><p><a href="java_hashmap_class.htm">HashMap </a></p>
-<p>Extends AbstractMap to use a hash table.</p>
-</td>
-</tr>
-<tr>
-<td>12</td>
-<td><p><a href="java_treemap_class.htm">TreeMap </a></p>
-<p>Extends AbstractMap to use a tree.</p>
-</td>
-</tr>
-<tr>
-<td>13</td>
-<td><p><a href="java_weakhashmap_class.htm">WeakHashMap </a></p>
-<p>Extends AbstractMap to use a hash table with weak keys.</p>
-</td>
-</tr>
-<tr>
-<td>14</td>
-<td><p><a href="java_linkedhashmap_class.htm">LinkedHashMap </a></p>
-<p>Extends HashMap to allow insertion-order iterations.</p>
-</td>
-</tr>
-<tr>
-<td>15</td>
-<td><p><a href="java_identityhashmap_class.htm">IdentityHashMap </a></p>
-<p>Extends AbstractMap and uses reference equality when comparing documents.</p>
-</td>
-</tr>
-</table>
-<p>The <i>AbstractCollection, AbstractSet, AbstractList, AbstractSequentialList</i> and <i>AbstractMap</i> classes provide skeletal implementations of the core collection interfaces, to minimize the effort required to implement them.</p>
-<p>The following legacy classes defined by java.util have been discussed in previous tutorial:</p>
-<table class="table table-bordered">
-<tr>
-<th>SN</th>
-<th>Classes with Description</th>
-</tr>
-<tr>
-<td>1</td>
-<td><p><a href="java_vector_class.htm">Vector </a></p>
-<p>This implements a dynamic array. It is similar to ArrayList, but with some differences.</p>
-</td>
-</tr>
-<tr>
-<td>2</td>
-<td><p><a href="java_stack_class.htm">Stack </a></p>
-<p>Stack is a subclass of Vector that implements a standard last-in, first-out stack.</p>
-</td>
-</tr>
-<tr>
-<td>3</td>
-<td><p><a href="java_dictionary_class.htm">Dictionary</a></p>
-<p>Dictionary is an abstract class that represents a key/value storage repository and operates much like Map.</p>
-</td>
-</tr>
-<tr>
-<td>4</td>
-<td><p><a href="java_hashtable_class.htm">Hashtable</a></p>
-<p>Hashtable was part of the original java.util and is a concrete implementation of a Dictionary.</p>
-</td>
-</tr>
-<tr>
-<td>5</td>
-<td><p><a href="java_properties_class.htm">Properties</a></p>
-<p>Properties is a subclass of Hashtable. It is used to maintain lists of values in which the key is a String and the value is also a String.</p>
-</td>
-</tr>
-<tr>
-<td>6</td>
-<td><p><a href="java_bitset_class.htm">BitSet</a></p>
-<p>A BitSet class creates a special type of array that holds bit values. This array can
-increase in size as needed.</p>
-</td>
-</tr>
-</table>
-<h2>The Collection Algorithms:</h2>
-<p>The collections framework defines several algorithms that can be applied to collections and maps. These algorithms are defined as static methods within the Collections
-class.</p>
-<p>Several of the methods can throw a <b>ClassCastException</b>, which occurs when an attempt is made to compare incompatible types, or an <b>UnsupportedOperationException</b>, which occurs when an attempt is made to modify an unmodifiable collection.</p>
-<p>Collections define three static variables: EMPTY_SET, EMPTY_LIST, and EMPTY_MAP. All are immutable.</p>
-<table class="table table-bordered">
-<tr>
-<th>SN</th>
-<th>Algorithms with Description</th>
-</tr>
-<tr>
-<td>1</td>
-<td><p><a href="java_collection_algorithms.htm">The Collection Algorithms</a></p>
-<p> Here is a list of all the algorithm implementation.</p>
-</td>
-</tr>
-</table>
-<h2>How to use an Iterator ?</h2>
-<p>Often, you will want to cycle through the elements in a collection. For example, you might want to display each element.</p>
-<p>The easiest way to do this is to employ an iterator, which is an object that implements either the Iterator or the ListIterator interface.</p>
-<p>Iterator enables you to cycle through a collection, obtaining or removing elements. ListIterator extends Iterator to allow bidirectional traversal of a list and the modification of elements.</p>
-<table class="table table-bordered">
-<tr>
-<th>SN</th>
-<th>Iterator Methods with Description</th>
-</tr>
-<tr>
-<td>1</td>
-<td><p><a href="java_using_iterator.htm">Using Java Iterator</a></p>
-<p> Here is a list of all the methods with examples provided by Iterator  and ListIterator interfaces.</p>
-</td>
-</tr>
-</table>
-<h2>How to use a Comparator ?</h2>
-<p>Both TreeSet and TreeMap store elements in sorted order. However, it is the comparator that defines precisely what <i>sorted order</i> means.</p>
-<p>This interface lets us sort a given collection any number of different ways. Also this interface can be used to sort any instances of any class (even classes we cannot modify).</p>
-<table class="table table-bordered">
-<tr>
-<th>SN</th>
-<th>Iterator Methods with Description</th>
-</tr>
-<tr>
-<td>1</td>
-<td><p><a href="java_using_comparator.htm">Using Java Comparator</a></p>
-<p> Here is a list of all the methods with examples provided by Comparator Interface.</p>
-</td>
-</tr>
-</table>
-<h2>Summary:</h2>
-<p>The Java collections framework gives the programmer access to prepackaged data structures as well as to algorithms for manipulating them.</p>
-<p>A collection is an object that can hold references to other objects. The collection interfaces declare the operations that can be performed on each type of collection.</p>
-<p>The classes and interfaces of the collections framework are in package java.util.</p>
+<h2>Rounding to Nearest Integer</h2>
+<p>Here are the three easiest ways to round to the nearest integer.</p>
+<h3 style="color:#fff; text-decoration:none;">1. Using Math.round()</h3>
+<pre class="prettyprint notranslate tryit">
+  double randomDouble = 2.501589;
+
+  int roundedNumber = Math.round((randomDouble) * 100.0 ) / 100.0;
+
+  System.out.print(roundedNumber + "");</pre>
+
+<p><b>Result: </b></p>
+<pre class="prettyprint notranslate">
+3
+</pre>
+
+<h3 style="color:#fff; text-decoration:none;">2. Using DecimalFormat</h3>
+<pre class="prettyprint notranslate tryit">
+  double number = 2.501589;
+
+  DecimalFormat df = new DecimalFormat("#");
+  // You can also use : DecimalFormat df = new DecimalFormat("0");
+
+  int rounded = Integer.parseInt(df.format(number));
+  System.out.print(rounded + "");
+</pre>
+<p><b>Result: </b></p>
+<pre class="prettyprint notranslate">
+3
+</pre>
+
+<h3 style="color:#fff; text-decoration:none;">3. Using String Formatting</h3>
+<pre class="prettyprint notranslate tryit">
+  double number = 2.501589;
+
+  int rounded = Integer.parseInt(String.format("%.0f", number));
+
+  System.out.print(rounded + "");
+  </pre>
+
+<p><b>Result: </b></p>
+<pre class="prettyprint notranslate">
+3
+</pre>
+
+<hr>
+
+<h2>Rounding to Nearest Decimal Place</h2>
+<p>Here are the three easiest ways to round to the nearest decimal place.</p>
+<h3 style="color:#fff; text-decoration:none;">1. Using DecimalFormat</h3>
+<pre class="prettyprint notranslate tryit">
+  double pi = 3.14159265358979323846264;
+
+  DecimalFormat twoDecimalPlaces = new DecimalFormat("#.##");
+  // You can also use : DecimalFormat df = new DecimalFormat("0.00");
+
+  DecimalFormat fiveDecimalPlaces = new DecimalFormat("#.#####");
+  // You can also use : DecimalFormat df = new DecimalFormat("0.00");
+
+  System.out.print("Pi rounded to 2 decimal places : " + twoDecimalPlaces.format(pi) + "\n");
+  System.out.print("Pi rounded to 5 decimal places : " + fiveDecimalPlaces.format(pi) + "\n");
+</pre>
+<p><b>Result: </b></p>
+<pre class="prettyprint notranslate">
+  Pi rounded to 2 decimal places : 3.14
+  Pi rounded to 5 decimal places :3.14159
+</pre>
+
+<h3 style="color:#fff; text-decoration:none;">2. Using String Formatting</h3>
+<pre class="prettyprint notranslate tryit">
+  double pi = 3.14159265358979323846264;
+
+  double rounded3Decimals = Double.parseDouble(String.format("%.3f", pi));
+  double rounded6Decimals = Double.parseDouble(String.format("%.6f", pi));
+
+  System.out.print("Pi rounded to 3 decimal places : " + rounded3Decimals + "\n");
+  System.out.print("Pi rounded to 6 decimal places : " + rounded6Decimals + "\n");
+  </pre>
+
+<p><b>Result: </b></p>
+<pre class="prettyprint notranslate">
+  Pi rounded to 3 decimal places : 3.142
+  Pi rounded to 6 decimal places : 3.141593
+</pre>
+
+<hr>
+
+<h2>Rounding "Up" & "Down" to Nearest Integer</h2>
+<p>Here are the two easiest ways to round UP or DOWN to the nearest integer.</p>
+
+<h3 style="color:#fff; text-decoration:none;">1. Rounding UP to Nearest Integer</h3>
+<pre class="prettyprint notranslate tryit">
+  double pi = 3.14159265358979323846264;
+
+  int roundedUpPi = (int) Math.ceil(pi);
+
+  System.out.print("Pi rounded UP to nearest integer : " + roundedUpPi+ "\n");
+  </pre>
+
+<p><b>Result: </b></p>
+<pre class="prettyprint notranslate">
+  Pi rounded UP to nearest integer : 4
+</pre>
+
+<h3 style="color:#fff; text-decoration:none;">2. Rounding DOWN to Nearest Integer</h3>
+<pre class="prettyprint notranslate tryit">
+  double e = 2.7182818284590452353602874713526;
+
+  int roundedDownE = (int) Math.floor(e);
+
+  System.out.print("e rounded DOWN to nearest integer : " + roundedDownE + "\n");
+  </pre>
+
+<p><b>Result: </b></p>
+<pre class="prettyprint notranslate">
+  e rounded DOWN to nearest integer : 2
+</pre>
+
+
+
 <hr style="margin-bottom:1.25% !important;"><div class="pre-btn">
-<a href="java_data_structures.htm"> Previous Page</a>
+<a href="java_strings.htm"> Previous Page</a>
 </div>
 <div class="print-btn center">
 <a href="/cgi-bin/printpage.cgi" target="_blank"> Print</a>
 </div>
 <div class="pdf-btn">
-<a href="pdf/java_collections.pdf" title="Java - Collections" target="_blank"> PDF</a>
+<a href="pdf/java_string_concat.pdf" title="Java - String concat() Method" target="_blank"> PDF</a>
 </div>
 <div class="nxt-btn">
-<a href="java_generics.htm">Next Page &nbsp;</a>
+<a href="java_strings.htm">Next Page &nbsp;</a>
 </div>
+<div class="parent-file">java_strings.htm</div>
 <hr />
 <!-- PRINTING ENDS HERE -->
 <div class="bottomgooglead">
